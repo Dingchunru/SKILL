@@ -1,17 +1,16 @@
----
 name: Skill Evals
 
-# promptfoo evals that run Claude against the skills (see evals/README.md).
+# promptfoo evals that run Claude against the ctf-skills library (see ctf-skills/evals/README.md).
 # Config validation is free and runs on every relevant PR. The evals bill the
 # ANTHROPIC_API_KEY secret, so they only run on demand: manually, or on a PR
 # carrying the `run-evals` label.
 
-'on':
+on:
   pull_request:
     types: [opened, synchronize, reopened, labeled]
     paths:
-      - '**/SKILL.md'
-      - 'evals/**'
+      - 'ctf-skills/**/SKILL.md'
+      - 'ctf-skills/evals/**'
       - '.github/workflows/skill-evals.yml'
   workflow_dispatch:
     inputs:
@@ -42,21 +41,16 @@ jobs:
       contents: read
     defaults:
       run:
-        working-directory: evals
+        working-directory: ctf-skills/evals
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Set up Node
-        uses: actions/setup-node@v7
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: npm
-          cache-dependency-path: evals/package-lock.json
-
+          cache-dependency-path: ctf-skills/evals/package-lock.json
       - name: Install promptfoo
         run: npm ci --no-audit --no-fund
-
       - name: Validate configs
         run: npm run validate
 
@@ -72,31 +66,25 @@ jobs:
       contents: read
     defaults:
       run:
-        working-directory: evals
+        working-directory: ctf-skills/evals
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       SUITE: ${{ inputs.suite || 'routing' }}
       REPEAT: ${{ inputs.repeat || '1' }}
-      # Stop before the job timeout so result files still get written.
       PROMPTFOO_MAX_EVAL_TIME_MS: '3000000'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
+      - uses: actions/checkout@v4
       - name: Check for API key
         run: |
           if [ -z "$ANTHROPIC_API_KEY" ]; then
             echo "::error::ANTHROPIC_API_KEY secret is not set (fork PRs do not get secrets)."
             exit 1
           fi
-
-      - name: Set up Node
-        uses: actions/setup-node@v7
+      - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: npm
-          cache-dependency-path: evals/package-lock.json
-
+          cache-dependency-path: ctf-skills/evals/package-lock.json
       - name: Install promptfoo
         run: npm ci --no-audit --no-fund
 
@@ -121,9 +109,8 @@ jobs:
           PROMPTFOO_FAILED_TEST_EXIT_CODE: '0'
         run: npm run eval:solve -- --repeat "$REPEAT" --no-progress-bar --no-table
 
-      # Rules checks are heuristics over tool-call content (see
-      # evals/lib/assertions.js) -- tolerate the same single-flaky-case
-      # margin as routing rather than gating the job on every case.
+      # Rules checks are heuristics over tool-call content (see evals/lib/assertions.js)
+      # -- tolerate one flaky case rather than gating on every case.
       - name: Rules suite
         if: env.SUITE == 'rules' || env.SUITE == 'all'
         env:
@@ -136,8 +123,8 @@ jobs:
 
       - name: Upload results
         if: always()
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@v4
         with:
           name: skill-eval-results
-          path: evals/out/
+          path: ctf-skills/evals/out/
           retention-days: 14

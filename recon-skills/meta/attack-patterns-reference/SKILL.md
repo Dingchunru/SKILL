@@ -1,7 +1,8 @@
 ---
 name: attack-patterns-reference
 description: 当需要归类已验证的 Web 或 WordPress 行为，并选择相关的验证技能时使用。
-version: 1.2.0
+version: 1.2.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: N/A (reference catalog)
@@ -19,7 +20,6 @@ metadata:
     - staging-subdomain-hunt
     - wordpress-plugin-hunt
     - wp-mass-recon
-    - xmlrpc-exploitation
 ---
 
 # 攻击模式参考

@@ -1,8 +1,8 @@
 ---
 name: wordpress-plugin-hunt
 description: 通过 REST 接口猎取 WP 插件，在已知版本时利用 CVE。
-version: 1.1.0
-revision_date: 2026-07-25
+version: 1.1.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: Requires curl, nmap, python3, masscan, subfinder, httpx, nuclei
@@ -15,7 +15,6 @@ metadata:
     - cross-attack-chains
     - wordpress-full-compromise
     - staging-subdomain-hunt
-    - xmlrpc-exploitation
 ---
 
 # WordPress 插件猎取技能

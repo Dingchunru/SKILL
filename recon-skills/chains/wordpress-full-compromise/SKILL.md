@@ -1,7 +1,8 @@
 ---
 name: wordpress-full-compromise
 description: 当已验证的 WordPress 发现可能组合成通往管理控制或服务器控制的经授权路径时使用。
-version: 2.0.0
+version: 2.0.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux, macos]
 compatibility: Requires curl, a browser, approved test identities, and WordPress component evidence
@@ -14,7 +15,6 @@ metadata:
     - triage-validation
     - wordpress-cors-xmlrpc-rce-chain
     - wordpress-plugin-hunt
-    - xmlrpc-exploitation
 ---
 
 # WordPress 失陷路径分析

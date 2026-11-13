@@ -1,0 +1,71 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  ctf-skills:
+    name: ctf-skills (catalog + tests)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ctf-skills
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: ctf-skills/pyproject.toml
+      - name: Install pytest
+        run: pip install pytest
+      - name: Generated catalog is up to date
+        run: python scripts/build_skill_catalog.py --check
+      - name: Tests
+        run: python -m pytest tests/ -v
+
+  recon-skills:
+    name: recon-skills (validate + index)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: recon-skills
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate skills
+        run: python scripts/validate_skills.py
+      - name: Generated dist is up to date
+        run: python scripts/build_index.py --check
+
+  security-audit:
+    name: ctf-skills security audit
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ctf-skills
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit skill categories
+        run: |
+          set -e
+          for skill in ctf-web ctf-pwn ctf-reverse; do
+            echo "::group::audit $skill"
+            python scripts/skill_security_auditor.py "$skill" --strict
+            echo "::endgroup::"
+          done

@@ -54,6 +54,10 @@
 ```text
 D:\SKILL\
 |-- AGENTS.md                  # 本文件
+|-- .github\                   # 仓库级 GitHub 配置
+|   |-- workflows\             # ci.yml / ctf-markdown-lint / ctf-link-checker / ctf-script-lint / skill-evals
+|   |-- ISSUE_TEMPLATE\  pull_request_template.md
+|   `-- dependabot.yml
 |-- recon-skills\
 |   |-- AGENTS.md  STYLE.md  README.md  SOUL.md  STUDY.md  CHANGELOG.md
 |   |-- <category>\<skill-name>\SKILL.md
@@ -67,8 +71,7 @@ D:\SKILL\
     |   |-- catalog.md  catalog.json          # 生成物，禁止手改
     |   `-- <technique>.md ...
     |-- scripts\               # build_skill_catalog.py / install_ctf_tools.sh / skill_security_auditor.py
-    |-- tests\  evals\
-    `-- .github\workflows\     # CI
+    `-- tests\  evals\
 ```
 
 - 一个 skill 必须是一个独立目录，目录名与 frontmatter `name` 一致（kebab-case）。
@@ -199,7 +202,6 @@ python3 scripts/skill_security_auditor.py <skill> --strict --json
 - `README.md` 的 Skills 表；
 - `.opencode/opencode.json` 的 `references`；
 - `.opencode/agents/ctf-<name>.md`；
-- `.github/labeler.yml`（如有分类标签）；
 - `CONTRIBUTING.md`（如涉及新约定）；
 - `scripts/install_ctf_tools.sh`（如需新工具）。
 
@@ -275,38 +277,31 @@ HTTP 状态码、版本号、banner 通常不构成漏洞证明。必须给出�
 
 ## 8. 校验与 CI
 
-### recon（本地校验，无 CI）
+CI 统一放在根级 `.github/workflows/`，两个子库在同一个工作流里按 `working-directory` 分开跑。旧的 `ctf-skills/.github/` 已删除，不要再在子库下放 workflow。
+
+| 工作流 | 触发 | 检查内容 |
+|---|---|---|
+| `ci.yml` | PR / push main / 手动 | ctf：`build_skill_catalog.py --check` + `pytest tests/`；recon：`validate_skills.py` + `build_index.py --check`；ctf 安全审计（ctf-web/pwn/reverse，`--strict`，Critical 失败） |
+| `ctf-markdown-lint.yml` | `ctf-skills/**/*.md` 变更 | markdownlint-cli2，配置 `ctf-skills/.markdownlint-cli2.yaml` |
+| `ctf-link-checker.yml` | `ctf-skills/**/*.md` 变更、每周一、手动 | lychee 检查 URL，配置 `ctf-skills/.lychee.toml` |
+| `ctf-script-lint.yml` | `ctf-skills/scripts/**` 变更 | shellcheck + ruff check/format |
+| `skill-evals.yml` | `ctf-skills/**/SKILL.md` 或 `ctf-skills/evals/**` 变更 / 手动 | promptfoo 配置校验常跑；实际评测需手动或 `run-evals` 标签（消耗 `ANTHROPIC_API_KEY`） |
+
+本地等价命令：
 
 ```bash
 cd recon-skills
-python3 scripts/validate_skills.py      # 结构错误、重复 name、断链、运行时耦合
-python3 scripts/build_index.py --check  # 生成物是否过期
-```
+python3 scripts/validate_skills.py
+python3 scripts/build_index.py --check
 
-`validate_skills.py` 的错误必须修复；历史风格债以 warning 输出，可增量改进，但新增内容不得新增 warning。
-
-### ctf（本地生效，CI 需迁移）
-
-`ctf-skills/.github/workflows/` 只有在独立仓库里才会触发；并入根仓后，根级没有 `.github`，这些 workflow 不会运行。当前必须本地执行：
-
-```bash
-cd ctf-skills
+cd /d/SKILL/ctf-skills
 python scripts/build_skill_catalog.py --check
 python -m pytest tests/ -v
+python3 scripts/skill_security_auditor.py ctf-web --strict
 pre-commit run --all-files
 ```
 
-原 CI 检查项（供迁移时参考）：
-
-| 工作流 | 检查内容 |
-|---|---|
-| Tests | `build_skill_catalog.py --check` + `pytest tests/` |
-| Markdown Lint | markdownlint-cli2 |
-| Skill Security Audit | 危险模式扫描，Critical 失败 |
-| Link Checker | lychee 检查 URL |
-| Lint Scripts | ruff + shellcheck |
-
-如果要把 CI 恢复到根仓，需把相关 workflow 移到根级 `.github/workflows/` 并调整路径；迁移前不要假设 PR 检查会自动运行。
+`validate_skills.py` 的错误必须修复；历史风格债以 warning 输出，可增量改进，但新增内容不得新增 warning。
 
 - 不得通过修改 workflow、放宽 lint 配置或跳过 pre-commit 来让检查通过。
 - `<!-- audit-ok -->` 只用于有意保留的攻击技术说明，并需在 PR 中说明理由。
@@ -420,6 +415,7 @@ find . -type f -not -path "*/.git/*" -exec md5sum {} + | sort -k2
 2. 根仓无 `.gitignore`，`.idea/` 处于未跟踪状态。
 3. `ctf-skills/README.md` 的 Files 计数会随文件增减漂移，改动后需人工复核。
 4. `ctf-skills/CONTRIBUTING.md` 要求 description 以第三人称动词开头，但测试只校验长度大于 20 字符。
-5. `recon-skills` 没有 CI，校验依赖本地脚本；`dist/` 是否过期只能靠 `--check` 手工发现。
+5. ~~`recon-skills` 没有 CI，校验依赖本地脚本~~：2026-11-13 已纳入根级 `ci.yml`。
 6. `recon-skills/` 已汉化，但与上游 `uphiago/recon-skills` 的差异没有独立记录；后续若合并上游需先做差异审计。
-7. `ctf-skills/.github/workflows/` 在并入根仓后不再触发；根仓当前没有 CI，所有 ctf 检查需本地手动执行，或把 workflow 迁移到根 `.github/workflows/`。
+7. ~~`ctf-skills/.github/workflows/` 在并入根仓后不再触发~~：2026-11-13 已上移到根级 `.github/workflows/`，子库下不再保留 workflow。
+8. recon 有 5 个文件正文仍提到已移除的 `xmlrpc-exploitation` 技能（`meta/attack-patterns-reference`、`meta/cross-wave-delta-analysis`、`recon/phpinfo-to-rce`、`redteam/hunt-wordpress`、`redteam/recon-sector`）；校验器只查 `related_skills`，正文指路待重新指向现有技能。

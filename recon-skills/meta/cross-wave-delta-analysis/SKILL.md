@@ -1,8 +1,8 @@
 ---
 name: cross-wave-delta-analysis
 description: 对比多轮侦察结果，找出新增（NEW）、回归（REGRESSED）与持续存在（PERSISTENT）的发现。
-version: 1.1.0
-revision_date: 2026-07-25
+version: 1.1.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: N/A (analysis methodology)
@@ -13,7 +13,6 @@ metadata:
     - recon-playbook
     - cross-attack-chains
     - cors-credential-wordpress
-    - xmlrpc-exploitation
     - attack-patterns-reference
 ---
 

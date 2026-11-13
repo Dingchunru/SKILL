@@ -1,0 +1,44 @@
+name: ctf-skills script lint
+
+on:
+  pull_request:
+    paths:
+      - 'ctf-skills/scripts/**'
+      - '.github/workflows/ctf-script-lint.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ctf-skills/scripts/**'
+      - '.github/workflows/ctf-script-lint.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: ctf-scripts-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ShellCheck
+        run: shellcheck ctf-skills/scripts/*.sh
+
+  ruff:
+    name: Ruff
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Ruff
+        run: pip install ruff
+      - name: Ruff check
+        run: ruff check ctf-skills/scripts/
+      - name: Ruff format check
+        run: ruff format --check ctf-skills/scripts/

@@ -16,6 +16,11 @@ body:
         - ctf-pwn
         - ctf-reverse
         - ctf-web
+        - recon/chains
+        - recon/infra
+        - recon/meta
+        - recon/recon
+        - recon/redteam
     validations:
       required: true
 

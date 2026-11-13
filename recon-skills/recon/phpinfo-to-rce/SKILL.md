@@ -1,8 +1,8 @@
 ---
 name: phpinfo-to-rce
 description: 当 info.php 暴露时，通过 exec 检查将 phpinfo 串联至 RCE。
-version: 1.1.0
-revision_date: 2026-07-25
+version: 1.1.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: Requires curl, nmap, python3, masscan, subfinder, httpx, nuclei
@@ -11,7 +11,6 @@ metadata:
   category: recon
   related_skills:
     - source-leak-hunt
-    - xmlrpc-exploitation
     - wordpress-full-compromise
     - cross-attack-chains
     - error-log-mining

@@ -1,0 +1,32 @@
+name: ctf-skills markdown lint
+
+on:
+  pull_request:
+    paths:
+      - 'ctf-skills/**/*.md'
+      - '.github/workflows/ctf-markdown-lint.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ctf-skills/**/*.md'
+      - '.github/workflows/ctf-markdown-lint.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: ctf-markdown-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  markdownlint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v25
+        with:
+          globs: 'ctf-skills/**/*.md'
+          config: 'ctf-skills/.markdownlint-cli2.yaml'

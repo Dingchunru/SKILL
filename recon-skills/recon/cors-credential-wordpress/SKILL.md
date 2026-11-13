@@ -1,8 +1,8 @@
 ---
 name: cors-credential-wordpress
 description: 利用 WordPress CORS 凭据反射实施数据窃取。
-version: 1.1.0
-revision_date: 2026-07-25
+version: 1.1.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: Requires curl, nmap, python3, masscan, subfinder, httpx, nuclei
@@ -11,7 +11,6 @@ metadata:
   category: recon
   related_skills:
     - wp-mass-recon
-    - xmlrpc-exploitation
     - cross-attack-chains
     - wordpress-full-compromise
 ---

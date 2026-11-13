@@ -1,8 +1,8 @@
 ---
 name: deep-invade
 description: "WordPress 深度渗透：SSRF、插件 CVE、JS 挖掘、端口扫描链。"
-version: 1.1.0
-revision_date: 2026-07-25
+version: 1.1.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: Requires curl, nmap, python3, httpx, nuclei
@@ -11,7 +11,6 @@ metadata:
   category: recon
   related_skills:
     - wp-mass-recon
-    - xmlrpc-exploitation
     - error-log-mining
     - js-secrets-extraction
     - staging-subdomain-hunt

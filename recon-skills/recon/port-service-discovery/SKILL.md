@@ -1,8 +1,8 @@
 ---
 name: port-service-discovery
 description: 使用 Nmap 扫描 MySQL、Redis、FTP、SSH 及内部 API 服务。
-version: 1.1.0
-revision_date: 2026-07-25
+version: 1.1.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: Requires curl, nmap, masscan
@@ -14,7 +14,6 @@ metadata:
     - wp-mass-recon
     - cross-attack-chains
     - staging-subdomain-hunt
-    - xmlrpc-exploitation
 ---
 
 # 端口与服务发现技能

@@ -1,7 +1,8 @@
 ---
 name: wordpress-cors-xmlrpc-rce-chain
 description: Use when verified WordPress CORS, XML-RPC, role, upload, and execution behaviors may form one authorized attack path.
-version: 2.0.0
+version: 2.0.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux, macos]
 compatibility: Requires curl, a browser, and approved WordPress test identities
@@ -13,7 +14,6 @@ metadata:
     - hunt-cors
     - hunt-wordpress
     - triage-validation
-    - xmlrpc-exploitation
 ---
 
 # WordPress CORS, XML-RPC, and Upload Chain

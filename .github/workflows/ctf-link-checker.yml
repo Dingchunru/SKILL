@@ -1,0 +1,41 @@
+name: ctf-skills link checker
+
+on:
+  pull_request:
+    paths:
+      - 'ctf-skills/**/*.md'
+      - 'ctf-skills/.lychee.toml'
+      - '.github/workflows/ctf-link-checker.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ctf-skills/**/*.md'
+      - 'ctf-skills/.lychee.toml'
+      - '.github/workflows/ctf-link-checker.yml'
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+concurrency:
+  group: ctf-links-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check-links:
+    name: Check links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lychee link checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config ctf-skills/.lychee.toml
+            --no-progress
+            --exclude-path ctf-skills/.pytest_cache
+            --exclude-path ctf-skills/evals/node_modules
+            'ctf-skills/**/*.md'
+          fail: true

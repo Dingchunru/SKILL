@@ -1,8 +1,8 @@
 ---
 name: recon-sector
 description: Parameterized sector recon using sector database.
-version: 2.0.0
-revision_date: 2026-07-25
+version: 2.0.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: Requires curl, python3
@@ -12,7 +12,6 @@ metadata:
   related_skills:
     - wp-mass-recon
     - cors-credential-wordpress
-    - xmlrpc-exploitation
     - source-leak-hunt
     - error-log-mining
     - deep-invade

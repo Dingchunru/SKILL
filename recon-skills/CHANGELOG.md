@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-11-13 — 清理悬空引用
+
+- 删除 12 个 `SKILL.md` 中指向已移除技能 `xmlrpc-exploitation` 的 `related_skills`
+  条目（`chains/wordpress-full-compromise`、`meta/attack-patterns-reference`、
+  `meta/cross-wave-delta-analysis`、`recon/cors-credential-wordpress`、`recon/deep-invade`、
+  `recon/phpinfo-to-rce`、`recon/port-service-discovery`、`recon/wordpress-plugin-hunt`、
+  `recon/wp-mass-recon`、`redteam/hunt-wordpress`、`redteam/recon-sector`、
+  `redteam/wordpress-cors-xmlrpc-rce-chain`），`validate_skills.py` 恢复零错误。
+- 上述文件递增 `version` 并刷新 `revision_date`；重新生成 `dist/`。
+
 ## 2026-11-07 — Catalog quality sweep
 
 - Repaired broken snippets catalog-wide (unclosed heredocs and quotes,

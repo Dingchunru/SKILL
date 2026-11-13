@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: weekly
 
-  - package-ecosystem: pip
-    directory: /
+  - package-ecosystem: npm
+    directory: /ctf-skills/evals
     schedule:
       interval: weekly

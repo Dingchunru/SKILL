@@ -1,8 +1,8 @@
 ---
 name: wp-mass-recon
 description: "批量 WP 侦察：跨域名的用户、CORS、XMLRPC 与泄露。"
-version: 1.1.0
-revision_date: 2026-07-25
+version: 1.1.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux]
 compatibility: Requires curl, nmap, python3, masscan, subfinder, httpx, nuclei
@@ -11,7 +11,6 @@ metadata:
   category: recon
   related_skills:
     - cors-credential-wordpress
-    - xmlrpc-exploitation
     - source-leak-hunt
     - wordpress-plugin-hunt
     - staging-subdomain-hunt

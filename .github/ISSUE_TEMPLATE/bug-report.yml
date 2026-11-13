@@ -12,7 +12,7 @@ body:
     attributes:
       label: Affected File or Skill
       description: Which file or skill category is affected?
-      placeholder: "e.g., ctf-web/SKILL.md, scripts/install_ctf_tools.sh"
+      placeholder: "e.g., ctf-skills/ctf-web/SKILL.md, recon-skills/recon/port-service-discovery/SKILL.md"
     validations:
       required: true
 

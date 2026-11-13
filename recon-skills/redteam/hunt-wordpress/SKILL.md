@@ -1,7 +1,8 @@
 ---
 name: hunt-wordpress
 description: 当授权目标暴露 WordPress 核心、插件、主题、REST 或 XML-RPC 行为时使用。
-version: 3.0.0
+version: 3.0.1
+revision_date: 2026-11-13
 license: MIT
 platforms: [linux, macos]
 compatibility: Requires curl, jq, and optional wpscan
@@ -15,7 +16,6 @@ metadata:
     - staging-subdomain-hunt
     - wordpress-plugin-hunt
     - wp-plugin-rest-auth-bypass
-    - xmlrpc-exploitation
 ---
 
 # WordPress 安全评估

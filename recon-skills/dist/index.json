@@ -55,7 +55,7 @@
       "path": "chains/wordpress-full-compromise/SKILL.md",
       "category": "chains",
       "description": "当已验证的 WordPress 发现可能组合成通往管理控制或服务器控制的经授权路径时使用。",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "platforms": [
         "linux",
         "macos"
@@ -71,8 +71,7 @@
         "hunt-wordpress",
         "triage-validation",
         "wordpress-cors-xmlrpc-rce-chain",
-        "wordpress-plugin-hunt",
-        "xmlrpc-exploitation"
+        "wordpress-plugin-hunt"
       ],
       "when_to_use": "- 某个插件漏洞已有确切的版本与路由证据。\n- 某个已批准的身份可能拥有意外的 WordPress 能力。\n- 某次上传或配置写入可能到达可执行的解析处理。\n- CORS、XML-RPC、预发环境或源码暴露可能提供缺失的前置条件。",
       "triggers": [
@@ -137,7 +136,7 @@
       "path": "meta/attack-patterns-reference/SKILL.md",
       "category": "meta",
       "description": "当需要归类已验证的 Web 或 WordPress 行为，并选择相关的验证技能时使用。",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "platforms": [
         "linux"
       ],
@@ -157,8 +156,7 @@
         "source-leak-hunt",
         "staging-subdomain-hunt",
         "wordpress-plugin-hunt",
-        "wp-mass-recon",
-        "xmlrpc-exploitation"
+        "wp-mass-recon"
       ],
       "when_to_use": "- 在某项侦察结果进入专项测试之前，需要对其进行归类。\n- 多个已验证的行为可能构成一条候选攻击路径。\n- WordPress、CORS、XML-RPC、源码泄漏或暴露服务信号需要一个负责的验证流程。\n\n不要将该目录用作扫描器漏洞列表，也不要用它替代所属技能的验证章节。",
       "triggers": [
@@ -185,7 +183,7 @@
       "path": "meta/cross-wave-delta-analysis/SKILL.md",
       "category": "meta",
       "description": "对比多轮侦察结果，找出新增（NEW）、回归（REGRESSED）与持续存在（PERSISTENT）的发现。",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "platforms": [
         "linux"
       ],
@@ -200,7 +198,6 @@
         "recon-playbook",
         "cross-attack-chains",
         "cors-credential-wordpress",
-        "xmlrpc-exploitation",
         "attack-patterns-reference"
       ],
       "when_to_use": "- 对同一组目标重复执行侦察（第 N 轮之后的第 N+1 轮）。\n- 你想知道某个漏洞自上一轮以来是否已被修补。\n- 你想知道是否出现了新的攻击面（新端口、新子域、新端点）。\n- 完成一轮深度侦察之后——在进入下一轮之前产出差异报告。\n- 在提交报告之前——确认发现仍然有效（未发生回归）。",
@@ -220,7 +217,7 @@
         "Verification": true
       },
       "assets": [],
-      "line_count": 123
+      "line_count": 122
     },
     {
       "name": "evasion-stack-guide",
@@ -603,7 +600,7 @@
       "path": "recon/cors-credential-wordpress/SKILL.md",
       "category": "recon",
       "description": "利用 WordPress CORS 凭据反射实施数据窃取。",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "platforms": [
         "linux"
       ],
@@ -616,7 +613,6 @@
       ],
       "related_skills": [
         "wp-mass-recon",
-        "xmlrpc-exploitation",
         "cross-attack-chains",
         "wordpress-full-compromise"
       ],
@@ -636,14 +632,14 @@
         "Verification": true
       },
       "assets": [],
-      "line_count": 171
+      "line_count": 170
     },
     {
       "name": "deep-invade",
       "path": "recon/deep-invade/SKILL.md",
       "category": "recon",
       "description": "WordPress 深度渗透：SSRF、插件 CVE、JS 挖掘、端口扫描链。",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "platforms": [
         "linux"
       ],
@@ -657,7 +653,6 @@
       ],
       "related_skills": [
         "wp-mass-recon",
-        "xmlrpc-exploitation",
         "error-log-mining",
         "js-secrets-extraction",
         "staging-subdomain-hunt",
@@ -683,7 +678,7 @@
         "Verification": true
       },
       "assets": [],
-      "line_count": 457
+      "line_count": 456
     },
     {
       "name": "email-security",
@@ -1218,7 +1213,7 @@
       "path": "recon/phpinfo-to-rce/SKILL.md",
       "category": "recon",
       "description": "当 info.php 暴露时，通过 exec 检查将 phpinfo 串联至 RCE。",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "platforms": [
         "linux"
       ],
@@ -1231,7 +1226,6 @@
       ],
       "related_skills": [
         "source-leak-hunt",
-        "xmlrpc-exploitation",
         "wordpress-full-compromise",
         "cross-attack-chains",
         "error-log-mining"
@@ -1252,7 +1246,7 @@
         "Verification": true
       },
       "assets": [],
-      "line_count": 212
+      "line_count": 211
     },
     {
       "name": "port-mass-scan",
@@ -1299,7 +1293,7 @@
       "path": "recon/port-service-discovery/SKILL.md",
       "category": "recon",
       "description": "使用 Nmap 扫描 MySQL、Redis、FTP、SSH 及内部 API 服务。",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "platforms": [
         "linux"
       ],
@@ -1315,8 +1309,7 @@
         "deep-invade",
         "wp-mass-recon",
         "cross-attack-chains",
-        "staging-subdomain-hunt",
-        "xmlrpc-exploitation"
+        "staging-subdomain-hunt"
       ],
       "when_to_use": "- 在高价值目标上执行 `deep-invade` 的阶段 6。\n- 当表层侦察未发现可利用的 Web 漏洞后 — 转向基础设施。\n- 当目标是 SaaS 且在非标准端口上提供后端 API 时。\n- 发现预发布子域名后 — 检查数据库/管理端口。",
       "triggers": [
@@ -1334,7 +1327,7 @@
         "Verification": true
       },
       "assets": [],
-      "line_count": 252
+      "line_count": 251
     },
     {
       "name": "s3-minio-content-type-xss",
@@ -1818,7 +1811,7 @@
       "path": "recon/wordpress-plugin-hunt/SKILL.md",
       "category": "recon",
       "description": "通过 REST 接口猎取 WP 插件，在已知版本时利用 CVE。",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "platforms": [
         "linux"
       ],
@@ -1834,8 +1827,7 @@
         "deep-invade",
         "cross-attack-chains",
         "wordpress-full-compromise",
-        "staging-subdomain-hunt",
-        "xmlrpc-exploitation"
+        "staging-subdomain-hunt"
       ],
       "when_to_use": "- 目标已确认是 WordPress（通过 `wp-mass-recon`）。\n- 正在执行 `deep-invade` 的阶段 3。\n- 你需要除 CORS/XMLRPC 之外的利用向量。\n- 目标是一个插件密集的 WordPress 站点（电商、页面构建器、表单）。",
       "triggers": [
@@ -1853,14 +1845,14 @@
         "Verification": true
       },
       "assets": [],
-      "line_count": 308
+      "line_count": 307
     },
     {
       "name": "wp-mass-recon",
       "path": "recon/wp-mass-recon/SKILL.md",
       "category": "recon",
       "description": "批量 WP 侦察：跨域名的用户、CORS、XMLRPC 与泄露。",
-      "version": "1.1.0",
+      "version": "1.1.1",
       "platforms": [
         "linux"
       ],
@@ -1872,7 +1864,6 @@
       ],
       "related_skills": [
         "cors-credential-wordpress",
-        "xmlrpc-exploitation",
         "source-leak-hunt",
         "wordpress-plugin-hunt",
         "staging-subdomain-hunt",
@@ -1899,7 +1890,7 @@
       "assets": [
         "scripts/scanner.py"
       ],
-      "line_count": 270
+      "line_count": 269
     },
     {
       "name": "wp-plugin-rest-auth-bypass",
@@ -4028,7 +4019,7 @@
       "path": "redteam/hunt-wordpress/SKILL.md",
       "category": "redteam",
       "description": "当授权目标暴露 WordPress 核心、插件、主题、REST 或 XML-RPC 行为时使用。",
-      "version": "3.0.0",
+      "version": "3.0.1",
       "platforms": [
         "linux",
         "macos"
@@ -4046,8 +4037,7 @@
         "source-leak-hunt",
         "staging-subdomain-hunt",
         "wordpress-plugin-hunt",
-        "wp-plugin-rest-auth-bypass",
-        "xmlrpc-exploitation"
+        "wp-plugin-rest-auth-bypass"
       ],
       "when_to_use": "- HTML、响应头、静态资源、cookie 或路由表明存在 WordPress。\n- `/wp-json/`、`/wp-login.php`、`/xmlrpc.php` 或 `/wp-content/` 可达。\n- JavaScript 或源代码引用了 WordPress 后端。\n- staging 或子目录安装可能与主站不同。",
       "triggers": [
@@ -4504,7 +4494,7 @@
       "path": "redteam/recon-sector/SKILL.md",
       "category": "redteam",
       "description": "Parameterized sector recon using sector database.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "platforms": [
         "linux"
       ],
@@ -4519,7 +4509,6 @@
       "related_skills": [
         "wp-mass-recon",
         "cors-credential-wordpress",
-        "xmlrpc-exploitation",
         "source-leak-hunt",
         "error-log-mining",
         "deep-invade",
@@ -4543,7 +4532,7 @@
         "references/probe_sector.py",
         "references/sectors.yaml"
       ],
-      "line_count": 181
+      "line_count": 180
     },
     {
       "name": "recon-sector-expansion",
@@ -4874,7 +4863,7 @@
       "path": "redteam/wordpress-cors-xmlrpc-rce-chain/SKILL.md",
       "category": "redteam",
       "description": "Use when verified WordPress CORS, XML-RPC, role, upload, and execution behaviors may form one authorized attack path.",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "platforms": [
         "linux",
         "macos"
@@ -4890,8 +4879,7 @@
         "cross-attack-chains",
         "hunt-cors",
         "hunt-wordpress",
-        "triage-validation",
-        "xmlrpc-exploitation"
+        "triage-validation"
       ],
       "when_to_use": "- Credentialed CORS exposes non-public WordPress data.\n- XML-RPC returns a protocol-valid method list.\n- An approved test identity has an upload-capable role.\n- A plugin or core upload operation may accept an executable file.\n- The assessment explicitly permits state-changing upload and execution tests.",
       "triggers": [
