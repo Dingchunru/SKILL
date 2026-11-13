@@ -1,0 +1,3717 @@
+{
+  "schema_version": 1,
+  "by_category": {
+    "chains": [
+      "cross-attack-chains",
+      "wordpress-full-compromise"
+    ],
+    "infra": [
+      "docker-privesc"
+    ],
+    "meta": [
+      "attack-patterns-reference",
+      "cross-wave-delta-analysis",
+      "evasion-stack-guide",
+      "google-dorks-catalog",
+      "pentest-playbook",
+      "recon-playbook",
+      "sector-recon-methodology"
+    ],
+    "recon": [
+      "401-403-bypass-techniques",
+      "api-noauth-hunt",
+      "asn-infrastructure-mapping",
+      "cms-detection",
+      "cors-credential-wordpress",
+      "deep-invade",
+      "email-security",
+      "error-log-mining",
+      "exchange-owa-attack",
+      "flask-werkzeug-attack",
+      "github-secret-hunting",
+      "gitlab-public-recon",
+      "hardcoded-credential-hunt",
+      "http2-header-impersonation",
+      "humanize-automation",
+      "iot-camera-recon",
+      "js-secrets-extraction",
+      "jwt-attack",
+      "origin-ip-discovery",
+      "phpinfo-to-rce",
+      "port-mass-scan",
+      "port-service-discovery",
+      "s3-minio-content-type-xss",
+      "scada-hikvision-isapi",
+      "source-leak-hunt",
+      "staging-subdomain-hunt",
+      "stealth-browser-launch",
+      "subdomain-enumeration",
+      "subdomain-takeover-hunt",
+      "tls-fingerprint-impersonation",
+      "unauth-api-flow-hijack",
+      "vhost-enumeration",
+      "visual-recon",
+      "wordpress-plugin-hunt",
+      "wp-mass-recon",
+      "wp-plugin-rest-auth-bypass",
+      "zimbra-attack"
+    ],
+    "redteam": [
+      "apk-redteam-pipeline",
+      "bb-methodology",
+      "bug-bounty",
+      "bugcrowd-reporting",
+      "cloud-iam-deep",
+      "cors-chain-automation",
+      "enterprise-vpn-attack",
+      "evidence-hygiene",
+      "hunt-api-misconfig",
+      "hunt-aspnet",
+      "hunt-ato",
+      "hunt-auth-bypass",
+      "hunt-brute-force",
+      "hunt-business-logic",
+      "hunt-cache-poison",
+      "hunt-cicd",
+      "hunt-cloud-misconfig",
+      "hunt-cors",
+      "hunt-csrf",
+      "hunt-deserialization",
+      "hunt-dispatch",
+      "hunt-dom",
+      "hunt-file-upload",
+      "hunt-firebase",
+      "hunt-frameworks",
+      "hunt-graphql",
+      "hunt-grpc",
+      "hunt-host-header",
+      "hunt-http-smuggling",
+      "hunt-idor",
+      "hunt-information-disclosure",
+      "hunt-k8s",
+      "hunt-ldap",
+      "hunt-lfi",
+      "hunt-llm-ai",
+      "hunt-mass-assignment",
+      "hunt-mcp-security",
+      "hunt-metrics-exposure",
+      "hunt-mfa-bypass",
+      "hunt-misc",
+      "hunt-nestjs",
+      "hunt-nextjs",
+      "hunt-nosqli",
+      "hunt-ntlm-info",
+      "hunt-oauth",
+      "hunt-open-redirect",
+      "hunt-prototype-pollution",
+      "hunt-race-condition",
+      "hunt-rce",
+      "hunt-saml",
+      "hunt-schema-enumeration",
+      "hunt-session",
+      "hunt-sharepoint",
+      "hunt-source-leak",
+      "hunt-springboot",
+      "hunt-sqli",
+      "hunt-ssrf",
+      "hunt-ssti",
+      "hunt-subdomain",
+      "hunt-supabase",
+      "hunt-tls-network",
+      "hunt-websocket",
+      "hunt-wordpress",
+      "hunt-write-gap",
+      "hunt-xss",
+      "hunt-xxe",
+      "llm-prompt-injection",
+      "m365-entra-attack",
+      "meme-coin-audit",
+      "mid-engagement-ir-detection",
+      "offensive-osint",
+      "okta-attack",
+      "ops-proxyns",
+      "osint-methodology",
+      "password-spray-methodology",
+      "recon-sector",
+      "recon-sector-expansion",
+      "redteam-mindset",
+      "redteam-report-template",
+      "report-writing",
+      "security-arsenal",
+      "supply-chain-attack-recon",
+      "triage-validation",
+      "vmware-vcenter-attack",
+      "web2-recon",
+      "web3-audit",
+      "wordpress-cors-xmlrpc-rce-chain",
+      "wp-plugin-cve-hunt",
+      "wstg-web-pentest"
+    ]
+  },
+  "by_tag": {
+    "access-control": [
+      "401-403-bypass-techniques"
+    ],
+    "account-takeover": [
+      "hunt-ato"
+    ],
+    "activedirectory": [
+      "exchange-owa-attack"
+    ],
+    "agent": [
+      "hunt-mcp-security"
+    ],
+    "agentic-ai": [
+      "llm-prompt-injection"
+    ],
+    "ai": [
+      "hunt-llm-ai",
+      "hunt-mcp-security",
+      "llm-prompt-injection"
+    ],
+    "analysis": [
+      "cross-wave-delta-analysis"
+    ],
+    "android": [
+      "apk-redteam-pipeline"
+    ],
+    "anti-bot": [
+      "evasion-stack-guide",
+      "humanize-automation",
+      "stealth-browser-launch"
+    ],
+    "api": [
+      "api-noauth-hunt",
+      "hardcoded-credential-hunt",
+      "hunt-api-misconfig",
+      "hunt-mass-assignment",
+      "hunt-wordpress",
+      "recon-playbook",
+      "unauth-api-flow-hijack"
+    ],
+    "api-key": [
+      "github-secret-hunting",
+      "js-secrets-extraction"
+    ],
+    "apk": [
+      "apk-redteam-pipeline"
+    ],
+    "arsenal": [
+      "security-arsenal"
+    ],
+    "asn": [
+      "asn-infrastructure-mapping"
+    ],
+    "aspnet": [
+      "hunt-aspnet"
+    ],
+    "asset-discovery": [
+      "subdomain-enumeration"
+    ],
+    "ato": [
+      "cors-credential-wordpress",
+      "hunt-ato"
+    ],
+    "attack": [
+      "enterprise-vpn-attack",
+      "m365-entra-attack",
+      "okta-attack",
+      "supply-chain-attack-recon",
+      "vmware-vcenter-attack"
+    ],
+    "attack-path": [
+      "cross-attack-chains",
+      "wordpress-full-compromise"
+    ],
+    "audit": [
+      "meme-coin-audit",
+      "web3-audit"
+    ],
+    "auth": [
+      "hunt-auth-bypass"
+    ],
+    "auth-bypass": [
+      "wp-plugin-rest-auth-bypass"
+    ],
+    "authorization": [
+      "401-403-bypass-techniques",
+      "hunt-mass-assignment"
+    ],
+    "automation": [
+      "cors-chain-automation",
+      "humanize-automation"
+    ],
+    "aws": [
+      "cloud-iam-deep"
+    ],
+    "axis": [
+      "iot-camera-recon"
+    ],
+    "azure": [
+      "cloud-iam-deep",
+      "m365-entra-attack",
+      "subdomain-takeover-hunt"
+    ],
+    "behavioral": [
+      "humanize-automation"
+    ],
+    "blockchain": [
+      "web3-audit"
+    ],
+    "browser": [
+      "http2-header-impersonation",
+      "stealth-browser-launch",
+      "tls-fingerprint-impersonation"
+    ],
+    "brute-force": [
+      "hunt-brute-force",
+      "jwt-attack"
+    ],
+    "bucket": [
+      "s3-minio-content-type-xss"
+    ],
+    "bug-bounty": [
+      "bb-methodology",
+      "bug-bounty",
+      "bugcrowd-reporting"
+    ],
+    "bugcrowd": [
+      "bugcrowd-reporting"
+    ],
+    "business-logic": [
+      "hunt-business-logic"
+    ],
+    "bypass": [
+      "hunt-auth-bypass",
+      "hunt-mfa-bypass",
+      "origin-ip-discovery"
+    ],
+    "cache": [
+      "hunt-cache-poison"
+    ],
+    "camera": [
+      "iot-camera-recon",
+      "scada-hikvision-isapi"
+    ],
+    "cdn": [
+      "origin-ip-discovery"
+    ],
+    "chain": [
+      "cors-chain-automation",
+      "phpinfo-to-rce",
+      "wordpress-cors-xmlrpc-rce-chain"
+    ],
+    "chains": [
+      "cross-attack-chains",
+      "wordpress-full-compromise"
+    ],
+    "chromium": [
+      "stealth-browser-launch"
+    ],
+    "cicd": [
+      "hunt-cicd"
+    ],
+    "cidr": [
+      "asn-infrastructure-mapping"
+    ],
+    "cloud": [
+      "cloud-iam-deep",
+      "hunt-cloud-misconfig",
+      "s3-minio-content-type-xss",
+      "subdomain-takeover-hunt"
+    ],
+    "cloudflare": [
+      "origin-ip-discovery"
+    ],
+    "cms": [
+      "cms-detection"
+    ],
+    "cname": [
+      "subdomain-takeover-hunt"
+    ],
+    "comparison": [
+      "cross-wave-delta-analysis"
+    ],
+    "config": [
+      "hunt-information-disclosure"
+    ],
+    "container-escape": [
+      "docker-privesc"
+    ],
+    "content-publishing": [
+      "wp-plugin-rest-auth-bypass"
+    ],
+    "content-type": [
+      "s3-minio-content-type-xss"
+    ],
+    "cors": [
+      "cors-chain-automation",
+      "cors-credential-wordpress",
+      "hunt-cors",
+      "recon-sector",
+      "wordpress-cors-xmlrpc-rce-chain"
+    ],
+    "credential": [
+      "github-secret-hunting",
+      "hardcoded-credential-hunt"
+    ],
+    "credential-theft": [
+      "cors-credential-wordpress"
+    ],
+    "credentials": [
+      "error-log-mining"
+    ],
+    "crt.sh": [
+      "subdomain-enumeration"
+    ],
+    "crud": [
+      "api-noauth-hunt"
+    ],
+    "csrf": [
+      "hunt-csrf"
+    ],
+    "cve": [
+      "deep-invade",
+      "wordpress-plugin-hunt",
+      "wp-plugin-cve-hunt",
+      "zimbra-attack"
+    ],
+    "data-breach": [
+      "api-noauth-hunt"
+    ],
+    "data-mining": [
+      "error-log-mining"
+    ],
+    "debugger": [
+      "flask-werkzeug-attack"
+    ],
+    "decision-guide": [
+      "evasion-stack-guide"
+    ],
+    "decorator": [
+      "hunt-nestjs"
+    ],
+    "deep": [
+      "deep-invade"
+    ],
+    "delta": [
+      "cross-wave-delta-analysis"
+    ],
+    "deserialization": [
+      "hunt-deserialization"
+    ],
+    "detection": [
+      "mid-engagement-ir-detection"
+    ],
+    "dispatch": [
+      "hunt-dispatch"
+    ],
+    "django": [
+      "hunt-frameworks"
+    ],
+    "dkim": [
+      "email-security"
+    ],
+    "dmarc": [
+      "email-security"
+    ],
+    "dns": [
+      "origin-ip-discovery",
+      "subdomain-enumeration",
+      "subdomain-takeover-hunt"
+    ],
+    "docker": [
+      "docker-privesc"
+    ],
+    "dom": [
+      "hunt-dom"
+    ],
+    "dork": [
+      "github-secret-hunting"
+    ],
+    "drupal": [
+      "cms-detection"
+    ],
+    "email": [
+      "email-security",
+      "zimbra-attack"
+    ],
+    "enterprise": [
+      "enterprise-vpn-attack"
+    ],
+    "entra": [
+      "m365-entra-attack"
+    ],
+    "enumeration": [
+      "hunt-information-disclosure",
+      "hunt-schema-enumeration"
+    ],
+    "error-leakage": [
+      "hunt-information-disclosure"
+    ],
+    "error-log": [
+      "error-log-mining"
+    ],
+    "evasion": [
+      "evasion-stack-guide"
+    ],
+    "evidence": [
+      "evidence-hygiene"
+    ],
+    "exchange": [
+      "exchange-owa-attack"
+    ],
+    "expansion": [
+      "recon-sector-expansion"
+    ],
+    "exploitation": [
+      "wordpress-plugin-hunt"
+    ],
+    "export": [
+      "unauth-api-flow-hijack"
+    ],
+    "exposure": [
+      "hunt-metrics-exposure",
+      "source-leak-hunt"
+    ],
+    "fastapi": [
+      "hunt-frameworks"
+    ],
+    "favicon": [
+      "origin-ip-discovery"
+    ],
+    "field-injection": [
+      "hunt-mass-assignment"
+    ],
+    "file-upload": [
+      "hunt-file-upload"
+    ],
+    "fingerprint": [
+      "evasion-stack-guide",
+      "http2-header-impersonation",
+      "stealth-browser-launch",
+      "tls-fingerprint-impersonation"
+    ],
+    "fingerprinting": [
+      "cms-detection",
+      "visual-recon"
+    ],
+    "firebase": [
+      "hunt-firebase"
+    ],
+    "flask": [
+      "flask-werkzeug-attack"
+    ],
+    "flow": [
+      "unauth-api-flow-hijack"
+    ],
+    "forge": [
+      "jwt-attack"
+    ],
+    "form": [
+      "unauth-api-flow-hijack"
+    ],
+    "frameworks": [
+      "hunt-frameworks"
+    ],
+    "ftp": [
+      "port-service-discovery"
+    ],
+    "fuzzing": [
+      "vhost-enumeration"
+    ],
+    "gcp": [
+      "cloud-iam-deep"
+    ],
+    "github": [
+      "github-secret-hunting"
+    ],
+    "gitlab": [
+      "gitlab-public-recon"
+    ],
+    "google-dorks": [
+      "google-dorks-catalog"
+    ],
+    "gpt-4o": [
+      "llm-prompt-injection"
+    ],
+    "graphql": [
+      "hunt-graphql",
+      "hunt-nestjs"
+    ],
+    "grpc": [
+      "hunt-grpc"
+    ],
+    "guard": [
+      "hunt-nestjs"
+    ],
+    "hardcoded": [
+      "hardcoded-credential-hunt"
+    ],
+    "headers": [
+      "http2-header-impersonation"
+    ],
+    "heroku": [
+      "subdomain-takeover-hunt"
+    ],
+    "hikvision": [
+      "iot-camera-recon",
+      "scada-hikvision-isapi"
+    ],
+    "host-header": [
+      "hunt-host-header",
+      "vhost-enumeration"
+    ],
+    "html": [
+      "hardcoded-credential-hunt"
+    ],
+    "http": [
+      "401-403-bypass-techniques",
+      "tls-fingerprint-impersonation"
+    ],
+    "http-smuggling": [
+      "hunt-http-smuggling"
+    ],
+    "http2": [
+      "http2-header-impersonation"
+    ],
+    "humanize": [
+      "humanize-automation"
+    ],
+    "hunt": [
+      "hunt-api-misconfig",
+      "hunt-aspnet",
+      "hunt-ato",
+      "hunt-auth-bypass",
+      "hunt-brute-force",
+      "hunt-business-logic",
+      "hunt-cache-poison",
+      "hunt-cicd",
+      "hunt-cloud-misconfig",
+      "hunt-cors",
+      "hunt-csrf",
+      "hunt-deserialization",
+      "hunt-dispatch",
+      "hunt-dom",
+      "hunt-file-upload",
+      "hunt-firebase",
+      "hunt-graphql",
+      "hunt-grpc",
+      "hunt-host-header",
+      "hunt-http-smuggling",
+      "hunt-idor",
+      "hunt-k8s",
+      "hunt-ldap",
+      "hunt-lfi",
+      "hunt-llm-ai",
+      "hunt-metrics-exposure",
+      "hunt-mfa-bypass",
+      "hunt-misc",
+      "hunt-nextjs",
+      "hunt-nosqli",
+      "hunt-ntlm-info",
+      "hunt-oauth",
+      "hunt-open-redirect",
+      "hunt-race-condition",
+      "hunt-rce",
+      "hunt-saml",
+      "hunt-schema-enumeration",
+      "hunt-session",
+      "hunt-sharepoint",
+      "hunt-source-leak",
+      "hunt-springboot",
+      "hunt-sqli",
+      "hunt-ssrf",
+      "hunt-ssti",
+      "hunt-subdomain",
+      "hunt-supabase",
+      "hunt-tls-network",
+      "hunt-websocket",
+      "hunt-write-gap",
+      "hunt-xss",
+      "hunt-xxe",
+      "wp-plugin-cve-hunt"
+    ],
+    "hygiene": [
+      "evidence-hygiene"
+    ],
+    "iam": [
+      "cloud-iam-deep"
+    ],
+    "idor": [
+      "hunt-idor"
+    ],
+    "impersonation": [
+      "http2-header-impersonation",
+      "tls-fingerprint-impersonation"
+    ],
+    "indirect-injection": [
+      "llm-prompt-injection"
+    ],
+    "industrial": [
+      "scada-hikvision-isapi"
+    ],
+    "information-disclosure": [
+      "hunt-information-disclosure",
+      "hunt-ntlm-info"
+    ],
+    "infra": [
+      "docker-privesc"
+    ],
+    "infrastructure": [
+      "asn-infrastructure-mapping",
+      "ops-proxyns",
+      "port-mass-scan"
+    ],
+    "injection": [
+      "hunt-nosqli",
+      "hunt-sqli"
+    ],
+    "internal-api": [
+      "port-service-discovery"
+    ],
+    "internal-ips": [
+      "gitlab-public-recon"
+    ],
+    "interview": [
+      "unauth-api-flow-hijack"
+    ],
+    "iot": [
+      "iot-camera-recon",
+      "scada-hikvision-isapi"
+    ],
+    "ip-range": [
+      "asn-infrastructure-mapping"
+    ],
+    "ir": [
+      "mid-engagement-ir-detection"
+    ],
+    "isapi": [
+      "scada-hikvision-isapi"
+    ],
+    "ja3": [
+      "tls-fingerprint-impersonation"
+    ],
+    "ja4": [
+      "http2-header-impersonation",
+      "tls-fingerprint-impersonation"
+    ],
+    "jailbreak": [
+      "llm-prompt-injection"
+    ],
+    "java": [
+      "hunt-springboot"
+    ],
+    "javascript": [
+      "hardcoded-credential-hunt",
+      "hunt-nextjs",
+      "hunt-prototype-pollution"
+    ],
+    "joomla": [
+      "cms-detection"
+    ],
+    "jquery": [
+      "hunt-prototype-pollution"
+    ],
+    "js": [
+      "js-secrets-extraction"
+    ],
+    "jwt": [
+      "js-secrets-extraction",
+      "jwt-attack"
+    ],
+    "k8s": [
+      "hunt-k8s"
+    ],
+    "keyboard": [
+      "humanize-automation"
+    ],
+    "kubernetes": [
+      "hunt-k8s"
+    ],
+    "laravel": [
+      "hunt-frameworks"
+    ],
+    "ldap": [
+      "hunt-ldap"
+    ],
+    "leak": [
+      "hunt-source-leak"
+    ],
+    "lfi": [
+      "hunt-lfi"
+    ],
+    "llm": [
+      "hunt-llm-ai",
+      "llm-prompt-injection"
+    ],
+    "m365": [
+      "m365-entra-attack"
+    ],
+    "magento": [
+      "cms-detection"
+    ],
+    "mass-assignment": [
+      "hunt-mass-assignment"
+    ],
+    "mass-recon": [
+      "recon-sector"
+    ],
+    "mass-scan": [
+      "wp-mass-recon"
+    ],
+    "masscan": [
+      "port-mass-scan"
+    ],
+    "mcp": [
+      "hunt-mcp-security"
+    ],
+    "meme-coin": [
+      "meme-coin-audit"
+    ],
+    "meta": [
+      "attack-patterns-reference",
+      "cross-wave-delta-analysis",
+      "evasion-stack-guide",
+      "google-dorks-catalog",
+      "pentest-playbook",
+      "recon-playbook",
+      "sector-recon-methodology"
+    ],
+    "methodology": [
+      "bb-methodology",
+      "osint-methodology",
+      "password-spray-methodology",
+      "pentest-playbook",
+      "redteam-mindset",
+      "sector-recon-methodology",
+      "wstg-web-pentest"
+    ],
+    "metrics": [
+      "hunt-metrics-exposure"
+    ],
+    "mfa": [
+      "hunt-mfa-bypass"
+    ],
+    "microservice": [
+      "hunt-nestjs"
+    ],
+    "microsoft": [
+      "hunt-sharepoint"
+    ],
+    "mid-engagement": [
+      "mid-engagement-ir-detection"
+    ],
+    "mindset": [
+      "redteam-mindset"
+    ],
+    "minio": [
+      "s3-minio-content-type-xss"
+    ],
+    "misc": [
+      "hunt-misc"
+    ],
+    "misconfiguration": [
+      "hunt-api-misconfig",
+      "hunt-cloud-misconfig"
+    ],
+    "mobile": [
+      "apk-redteam-pipeline"
+    ],
+    "mouse": [
+      "humanize-automation"
+    ],
+    "mysql": [
+      "port-service-discovery"
+    ],
+    "nestjs": [
+      "hunt-nestjs"
+    ],
+    "network": [
+      "hunt-tls-network"
+    ],
+    "nextjs": [
+      "hunt-nextjs"
+    ],
+    "nmap": [
+      "port-mass-scan"
+    ],
+    "no-auth": [
+      "api-noauth-hunt"
+    ],
+    "node.js": [
+      "hunt-prototype-pollution"
+    ],
+    "nodejs": [
+      "hunt-frameworks"
+    ],
+    "nosql": [
+      "hunt-nosqli"
+    ],
+    "ntlm": [
+      "exchange-owa-attack",
+      "hunt-ntlm-info"
+    ],
+    "oauth": [
+      "hunt-oauth"
+    ],
+    "offensive": [
+      "offensive-osint"
+    ],
+    "okta": [
+      "okta-attack"
+    ],
+    "onvif": [
+      "iot-camera-recon",
+      "scada-hikvision-isapi"
+    ],
+    "open-redirect": [
+      "hunt-open-redirect"
+    ],
+    "openai": [
+      "llm-prompt-injection"
+    ],
+    "ops": [
+      "ops-proxyns"
+    ],
+    "origin-ip": [
+      "origin-ip-discovery"
+    ],
+    "orm": [
+      "hunt-mass-assignment"
+    ],
+    "osint": [
+      "github-secret-hunting",
+      "google-dorks-catalog",
+      "offensive-osint",
+      "osint-methodology"
+    ],
+    "owa": [
+      "exchange-owa-attack"
+    ],
+    "owasp": [
+      "hunt-mcp-security",
+      "wstg-web-pentest"
+    ],
+    "passive-recon": [
+      "google-dorks-catalog"
+    ],
+    "password": [
+      "hardcoded-credential-hunt",
+      "password-spray-methodology"
+    ],
+    "password-spray": [
+      "exchange-owa-attack"
+    ],
+    "path-normalization": [
+      "401-403-bypass-techniques"
+    ],
+    "patterns": [
+      "attack-patterns-reference"
+    ],
+    "pentest": [
+      "deep-invade",
+      "pentest-playbook",
+      "wstg-web-pentest"
+    ],
+    "phpinfo": [
+      "phpinfo-to-rce"
+    ],
+    "pipeline": [
+      "hunt-cicd"
+    ],
+    "playbook": [
+      "pentest-playbook"
+    ],
+    "playwright": [
+      "stealth-browser-launch"
+    ],
+    "plugin": [
+      "wp-plugin-cve-hunt"
+    ],
+    "plugin-exploit": [
+      "wp-plugin-rest-auth-bypass"
+    ],
+    "plugins": [
+      "hunt-wordpress",
+      "wordpress-plugin-hunt"
+    ],
+    "poisoning": [
+      "hunt-cache-poison"
+    ],
+    "port-scan": [
+      "port-mass-scan",
+      "port-service-discovery"
+    ],
+    "privilege-escalation": [
+      "cloud-iam-deep",
+      "docker-privesc"
+    ],
+    "prompt-injection": [
+      "hunt-mcp-security",
+      "llm-prompt-injection"
+    ],
+    "prototype-pollution": [
+      "hunt-prototype-pollution"
+    ],
+    "proxyns": [
+      "ops-proxyns"
+    ],
+    "ptr": [
+      "vhost-enumeration"
+    ],
+    "python": [
+      "flask-werkzeug-attack"
+    ],
+    "race-condition": [
+      "hunt-race-condition"
+    ],
+    "rag": [
+      "llm-prompt-injection"
+    ],
+    "rce": [
+      "hunt-prototype-pollution",
+      "hunt-rce",
+      "phpinfo-to-rce"
+    ],
+    "recon": [
+      "401-403-bypass-techniques",
+      "api-noauth-hunt",
+      "asn-infrastructure-mapping",
+      "bb-methodology",
+      "bug-bounty",
+      "cms-detection",
+      "cors-credential-wordpress",
+      "deep-invade",
+      "email-security",
+      "error-log-mining",
+      "exchange-owa-attack",
+      "flask-werkzeug-attack",
+      "github-secret-hunting",
+      "gitlab-public-recon",
+      "hardcoded-credential-hunt",
+      "http2-header-impersonation",
+      "humanize-automation",
+      "iot-camera-recon",
+      "js-secrets-extraction",
+      "jwt-attack",
+      "offensive-osint",
+      "origin-ip-discovery",
+      "osint-methodology",
+      "phpinfo-to-rce",
+      "port-mass-scan",
+      "port-service-discovery",
+      "recon-playbook",
+      "recon-sector",
+      "recon-sector-expansion",
+      "s3-minio-content-type-xss",
+      "scada-hikvision-isapi",
+      "source-leak-hunt",
+      "staging-subdomain-hunt",
+      "stealth-browser-launch",
+      "subdomain-enumeration",
+      "subdomain-takeover-hunt",
+      "supply-chain-attack-recon",
+      "tls-fingerprint-impersonation",
+      "unauth-api-flow-hijack",
+      "vhost-enumeration",
+      "visual-recon",
+      "web2-recon",
+      "wordpress-plugin-hunt",
+      "wp-mass-recon",
+      "wp-plugin-rest-auth-bypass",
+      "zimbra-attack"
+    ],
+    "redteam": [
+      "apk-redteam-pipeline",
+      "bb-methodology",
+      "bug-bounty",
+      "bugcrowd-reporting",
+      "cloud-iam-deep",
+      "cors-chain-automation",
+      "enterprise-vpn-attack",
+      "evidence-hygiene",
+      "hunt-api-misconfig",
+      "hunt-aspnet",
+      "hunt-ato",
+      "hunt-auth-bypass",
+      "hunt-brute-force",
+      "hunt-business-logic",
+      "hunt-cache-poison",
+      "hunt-cicd",
+      "hunt-cloud-misconfig",
+      "hunt-cors",
+      "hunt-csrf",
+      "hunt-deserialization",
+      "hunt-dispatch",
+      "hunt-dom",
+      "hunt-file-upload",
+      "hunt-firebase",
+      "hunt-frameworks",
+      "hunt-graphql",
+      "hunt-grpc",
+      "hunt-host-header",
+      "hunt-http-smuggling",
+      "hunt-idor",
+      "hunt-information-disclosure",
+      "hunt-k8s",
+      "hunt-ldap",
+      "hunt-lfi",
+      "hunt-llm-ai",
+      "hunt-mass-assignment",
+      "hunt-mcp-security",
+      "hunt-metrics-exposure",
+      "hunt-mfa-bypass",
+      "hunt-misc",
+      "hunt-nestjs",
+      "hunt-nextjs",
+      "hunt-nosqli",
+      "hunt-ntlm-info",
+      "hunt-oauth",
+      "hunt-open-redirect",
+      "hunt-prototype-pollution",
+      "hunt-race-condition",
+      "hunt-rce",
+      "hunt-saml",
+      "hunt-schema-enumeration",
+      "hunt-session",
+      "hunt-sharepoint",
+      "hunt-source-leak",
+      "hunt-springboot",
+      "hunt-sqli",
+      "hunt-ssrf",
+      "hunt-ssti",
+      "hunt-subdomain",
+      "hunt-supabase",
+      "hunt-tls-network",
+      "hunt-websocket",
+      "hunt-wordpress",
+      "hunt-write-gap",
+      "hunt-xss",
+      "hunt-xxe",
+      "llm-prompt-injection",
+      "m365-entra-attack",
+      "meme-coin-audit",
+      "mid-engagement-ir-detection",
+      "offensive-osint",
+      "okta-attack",
+      "ops-proxyns",
+      "osint-methodology",
+      "password-spray-methodology",
+      "recon-sector-expansion",
+      "redteam-mindset",
+      "redteam-report-template",
+      "report-writing",
+      "security-arsenal",
+      "supply-chain-attack-recon",
+      "triage-validation",
+      "vmware-vcenter-attack",
+      "web2-recon",
+      "web3-audit",
+      "wp-plugin-cve-hunt"
+    ],
+    "reference": [
+      "attack-patterns-reference"
+    ],
+    "report": [
+      "redteam-report-template",
+      "report-writing"
+    ],
+    "reporting": [
+      "bugcrowd-reporting",
+      "cross-attack-chains",
+      "evidence-hygiene"
+    ],
+    "rest-api": [
+      "wp-plugin-rest-auth-bypass"
+    ],
+    "reverse-dns": [
+      "asn-infrastructure-mapping"
+    ],
+    "reverse-engineering": [
+      "apk-redteam-pipeline"
+    ],
+    "rtsp": [
+      "iot-camera-recon",
+      "scada-hikvision-isapi"
+    ],
+    "rustscan": [
+      "port-mass-scan"
+    ],
+    "s3": [
+      "s3-minio-content-type-xss",
+      "subdomain-takeover-hunt"
+    ],
+    "saml": [
+      "hunt-saml"
+    ],
+    "scada": [
+      "scada-hikvision-isapi"
+    ],
+    "schema": [
+      "hunt-schema-enumeration"
+    ],
+    "screenshot": [
+      "visual-recon"
+    ],
+    "secret": [
+      "flask-werkzeug-attack",
+      "github-secret-hunting"
+    ],
+    "secrets": [
+      "gitlab-public-recon",
+      "google-dorks-catalog",
+      "js-secrets-extraction",
+      "source-leak-hunt"
+    ],
+    "sector": [
+      "recon-sector",
+      "recon-sector-expansion",
+      "sector-recon-methodology"
+    ],
+    "security": [
+      "security-arsenal"
+    ],
+    "session": [
+      "hunt-session"
+    ],
+    "sharepoint": [
+      "hunt-sharepoint"
+    ],
+    "smtp": [
+      "email-security"
+    ],
+    "soap": [
+      "zimbra-attack"
+    ],
+    "source": [
+      "hunt-source-leak"
+    ],
+    "source-code": [
+      "gitlab-public-recon"
+    ],
+    "source-leak": [
+      "source-leak-hunt"
+    ],
+    "source-map": [
+      "js-secrets-extraction"
+    ],
+    "source-maps": [
+      "hunt-information-disclosure"
+    ],
+    "spf": [
+      "email-security"
+    ],
+    "spoofing": [
+      "email-security"
+    ],
+    "spray": [
+      "password-spray-methodology"
+    ],
+    "springboot": [
+      "hunt-springboot"
+    ],
+    "sql": [
+      "hunt-sqli"
+    ],
+    "ssh": [
+      "port-service-discovery"
+    ],
+    "ssl": [
+      "vhost-enumeration"
+    ],
+    "sso": [
+      "hunt-saml",
+      "okta-attack"
+    ],
+    "ssrf": [
+      "deep-invade",
+      "hunt-ssrf"
+    ],
+    "ssti": [
+      "hunt-ssti"
+    ],
+    "staging": [
+      "staging-subdomain-hunt"
+    ],
+    "stealth": [
+      "stealth-browser-launch"
+    ],
+    "storage": [
+      "s3-minio-content-type-xss"
+    ],
+    "subdomain": [
+      "hunt-subdomain",
+      "staging-subdomain-hunt",
+      "subdomain-enumeration",
+      "subdomain-takeover-hunt"
+    ],
+    "supabase": [
+      "hunt-supabase"
+    ],
+    "supply-chain": [
+      "supply-chain-attack-recon"
+    ],
+    "takeover": [
+      "staging-subdomain-hunt",
+      "subdomain-takeover-hunt"
+    ],
+    "target-selection": [
+      "sector-recon-methodology"
+    ],
+    "technology": [
+      "cms-detection",
+      "visual-recon"
+    ],
+    "template": [
+      "redteam-report-template"
+    ],
+    "tld": [
+      "asn-infrastructure-mapping"
+    ],
+    "tls": [
+      "hunt-tls-network",
+      "tls-fingerprint-impersonation"
+    ],
+    "token": [
+      "github-secret-hunting",
+      "jwt-attack"
+    ],
+    "tool-security": [
+      "hunt-mcp-security"
+    ],
+    "tools": [
+      "security-arsenal"
+    ],
+    "triage": [
+      "triage-validation",
+      "visual-recon"
+    ],
+    "trufflehog": [
+      "github-secret-hunting"
+    ],
+    "typescript": [
+      "hunt-nestjs"
+    ],
+    "unauthenticated": [
+      "unauth-api-flow-hijack"
+    ],
+    "unauthorized-access": [
+      "wp-plugin-rest-auth-bypass"
+    ],
+    "upload": [
+      "unauth-api-flow-hijack"
+    ],
+    "us-companies": [
+      "sector-recon-methodology",
+      "wp-mass-recon"
+    ],
+    "user-enum": [
+      "zimbra-attack"
+    ],
+    "validation": [
+      "attack-patterns-reference",
+      "cross-attack-chains",
+      "triage-validation",
+      "wordpress-cors-xmlrpc-rce-chain",
+      "wordpress-full-compromise"
+    ],
+    "vcenter": [
+      "vmware-vcenter-attack"
+    ],
+    "vhost": [
+      "vhost-enumeration"
+    ],
+    "virtual-host": [
+      "vhost-enumeration"
+    ],
+    "visual": [
+      "visual-recon"
+    ],
+    "vmware": [
+      "vmware-vcenter-attack"
+    ],
+    "vpn": [
+      "enterprise-vpn-attack"
+    ],
+    "waf": [
+      "origin-ip-discovery"
+    ],
+    "wave": [
+      "cross-wave-delta-analysis"
+    ],
+    "web": [
+      "hunt-aspnet",
+      "hunt-wordpress",
+      "recon-playbook",
+      "wstg-web-pentest"
+    ],
+    "web2": [
+      "web2-recon"
+    ],
+    "web3": [
+      "meme-coin-audit",
+      "web3-audit"
+    ],
+    "websocket": [
+      "hunt-websocket"
+    ],
+    "werkzeug": [
+      "flask-werkzeug-attack"
+    ],
+    "wordpress": [
+      "cms-detection",
+      "cors-credential-wordpress",
+      "deep-invade",
+      "error-log-mining",
+      "hunt-wordpress",
+      "phpinfo-to-rce",
+      "recon-sector",
+      "source-leak-hunt",
+      "staging-subdomain-hunt",
+      "wordpress-cors-xmlrpc-rce-chain",
+      "wordpress-full-compromise",
+      "wordpress-plugin-hunt",
+      "wp-mass-recon",
+      "wp-plugin-cve-hunt",
+      "wp-plugin-rest-auth-bypass"
+    ],
+    "workflow": [
+      "pentest-playbook",
+      "recon-playbook"
+    ],
+    "write-gap": [
+      "hunt-write-gap"
+    ],
+    "writing": [
+      "report-writing"
+    ],
+    "wstg": [
+      "wstg-web-pentest"
+    ],
+    "xmlrpc": [
+      "recon-sector",
+      "wordpress-cors-xmlrpc-rce-chain"
+    ],
+    "xss": [
+      "hunt-dom",
+      "hunt-prototype-pollution",
+      "hunt-xss",
+      "s3-minio-content-type-xss"
+    ],
+    "xxe": [
+      "hunt-xxe"
+    ],
+    "zimbra": [
+      "zimbra-attack"
+    ]
+  },
+  "rules": [
+    {
+      "name": "cross-attack-chains",
+      "path": "chains/cross-attack-chains/SKILL.md",
+      "category": "chains",
+      "tags": [
+        "chains",
+        "attack-path",
+        "validation",
+        "reporting"
+      ],
+      "triggers": [
+        "两个或更多已验证的发现影响同一个信任边界。",
+        "某个发现暴露了另一个发现所需的身份、令牌、路由、主机或能力。",
+        "报告需要区分独立影响与复合影响。",
+        "攻击链的下一步无法安全测试，必须标记为推断。"
+      ]
+    },
+    {
+      "name": "wordpress-full-compromise",
+      "path": "chains/wordpress-full-compromise/SKILL.md",
+      "category": "chains",
+      "tags": [
+        "chains",
+        "wordpress",
+        "validation",
+        "attack-path"
+      ],
+      "triggers": [
+        "某个插件漏洞已有确切的版本与路由证据。",
+        "某个已批准的身份可能拥有意外的 WordPress 能力。",
+        "某次上传或配置写入可能到达可执行的解析处理。",
+        "CORS、XML-RPC、预发环境或源码暴露可能提供缺失的前置条件。"
+      ]
+    },
+    {
+      "name": "docker-privesc",
+      "path": "infra/docker-privesc/SKILL.md",
+      "category": "infra",
+      "tags": [
+        "infra",
+        "docker",
+        "privilege-escalation",
+        "container-escape"
+      ],
+      "triggers": [
+        "你已获得某个 Docker 容器的 shell 访问权限（通过 webshell、SSH 或 API 利用）。",
+        "id 显示你属于 docker 组，或你可以访问 /var/run/docker.sock。",
+        "docker ps 或 docker info 可在容器内正常工作。",
+        "在 api-noauth-hunt 或 wordpress-full-compromise 于容器中实现 RCE 之后。",
+        "Docker socket 挂载在 /var/run/docker.sock（检查：ls -la /var/run/docker.sock）。"
+      ]
+    },
+    {
+      "name": "attack-patterns-reference",
+      "path": "meta/attack-patterns-reference/SKILL.md",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "reference",
+        "patterns",
+        "validation"
+      ],
+      "triggers": [
+        "在某项侦察结果进入专项测试之前，需要对其进行归类。",
+        "多个已验证的行为可能构成一条候选攻击路径。",
+        "WordPress、CORS、XML-RPC、源码泄漏或暴露服务信号需要一个负责的验证流程。",
+        "不要将该目录用作扫描器漏洞列表，也不要用它替代所属技能的验证章节。"
+      ]
+    },
+    {
+      "name": "cross-wave-delta-analysis",
+      "path": "meta/cross-wave-delta-analysis/SKILL.md",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "wave",
+        "delta",
+        "comparison",
+        "analysis"
+      ],
+      "triggers": [
+        "对同一组目标重复执行侦察（第 N 轮之后的第 N+1 轮）。",
+        "你想知道某个漏洞自上一轮以来是否已被修补。",
+        "你想知道是否出现了新的攻击面（新端口、新子域、新端点）。",
+        "完成一轮深度侦察之后——在进入下一轮之前产出差异报告。",
+        "在提交报告之前——确认发现仍然有效（未发生回归）。"
+      ]
+    },
+    {
+      "name": "evasion-stack-guide",
+      "path": "meta/evasion-stack-guide/SKILL.md",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "evasion",
+        "anti-bot",
+        "fingerprint",
+        "decision-guide"
+      ],
+      "triggers": [
+        "尽管 URL 与方法都正确，请求仍被阻断或被质询。",
+        "WAF/CDN 返回质询页面、无响应体的 403，或机器人评分墙。",
+        "你不确定阻断是基于 IP、基于 TLS、基于 HTTP/2 还是基于行为的。"
+      ]
+    },
+    {
+      "name": "google-dorks-catalog",
+      "path": "meta/google-dorks-catalog/SKILL.md",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "google-dorks",
+        "secrets",
+        "passive-recon",
+        "osint"
+      ],
+      "triggers": [
+        "在对每个目标执行被动侦察（阶段 1）期间",
+        "在 crt.sh 子域枚举之后",
+        "在任何主动扫描之前",
+        "已针对 100 多个真实目标验证"
+      ]
+    },
+    {
+      "name": "pentest-playbook",
+      "path": "meta/pentest-playbook/SKILL.md",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "playbook",
+        "pentest",
+        "methodology",
+        "workflow"
+      ],
+      "triggers": [
+        "面对未知目标启动新的渗透测试项目时。",
+        "你需要适用于任何类型目标的规范工作流时。",
+        "完成攻击面侦察之后 —— 本剧本告诉你下一步该做什么。",
+        "培训场景 —— 理解专业渗透测试的完整生命周期。"
+      ]
+    },
+    {
+      "name": "recon-playbook",
+      "path": "meta/recon-playbook/SKILL.md",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "recon",
+        "web",
+        "api",
+        "workflow"
+      ],
+      "triggers": [
+        "开始外部 Web、API 或漏洞赏金评估时。",
+        "已有侦察输出，但缺乏规范化、来源追踪或优先级排序。",
+        "目标横跨多个应用、子域或身份边界。",
+        "需要将大范围扫描转化为聚焦的人工验证。",
+        "不要使用本剧本为超出约定范围的活动提供理由，也不要对每个资产运行所有可用工具。"
+      ]
+    },
+    {
+      "name": "sector-recon-methodology",
+      "path": "meta/sector-recon-methodology/SKILL.md",
+      "category": "meta",
+      "tags": [
+        "meta",
+        "sector",
+        "methodology",
+        "target-selection",
+        "us-companies"
+      ],
+      "triggers": [
+        "Targeting SECTOR NAME companies for recon.",
+        "[Sector-specific trigger]"
+      ]
+    },
+    {
+      "name": "401-403-bypass-techniques",
+      "path": "recon/401-403-bypass/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "authorization",
+        "http",
+        "access-control",
+        "path-normalization"
+      ],
+      "triggers": [
+        "已知路径返回 401 Unauthorized 或 403 Forbidden。",
+        "应用前方存在反向代理、WAF、API 网关或 CDN。",
+        "前端与后端对路径、方法或请求头的规范化方式不同。",
+        "可见 IIS、Tomcat、Spring、Apache、Nginx 或 WebDAV 的路由行为。",
+        "等价请求返回不同的状态码、请求头或响应体，暗示存在路由差异。"
+      ]
+    },
+    {
+      "name": "api-noauth-hunt",
+      "path": "recon/api-noauth-hunt/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "API",
+        "no-auth",
+        "data-breach",
+        "CRUD"
+      ],
+      "triggers": [
+        "端口扫描在非标准端口（3000、5000、8080-8085、9000）上发现 HTTP 服务。",
+        "目标拥有 API 子域名（api.target.com、backend.target.com）。",
+        "JavaScript 打包文件引用了内部 API 端点。",
+        "port-service-discovery 在意外端口上发现 HTTP 之后。",
+        "hunt-firebase 或 hunt-supabase 识别出后端 API 之后。"
+      ]
+    },
+    {
+      "name": "asn-infrastructure-mapping",
+      "path": "recon/asn-infrastructure-mapping/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "ASN",
+        "CIDR",
+        "IP-range",
+        "TLD",
+        "reverse-DNS",
+        "infrastructure"
+      ],
+      "triggers": [
+        "你已掌握目标域名，希望发现该组织拥有的每一个 IP。",
+        "被动子域名枚举只找到少量主机——其余可能位于兄弟 TLD 或不同 IP 段。",
+        "目标有已知 ASN，可扩展为完整 CIDR 网段。",
+        "非标准端口上的服务对仅关注 Web 的侦察不可见。",
+        "被收购的子公司或国际域名可能位于安全防护更弱的不同 ASN 上。"
+      ]
+    },
+    {
+      "name": "cms-detection",
+      "path": "recon/cms-detection/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "CMS",
+        "fingerprinting",
+        "technology",
+        "WordPress",
+        "Drupal",
+        "Joomla",
+        "Magento"
+      ],
+      "triggers": [
+        "你有一份存活主机列表，需要按技术对其进行归类。",
+        "WordPress 专项测试产生了误报（该站点实际使用的是 Drupal）。",
+        "需要识别正在运行的 CMS 版本，以便匹配已知 CVE。",
+        "某主机对所有路径都返回通用的 200——技术检测能告诉你它实际运行的是什么。",
+        "希望找出运行流行 CMS 平台过时版本的站点。"
+      ]
+    },
+    {
+      "name": "cors-credential-wordpress",
+      "path": "recon/cors-credential-wordpress/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "cors",
+        "wordpress",
+        "credential-theft",
+        "ATO"
+      ],
+      "triggers": [
+        "当 wp-mass-recon 标记目标存在 Access-Control-Allow-Credentials: true 时。",
+        "测试任意 WordPress 站点 REST API 的跨源数据访问时。",
+        "构建攻击链：CORS → 用户枚举 → 定向钓鱼 → ATO。",
+        "验证某个 CORS 发现是否可被利用（而非仅仅存在）。"
+      ]
+    },
+    {
+      "name": "deep-invade",
+      "path": "recon/deep-invade/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "pentest",
+        "deep",
+        "SSRF",
+        "CVE",
+        "wordpress"
+      ],
+      "triggers": [
+        "wp-mass-recon 对某目标给出 >= 6 的评分（CORS 已确认、XMLRPC 开放、发现源码泄漏）。",
+        "你被分配了一个单一高价值目标进行深度评估。",
+        "在表层侦察之后，你需要找到通向 RCE 或数据泄露的利用链。",
+        "多个相互独立的信号足以支持一次更深入、针对具体目标的后续跟进。"
+      ]
+    },
+    {
+      "name": "email-security",
+      "path": "recon/email-security/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "email",
+        "SPF",
+        "DKIM",
+        "DMARC",
+        "spoofing",
+        "SMTP",
+        "recon"
+      ],
+      "triggers": [
+        "被动侦察阶段（阶段 1）",
+        "初始 DNS 枚举之后",
+        "DMARC p=none 意味着 DMARC 强制未开启；实际是否可伪造仍取决于 SPF/DKIM 与接收方的本地策略",
+        "识别钓鱼/商业邮件诈骗风险的关键"
+      ]
+    },
+    {
+      "name": "error-log-mining",
+      "path": "recon/error-log-mining/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "error-log",
+        "credentials",
+        "wordpress",
+        "data-mining"
+      ],
+      "triggers": [
+        "对高价值目标运行 deep-invade 阶段 2 时。",
+        "skill_view(name='source-leak-hunt') 发现了一个返回 HTTP 200 的 error_log 文件。",
+        "目标使用 PHP（WordPress、Laravel、定制 PHP），且 display_errors 可能已开启。",
+        "在尝试利用前，你需要服务端上下文（路径、数据库结构）。"
+      ]
+    },
+    {
+      "name": "exchange-owa-attack",
+      "path": "recon/exchange-owa-attack/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "exchange",
+        "OWA",
+        "NTLM",
+        "ActiveDirectory",
+        "password-spray"
+      ],
+      "triggers": [
+        "目标拥有 owa.、mail.、webmail.、exchange. 或 autodiscover. 子域。",
+        "crt.sh 揭示与 Exchange 相关的 SAN 名称（mail.domain.com、autodiscover.domain.com）。",
+        "443 端口返回 NTLM WWW-Authenticate: Negotiate 或 WWW-Authenticate: NTLM。",
+        "在 subdomain-enumeration 发现与邮件相关的主机之后。",
+        "在 port-service-discovery 发现 443 端口上的 HTTPS 且带有 Exchange 指纹之后。"
+      ]
+    },
+    {
+      "name": "flask-werkzeug-attack",
+      "path": "recon/flask-werkzeug-attack/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "flask",
+        "werkzeug",
+        "debugger",
+        "SECRET",
+        "recon",
+        "python"
+      ],
+      "triggers": [
+        "端口扫描在非标准端口（8080、8081、8084、5000、8000 等）上发现未知 HTTP 服务",
+        "某个 API 端点返回 HTTP 500，并带有 Flask/Werkzeug 错误页面",
+        "URL 资源（CSS、JS、PNG）中出现 ?__debugger__=yes 参数",
+        "错误页面的 HTML 中包含 var CONSOLE_MODE、var EVALEX 或 SECRET="
+      ]
+    },
+    {
+      "name": "github-secret-hunting",
+      "path": "recon/github-secret-hunting/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "github",
+        "secret",
+        "API-key",
+        "token",
+        "dork",
+        "OSINT",
+        "trufflehog",
+        "credential"
+      ],
+      "triggers": [
+        "目标在某个组织账号下拥有公开仓库。",
+        "JS 打包文件分析揭示内部服务名称 —— 在 GitHub 上搜索相关的配置文件。",
+        "需要找到可用于云服务、支付网关或第三方集成的有效 API 密钥。",
+        "目标使用的 CI/CD 系统可能在构建日志或工作流文件中泄露令牌。",
+        "希望对目标组织新出现的密钥泄露进行实时监控。"
+      ]
+    },
+    {
+      "name": "gitlab-public-recon",
+      "path": "recon/gitlab-public-recon/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "gitlab",
+        "source-code",
+        "secrets",
+        "internal-IPs"
+      ],
+      "triggers": [
+        "目标拥有 gitlab. 子域或自建 GitLab 实例。",
+        "crt.sh 在证书中发现了 gitlab.target.com。",
+        "在 subdomain-enumeration 发现 GitLab 主机之后。",
+        "在 js-secrets-extraction 发现 GitLab CI/CD 引用之后。",
+        "目标是政府机构或大型企业（自建 GitLab 的常见用户）。"
+      ]
+    },
+    {
+      "name": "hardcoded-credential-hunt",
+      "path": "recon/hardcoded-credential-hunt/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "password",
+        "credential",
+        "hardcoded",
+        "HTML",
+        "javascript",
+        "API"
+      ],
+      "triggers": [
+        "应用提供的 HTML 表单带有预填充或隐藏的口令字段。",
+        "配置端点（/api/config、/env、/settings）返回包含类凭据字符串的 JSON。",
+        "调试/错误页面在 JavaScript 变量中泄露应用密钥。",
+        "未认证的 API 端点返回控制认证行为的数据（重置、退出登记、管理员操作）。",
+        "JavaScript 打包文件中包含符合口令模式的字符串赋值。"
+      ]
+    },
+    {
+      "name": "http2-header-impersonation",
+      "path": "recon/http2-header-impersonation/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "HTTP2",
+        "headers",
+        "fingerprint",
+        "impersonation",
+        "browser",
+        "JA4"
+      ],
+      "triggers": [
+        "TLS 指纹已正确，但目标仍能检测出非浏览器的 HTTP 行为。",
+        "目标使用 HTTP/2 特有的检测手段（SETTINGS 帧分析、伪首部顺序）。",
+        "需要与浏览器完全一致的 sec-ch-ua、Accept、Accept-Encoding、Priority 和 sec-fetch-* 请求头。",
+        "移动端 API 端点要求 Android OkHttp 请求头指纹。",
+        "与 TLS 仿冒结合，构成完整的网络层浏览器指纹。"
+      ]
+    },
+    {
+      "name": "humanize-automation",
+      "path": "recon/humanize-automation/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "humanize",
+        "behavioral",
+        "anti-bot",
+        "mouse",
+        "keyboard",
+        "automation"
+      ],
+      "triggers": [
+        "目标使用行为型机器人检测（鼠标轨迹分析、输入速度画像）。",
+        "在浏览器指纹正确的情况下，reCAPTCHA v3 评分仍然偏低（<0.3）。",
+        "目标在快速提交表单后超时或弹出质询。",
+        "需要模拟真实用户浏览会话以完成登录或账号注册。",
+        "目标使用基于 requestAnimationFrame 的鼠标移动追踪。"
+      ]
+    },
+    {
+      "name": "iot-camera-recon",
+      "path": "recon/iot-camera-recon/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "camera",
+        "IoT",
+        "RTSP",
+        "ONVIF",
+        "Axis",
+        "Hikvision"
+      ],
+      "triggers": [
+        "port-mass-scan 发现 RTSP（554）或摄像头 HTTP 端口（80、8010、8011）。",
+        "目标是实体安防公司、交通管理或政府监控机构。",
+        "Shodan 搜索显示目标 IP 段内存在摄像头设备。",
+        "在 port-service-discovery 发现 Axis/Hikvision/Dahua 的 ONVIF 服务之后。"
+      ]
+    },
+    {
+      "name": "js-secrets-extraction",
+      "path": "recon/js-secrets-extraction/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "js",
+        "secrets",
+        "API-key",
+        "jwt",
+        "source-map",
+        "recon"
+      ],
+      "triggers": [
+        "始终在初始 Web 枚举之后执行",
+        "当发现现代 SPA（React、Angular、Vue）时",
+        "当目标使用 Firebase、Supabase、Auth0 时",
+        "在许多目标上，产出比目录扫描更高"
+      ]
+    },
+    {
+      "name": "jwt-attack",
+      "path": "recon/jwt-attack/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "JWT",
+        "token",
+        "forge",
+        "brute-force"
+      ],
+      "triggers": [
+        "API 使用 Authorization: Bearer eyJ... 请求头。",
+        "JavaScript 打包文件中包含 eyJ... 形式的令牌。",
+        "在 js-secrets-extraction 发现 JWT 令牌之后。",
+        "在 api-noauth-hunt 需要伪造令牌以绕过认证时。",
+        "Cookie 中包含 jwt=、token= 或 session= 且取值为 base64 编码。"
+      ]
+    },
+    {
+      "name": "origin-ip-discovery",
+      "path": "recon/origin-ip-discovery/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "origin-ip",
+        "CDN",
+        "WAF",
+        "bypass",
+        "Cloudflare",
+        "favicon",
+        "DNS"
+      ],
+      "triggers": [
+        "目标位于 Cloudflare/Akamai 之后，且对所有请求返回 403 或 CAPTCHA 验证。",
+        "需要直接访问源站以绕过 WAF 规则。",
+        "子域名枚举发现了位于非 CDN IP 上的内部/预发布主机。",
+        "目标在所有基础设施上使用同一个 favicon。",
+        "各 IP 的 SSL 证书共享同一组织名称。"
+      ]
+    },
+    {
+      "name": "phpinfo-to-rce",
+      "path": "recon/phpinfo-to-rce/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "phpinfo",
+        "RCE",
+        "wordpress",
+        "chain"
+      ],
+      "triggers": [
+        "source-leak-hunt 标记出暴露了 info.php 或 phpinfo.php 的目标。",
+        "在投入精力研究上传向量之前，需要确认 RCE 是否可行。",
+        "正在构建需要代码执行的攻击链。",
+        "目标存在文件上传路径（开放注册 + XMLRPC、联系表单、个人头像等）。"
+      ]
+    },
+    {
+      "name": "port-mass-scan",
+      "path": "recon/port-mass-scan/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "port-scan",
+        "masscan",
+        "rustscan",
+        "nmap",
+        "infrastructure"
+      ],
+      "triggers": [
+        "已签署覆盖目标 IP 段的 RoE 的授权红队项目。",
+        "在 Nmap 服务枚举之前对单主机进行快速端口发现。",
+        "在 subdomain-enumeration 之后 — 扫描解析出的 IP，寻找非 HTTP 服务。",
+        "在大多数司法管辖区，未经明确书面授权的 ISP 全网或 /8 扫描是非法的。本技能面向合法的授权项目，而非大规模无差别扫描。"
+      ]
+    },
+    {
+      "name": "port-service-discovery",
+      "path": "recon/port-service-discovery/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "port-scan",
+        "mysql",
+        "FTP",
+        "SSH",
+        "internal-api"
+      ],
+      "triggers": [
+        "在高价值目标上执行 deep-invade 的阶段 6。",
+        "当表层侦察未发现可利用的 Web 漏洞后 — 转向基础设施。",
+        "当目标是 SaaS 且在非标准端口上提供后端 API 时。",
+        "发现预发布子域名后 — 检查数据库/管理端口。"
+      ]
+    },
+    {
+      "name": "s3-minio-content-type-xss",
+      "path": "recon/s3-minio-content-type-xss/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "S3",
+        "MinIO",
+        "bucket",
+        "XSS",
+        "Content-Type",
+        "cloud",
+        "storage"
+      ],
+      "triggers": [
+        "目标从公开存储桶提供用户上传的文件（图片、头像、附件）。",
+        "文件在目标自己的域名或子域名下提供（而非随机存储域名）。",
+        "上传校验看起来较为完善（扩展名白名单、magic byte 检查、强制 Content-Type）— 覆盖是在服务时而非上传时绕过以上全部校验。",
+        "存储桶 URL 对 ?response-content-type= 的请求返回改变后的 Content-Type。",
+        "存储桶返回 AWS SignatureDoesNotMatch 错误，泄露真实的存储桶主机与区域。"
+      ]
+    },
+    {
+      "name": "scada-hikvision-isapi",
+      "path": "recon/scada-hikvision-isapi/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "SCADA",
+        "Hikvision",
+        "ISAPI",
+        "IoT",
+        "camera",
+        "RTSP",
+        "ONVIF",
+        "industrial"
+      ],
+      "triggers": [
+        "非标准端口（443、8443、9443）上的 Web 界面加载了大型 JavaScript bundle，其中引用了 /ISAPI/、Bumblebee 或 Streaming/channels。",
+        "端口扫描发现 RTSP（554）、ONVIF（8899）或海康威视专有端口（8000、9010）。",
+        "服务器响应头或 SSL 证书中提及 Hikvision、HikCentral、iVMS 或 Pyramid。",
+        "目标具有工业/能源/基础设施背景，很可能存在 SCADA 系统。",
+        "Web 客户端从相对路径加载 Common/common.js、Common/components.js 或 Common/vendorGraph.js。"
+      ]
+    },
+    {
+      "name": "source-leak-hunt",
+      "path": "recon/source-leak-hunt/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "source-leak",
+        "exposure",
+        "secrets",
+        "wordpress"
+      ],
+      "triggers": [
+        "在 skill_view(name='wp-mass-recon') 确认目标存活之后。",
+        "对一批域名进行广泛扫描时。",
+        "当探测可能通向更深层访问的凭据泄露时。",
+        "作为 skill_view(name='js-secrets-extraction') 的补充，用于发现客户端侧机密。"
+      ]
+    },
+    {
+      "name": "staging-subdomain-hunt",
+      "path": "recon/staging-subdomain-hunt/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "subdomain",
+        "staging",
+        "takeover",
+        "wordpress"
+      ],
+      "triggers": [
+        "在 deep-invade 阶段 5 中处理高价值目标时。",
+        "生产目标防护良好（有 WAF、无泄露）——转向 staging。",
+        "目标攻击面较大（电商、SaaS、加盟模式）。",
+        "主站已加固，需要额外的入口点时。",
+        "在 subdomain-enumeration 产出子域名列表之后。"
+      ]
+    },
+    {
+      "name": "stealth-browser-launch",
+      "path": "recon/stealth-browser-launch/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "stealth",
+        "browser",
+        "anti-bot",
+        "fingerprint",
+        "chromium",
+        "playwright"
+      ],
+      "triggers": [
+        "目标使用 Cloudflare、Akamai、DataDome 或 Kasada 封堵 curl/httpx/nuclei。",
+        "需要完整的浏览器 JavaScript 执行能力，用于提交表单、登录或 XSS 测试。",
+        "即使请求头正确，目标对所有未认证请求仍返回 403。",
+        "需要访问受 reCAPTCHA 保护的端点而不解决验证码。",
+        "在住宅代理之后运行自动化侦察——隐蔽浏览器可防止 IP 与 UA 关联。"
+      ]
+    },
+    {
+      "name": "subdomain-enumeration",
+      "path": "recon/subdomain-enumeration/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "subdomain",
+        "DNS",
+        "crt.sh",
+        "asset-discovery"
+      ],
+      "triggers": [
+        "对任意目标域名启动侦察时。",
+        "生产站点防护良好——寻找更软的入口点。",
+        "执行 skill_view(name='wp-mass-recon') 之后——为每个 WordPress 目标枚举子域。",
+        "为目标组织构建完整的资产清单。"
+      ]
+    },
+    {
+      "name": "subdomain-takeover-hunt",
+      "path": "recon/subdomain-takeover-hunt/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "subdomain",
+        "takeover",
+        "CNAME",
+        "DNS",
+        "cloud",
+        "Heroku",
+        "S3",
+        "Azure"
+      ],
+      "triggers": [
+        "子域名枚举产出大量列表——扫描残留的 DNS 记录。",
+        "目标使用具有共享命名空间标识符的云服务（Heroku、S3、Azure、Zendesk、Shopify）。",
+        "子域名返回 NXDOMAIN、404 或 \"no such app\" 错误页。",
+        "CNAME 目标是名称可由用户注册的服务。"
+      ]
+    },
+    {
+      "name": "tls-fingerprint-impersonation",
+      "path": "recon/tls-fingerprint-impersonation/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "TLS",
+        "JA3",
+        "JA4",
+        "fingerprint",
+        "impersonation",
+        "HTTP",
+        "browser"
+      ],
+      "triggers": [
+        "即使 User-Agent 请求头正确，目标对 curl/httpx 仍返回 403 或封锁。",
+        "Cloudflare 或 Akamai 正在对 TLS ClientHello 做指纹识别（JA3/JA4 与浏览器不匹配）。",
+        "API 探测需要仿冒移动应用（Android 的 OkHttp 指纹）。",
+        "需要高吞吐的 HTTP 请求，且无需运行完整浏览器即可通过 TLS 指纹检查。",
+        "目标根据 TLS 指纹表现出不同行为（移动端与桌面端端点）。"
+      ]
+    },
+    {
+      "name": "unauth-api-flow-hijack",
+      "path": "recon/unauth-api-flow-hijack/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "API",
+        "unauthenticated",
+        "flow",
+        "interview",
+        "form",
+        "upload",
+        "export"
+      ],
+      "triggers": [
+        "API 提供多步工作流（start → step1 → step2 → ... → complete）。",
+        "任何步骤都不需要认证令牌、会话 cookie 或 API 密钥。",
+        "API 返回可在各步骤间复用的会话标识符（UUID、令牌）。",
+        "工作流包含文件上传、数据提交或导出功能。",
+        "错误消息暴露了预期的请求格式（可验证端点是否存活）。"
+      ]
+    },
+    {
+      "name": "vhost-enumeration",
+      "path": "recon/vhost-enumeration/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "vhost",
+        "virtual-host",
+        "Host-header",
+        "fuzzing",
+        "SSL",
+        "PTR"
+      ],
+      "triggers": [
+        "你从 skill_view(name='origin-ip-discovery') 或 skill_view(name='port-service-discovery') 获得了目标 IP 列表。",
+        "服务器对未知的 Host 头返回默认/空白页面。",
+        "子域名枚举可能遗漏了仅内部可用的主机名。",
+        "IP 列表上的 SSL 证书在 SAN 字段中列出了多个域名。",
+        "你需要梳理反向代理后面的内部服务。"
+      ]
+    },
+    {
+      "name": "visual-recon",
+      "path": "recon/visual-recon/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "screenshot",
+        "visual",
+        "triage",
+        "fingerprinting",
+        "technology"
+      ],
+      "triggers": [
+        "你有 100 个以上存活子域名，需要快速确定目标优先级。",
+        "人工浏览对于批量侦察来说太慢。",
+        "需要识别默认安装页面（WordPress 安装向导、phpMyAdmin 登录页、Jenkins 仪表盘）。",
+        "希望跨子域名比对视觉指纹（共享基础设施）。",
+        "目标会根据 User-Agent 或地理位置返回不同内容。"
+      ]
+    },
+    {
+      "name": "wordpress-plugin-hunt",
+      "path": "recon/wordpress-plugin-hunt/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "wordpress",
+        "plugins",
+        "CVE",
+        "exploitation"
+      ],
+      "triggers": [
+        "目标已确认是 WordPress（通过 wp-mass-recon）。",
+        "正在执行 deep-invade 的阶段 3。",
+        "你需要除 CORS/XMLRPC 之外的利用向量。",
+        "目标是一个插件密集的 WordPress 站点（电商、页面构建器、表单）。"
+      ]
+    },
+    {
+      "name": "wp-mass-recon",
+      "path": "recon/wp-mass-recon/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "wordpress",
+        "mass-scan",
+        "us-companies"
+      ],
+      "triggers": [
+        "你拥有一份来自漏洞赏金项目、渗透测试委托或已签署 RoE 的红队授权的目标清单。",
+        "在授权范围内进行行业级侦察。",
+        "在 subfinder/crt.sh 产出目标清单后，你需要进行研判。",
+        "你希望用可并行化的流水线实现每分钟最大发现量。"
+      ]
+    },
+    {
+      "name": "wp-plugin-rest-auth-bypass",
+      "path": "recon/wp-plugin-rest-auth-bypass/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "wordpress",
+        "rest-api",
+        "auth-bypass",
+        "plugin-exploit",
+        "unauthorized-access",
+        "content-publishing"
+      ],
+      "triggers": [
+        "目标是 WordPress 站点，且可通过 /wp-json/wp/v2/users 暴露用户。",
+        "你已从 /wp-json/ 发现感兴趣的插件命名空间，但需要梳理它们的路由。",
+        "标准 WordPress 端点返回 401——但第三方插件端点可能不会。",
+        "你想找到隐藏的管理 URL、调试端点或未认证的写操作。"
+      ]
+    },
+    {
+      "name": "zimbra-attack",
+      "path": "recon/zimbra-attack/SKILL.md",
+      "category": "recon",
+      "tags": [
+        "recon",
+        "zimbra",
+        "SOAP",
+        "user-enum",
+        "CVE",
+        "email"
+      ],
+      "triggers": [
+        "目标拥有 webmail.、mail. 或 zimbra. 子域名。",
+        "邮件服务器重定向到 /zimbra/ 路径。",
+        "服务器响应头或页面标题包含 “Zimbra”。",
+        "在 subdomain-enumeration 发现 webmail 主机之后。",
+        "政府、高校或企业目标（Zimbra 在这些行业很常见）。"
+      ]
+    },
+    {
+      "name": "apk-redteam-pipeline",
+      "path": "redteam/apk-redteam-pipeline/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "apk",
+        "android",
+        "mobile",
+        "reverse-engineering",
+        "redteam"
+      ],
+      "triggers": [
+        "Target has a mobile app catalogue (Play Store developer page), or you find an APK URL hosted on a web server.",
+        "Post-recon mentions \"mobile app\" in scope, or a customer-facing, dealer/partner, or employee companion app is listed.",
+        "APK package IDs surface in stealer logs (com..app, com..).",
+        "A bug bounty program lists Android in scope.",
+        "Do not use for iOS-only targets (IPA/MobSF/frida-ios-dump), React Native/Flutter web apps already covered by JS bundle analysis, or server-side-only assessme..."
+      ]
+    },
+    {
+      "name": "bb-methodology",
+      "path": "redteam/bb-methodology/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "bug-bounty",
+        "methodology",
+        "recon",
+        "redteam"
+      ],
+      "triggers": [
+        "Asking \"what should I do next?\" or \"where am I in the process?\"",
+        "You need the engagement sequence from scoping through reporting."
+      ]
+    },
+    {
+      "name": "bug-bounty",
+      "path": "redteam/bug-bounty/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "bug-bounty",
+        "recon",
+        "redteam"
+      ],
+      "triggers": [
+        "任何漏洞赏金任务 —— 启动新目标、侦察、挖掘特定漏洞、源码审计、AI 功能测试。"
+      ]
+    },
+    {
+      "name": "bugcrowd-reporting",
+      "path": "redteam/bugcrowd-reporting/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "bugcrowd",
+        "reporting",
+        "bug-bounty",
+        "redteam"
+      ],
+      "triggers": [
+        "Filing a Bugcrowd submission, when VRT default seems wrong, when triager closes as OOS or downgrades severity, when chaining linked submissions.",
+        "When scope distinguishes production from QA."
+      ]
+    },
+    {
+      "name": "cloud-iam-deep",
+      "path": "redteam/cloud-iam-deep/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "cloud",
+        "IAM",
+        "AWS",
+        "GCP",
+        "Azure",
+        "privilege-escalation",
+        "redteam"
+      ],
+      "triggers": [
+        "After finding Firebase API keys, Supabase keys, or GCP SA keys",
+        "When a target uses serverless (Cloud Functions, Cloud Run)",
+        "After finding S3 bucket names or MinIO instances",
+        "One SA key can escalate to full cloud access"
+      ]
+    },
+    {
+      "name": "cors-chain-automation",
+      "path": "redteam/cors-chain-automation/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "cors",
+        "automation",
+        "chain",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when you have a list of API endpoints or target domains and need to systematically find credential-exploitable CORS misconfigurations at scale.",
+        "Distinguishes the 3 exploitable patterns (reflect-any-origin + credentials, null-origin trust, subdomain-regex bypass) from false positives (ACAO: * alone, A...",
+        "Generates ready-to-use browser PoC HTML files for confirmed findings."
+      ]
+    },
+    {
+      "name": "enterprise-vpn-attack",
+      "path": "redteam/enterprise-vpn-attack/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "vpn",
+        "enterprise",
+        "attack",
+        "redteam"
+      ],
+      "triggers": [
+        "The target exposes an SSL VPN or remote-access appliance (Cisco ASA/AnyConnect, Fortinet, Citrix ADC, Palo Alto GlobalProtect, Pulse/Ivanti, SonicWall, F5).",
+        "Recon shows +CSCOE+ paths, VPN-style hosts (vpn.*, connect.*, webvpn.*, remote.*), appliance cookies (webvpn=, SVPNCOOKIE=, NSC_AAA=, DSAuthSession=, BIGipSe...",
+        "Login pages return appliance banners such as \"AnyConnect\", \"FortiGate\", \"NetScaler\", \"GlobalProtect\", \"Pulse\", or \"Ivanti\".",
+        "Do not use for internal lateral movement after a foothold, VPN client-side bugs, or IPsec/L2TP/OpenVPN (different protocols, not the SSL VPN web stack)."
+      ]
+    },
+    {
+      "name": "evidence-hygiene",
+      "path": "redteam/evidence-hygiene/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "evidence",
+        "hygiene",
+        "reporting",
+        "redteam"
+      ],
+      "triggers": [
+        "You are about to capture screenshots, HAR files, or Burp history for a report or bounty submission.",
+        "A PoC contains cookies, tokens, PII, or internal identifiers that must be redacted before sharing."
+      ]
+    },
+    {
+      "name": "hunt-api-misconfig",
+      "path": "redteam/hunt-api-misconfig/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "api",
+        "misconfiguration",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting API misconfigs, JWT flaws, mass-assignment, prototype pollution."
+      ]
+    },
+    {
+      "name": "hunt-aspnet",
+      "path": "redteam/hunt-aspnet/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "aspnet",
+        "hunt",
+        "redteam",
+        "web"
+      ],
+      "triggers": [
+        "The stack is ASP.NET/WebForms/WCF, or responses expose __VIEWSTATE, .aspx, trace.axd, or elmah.axd.",
+        "You need ViewState/machineKey preconditions, parser differentials, or request-validator bypasses."
+      ]
+    },
+    {
+      "name": "hunt-ato",
+      "path": "redteam/hunt-ato/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "ATO",
+        "account-takeover",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting ATO chains, testing password reset / email change / MFA / OAuth / session / JWT.",
+        "Chaining primitives toward Critical."
+      ]
+    },
+    {
+      "name": "hunt-auth-bypass",
+      "path": "redteam/hunt-auth-bypass/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "auth",
+        "bypass",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "狩猎身份认证绕过——参见 Legacy-Protocol Matrix 了解品牌化 UI 与遗留端点两种模式。"
+      ]
+    },
+    {
+      "name": "hunt-brute-force",
+      "path": "redteam/hunt-brute-force/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "brute-force",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "A login, OTP/2FA, reset-token, or enumeration endpoint is reachable and rate limiting is unknown or weak.",
+        "You need to distinguish lockout, soft throttle, CAPTCHA injection, and silent shadow-throttling before claiming a missing rate limit."
+      ]
+    },
+    {
+      "name": "hunt-business-logic",
+      "path": "redteam/hunt-business-logic/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "business-logic",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting business logic — heavy emphasis on financial-impact-demonstrated cases."
+      ]
+    },
+    {
+      "name": "hunt-cache-poison",
+      "path": "redteam/hunt-cache-poison/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "cache",
+        "poisoning",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting cache poisoning, Web Cache Deception, CDN-fronted apps."
+      ]
+    },
+    {
+      "name": "hunt-cicd",
+      "path": "redteam/hunt-cicd/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "cicd",
+        "pipeline",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "目标具有公开的 GitHub/GitLab 组织、暴露的 CI 仪表盘（Jenkins/TeamCity/Drone/Argo）。",
+        "构建制品/镜像可达。"
+      ]
+    },
+    {
+      "name": "hunt-cloud-misconfig",
+      "path": "redteam/hunt-cloud-misconfig/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "cloud",
+        "misconfiguration",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "猎取云原生存储与计算配置错误（S3/GCS/Blob、经 SSRF 访问 IMDS、无服务器、公开托管服务）。"
+      ]
+    },
+    {
+      "name": "hunt-cors",
+      "path": "redteam/hunt-cors/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "cors",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Testing API endpoints, SPAs.",
+        "Any app emitting Access-Control-* headers."
+      ]
+    },
+    {
+      "name": "hunt-csrf",
+      "path": "redteam/hunt-csrf/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "csrf",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when the target has any state-changing endpoint that a logged-in user can trigger — POST/PUT/DELETE on account settings, email changes, social account li...",
+        "CSRF exploits the trust a site has in a user's browser by forging cross-origin requests.",
+        "Every form submission, AJAX call, OAuth callback, and API mutation is a candidate.",
+        "Highest-value targets: account takeover vectors (OAuth/SSO flows, social account linking), authentication infrastructure (login CSRF, session fixation), JSON...",
+        "**CSRF PoC MUST work in a real browser, not just curl.",
+        "** The browser enforces rules that curl ignores"
+      ]
+    },
+    {
+      "name": "hunt-deserialization",
+      "path": "redteam/hunt-deserialization/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "deserialization",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "目标运行 Java、PHP 序列化、Python pickle、.NET。",
+        "Ruby on Rails。"
+      ]
+    },
+    {
+      "name": "hunt-dispatch",
+      "path": "redteam/hunt-dispatch/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "dispatch",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "/hunt has just received a mode answer (redteam or wapt + blackbox|greybox) and needs to load the appropriate skills and print the taxonomy."
+      ]
+    },
+    {
+      "name": "hunt-dom",
+      "path": "redteam/hunt-dom/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "dom",
+        "hunt",
+        "redteam",
+        "xss"
+      ],
+      "triggers": [
+        "Hunting DOM-XSS, client-side auth bypass.",
+        "Token exfiltration without server-side interaction."
+      ]
+    },
+    {
+      "name": "hunt-file-upload",
+      "path": "redteam/hunt-file-upload/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "file-upload",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "测试文件上传功能、头像/附件端点、导入/导出功能、XML/DOCX/ZIP 处理器。"
+      ]
+    },
+    {
+      "name": "hunt-firebase",
+      "path": "redteam/hunt-firebase/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "firebase",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "A JS bundle, APK.",
+        ".env file reveals a Firebase API key (AIzaSy...) or when target uses firebaseio.com / firestore.googleapis.com endpoints."
+      ]
+    },
+    {
+      "name": "hunt-frameworks",
+      "path": "redteam/hunt-frameworks/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "frameworks",
+        "django",
+        "fastapi",
+        "laravel",
+        "nodejs",
+        "redteam"
+      ],
+      "triggers": [
+        "目标被指纹识别为 Django/DRF（csrftoken、/admin/、DRF 可浏览 API）、FastAPI（/docs、422 detail 数组）、Laravel（XSRF-TOKEN/laravel_session cookie、Ignition 页面）或 Node.js/Express（X-Pow...",
+        "你需要框架特定的 sink，而不是通用的 API 测试。"
+      ]
+    },
+    {
+      "name": "hunt-graphql",
+      "path": "redteam/hunt-graphql/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "graphql",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting graphql on any target."
+      ]
+    },
+    {
+      "name": "hunt-grpc",
+      "path": "redteam/hunt-grpc/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "grpc",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Target exposes port 50051 / 443 / 8443 / 9090 with HTTP/2, when grpcurl/grpcui detects reflection, when an Envoy or grpc-gateway proxy is fronting a microser...",
+        "When recon reveals a microservice architecture."
+      ]
+    },
+    {
+      "name": "hunt-host-header",
+      "path": "redteam/hunt-host-header/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "host-header",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "The application reflects or routes on Host, X-Forwarded-Host, or X-Original-URL.",
+        "Password reset, cache, OAuth issuer, or routing behavior could be influenced by a header."
+      ]
+    },
+    {
+      "name": "hunt-http-smuggling",
+      "path": "redteam/hunt-http-smuggling/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "http-smuggling",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "在猎取运行 CDN+源站栈的 H1 付费项目时，或以负载均衡器 / WAF 绕过为目标时。"
+      ]
+    },
+    {
+      "name": "hunt-idor",
+      "path": "redteam/hunt-idor/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "idor",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when the target has any endpoint that references user-owned resources by ID — API paths with user/order/invoice/message IDs, GraphQL queries with id argu...",
+        "IDOR is one of the most common and highest-paying vulnerabilities because it directly exposes other users' data without authentication bypass.",
+        "Every feature that displays or acts on a resource by identifier is a candidate.",
+        "Highest-value targets: financial documents/billing APIs, private repositories, user messages, account management endpoints, and cross-tenant business/org adm..."
+      ]
+    },
+    {
+      "name": "hunt-information-disclosure",
+      "path": "redteam/hunt-information-disclosure/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "redteam",
+        "information-disclosure",
+        "error-leakage",
+        "source-maps",
+        "config",
+        "enumeration"
+      ],
+      "triggers": [
+        "应用返回带有堆栈跟踪、文件路径或 SQL 片段的详细错误消息。",
+        "生产环境部署了 source map（.js.map）。",
+        "版本化的静态资源泄露框架/CMS 版本。",
+        "API 响应因对象是否存在而不同（通过状态码/长度/时间进行用户枚举）。",
+        "调试端点、健康检查或状态页暴露内部状态。"
+      ]
+    },
+    {
+      "name": "hunt-k8s",
+      "path": "redteam/hunt-k8s/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "kubernetes",
+        "k8s",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Target runs containerized infra, exposes K8s ports (6443/10250/10255/2379/8443).",
+        "Cloud metadata reveals K8s service accounts."
+      ]
+    },
+    {
+      "name": "hunt-ldap",
+      "path": "redteam/hunt-ldap/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "ldap",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Target uses LDAP/AD authentication, corporate SSO with a directory backend, an address-book/people-search API.",
+        "XML-based data stores queried with XPath."
+      ]
+    },
+    {
+      "name": "hunt-lfi",
+      "path": "redteam/hunt-lfi/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "lfi",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting file-include or path-traversal bugs on any target."
+      ]
+    },
+    {
+      "name": "hunt-llm-ai",
+      "path": "redteam/hunt-llm-ai/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "llm",
+        "ai",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "挖掘 AI 功能、聊天机器人、RAG、智能体系统、MCP 时使用。"
+      ]
+    },
+    {
+      "name": "hunt-mass-assignment",
+      "path": "redteam/hunt-mass-assignment/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "redteam",
+        "mass-assignment",
+        "API",
+        "ORM",
+        "authorization",
+        "field-injection"
+      ],
+      "triggers": [
+        "API 接受包含 UI 未暴露字段的 JSON/XML/表单请求体。",
+        "用户资料更新、注册、结账或资源创建端点。",
+        "框架 ORM（Rails ActiveRecord、Laravel Eloquent、Django ORM、Mongoose、Prisma）中批量赋值是默认行为。",
+        "接受稀疏更新的 PATCH 端点——可能跳过逐字段授权。"
+      ]
+    },
+    {
+      "name": "hunt-mcp-security",
+      "path": "redteam/hunt-mcp-security/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "redteam",
+        "MCP",
+        "AI",
+        "tool-security",
+        "agent",
+        "prompt-injection",
+        "OWASP"
+      ],
+      "triggers": [
+        "目标部署了具备 MCP 工具访问能力的 AI agent（Claude Desktop MCP、Cursor AI 工具、自研 agent 框架）。",
+        "AI agent 可调用工具（数据库查询、文件操作、API 调用、Web 搜索）。",
+        "存在工具注册、schema 校验或访问控制逻辑。",
+        "需要测试工具输出能否把提示注入回 agent。",
+        "目标使用带外部数据源的 RAG（检索增强生成）。"
+      ]
+    },
+    {
+      "name": "hunt-metrics-exposure",
+      "path": "redteam/hunt-metrics-exposure/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "metrics",
+        "exposure",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "目标使用现代可观测性工具（Go、.",
+        "NET、Java、Node.",
+        "这些框架经常会暴露 /metrics、/health 和 /status 端点，而它们被遗忘在认证之后。",
+        "与应用数据泄露不同，metrics 泄露揭示的是完整的运营画像：使用了哪些 AI 模型、有多少活跃用户、数据库连接耗尽情况，以及第三方服务依赖。"
+      ]
+    },
+    {
+      "name": "hunt-mfa-bypass",
+      "path": "redteam/hunt-mfa-bypass/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "mfa",
+        "bypass",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting auth bypass, MFA flows, chaining primitives toward ATO."
+      ]
+    },
+    {
+      "name": "hunt-misc",
+      "path": "redteam/hunt-misc/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "misc",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting misc on any target."
+      ]
+    },
+    {
+      "name": "hunt-nestjs",
+      "path": "redteam/hunt-nestjs/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "redteam",
+        "nestjs",
+        "TypeScript",
+        "decorator",
+        "guard",
+        "microservice",
+        "GraphQL"
+      ],
+      "triggers": [
+        "目标使用 NestJS（表现为 x-powered-by: NestJS 或错误信息中的 TypeScript 装饰器模式）。",
+        "GraphQL 端点与 REST API 并存。",
+        "配置了微服务传输（TCP、Redis、NATS、MQTT、gRPC）。",
+        "Swagger/OpenAPI 文档暴露在 /api 或 /api-json。",
+        "CRUD 端点遵循可预测的 NestJS 命名约定。"
+      ]
+    },
+    {
+      "name": "hunt-nextjs",
+      "path": "redteam/hunt-nextjs/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "nextjs",
+        "hunt",
+        "redteam",
+        "javascript"
+      ],
+      "triggers": [
+        "目标运行 Next.js 13/14/15 或任何 React SSR 框架。"
+      ]
+    },
+    {
+      "name": "hunt-nosqli",
+      "path": "redteam/hunt-nosqli/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "nosql",
+        "injection",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "目标使用 MongoDB/Mongoose、CouchDB、Redis。",
+        "出现 NoSQL 错误消息。"
+      ]
+    },
+    {
+      "name": "hunt-ntlm-info",
+      "path": "redteam/hunt-ntlm-info/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "ntlm",
+        "information-disclosure",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Target advertises WWW-Authenticate: NTLM or Negotiate headers anonymously."
+      ]
+    },
+    {
+      "name": "hunt-oauth",
+      "path": "redteam/hunt-oauth/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "oauth",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting oauth on any target."
+      ]
+    },
+    {
+      "name": "hunt-open-redirect",
+      "path": "redteam/hunt-open-redirect/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "open-redirect",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "当目标存在任何重定向参数（?",
+        "redirect=、?",
+        "return=、?",
+        "redirect_uri= 等），位于登录/登出流程、OAuth 授权端点、语言切换、支付重定向，或任何控制操作后用户跳转位置的参数时使用。",
+        "开放重定向本身在大多数项目中为 Low，但当其串联至 OAuth token 窃取（redirect_uri 绕过）或 SSRF 升级时即变为 Critical。",
+        "任何可配置 redirect_uri 的 OAuth 授权端点都是最高价值目标。"
+      ]
+    },
+    {
+      "name": "hunt-prototype-pollution",
+      "path": "redteam/hunt-prototype-pollution/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "redteam",
+        "prototype-pollution",
+        "XSS",
+        "RCE",
+        "JavaScript",
+        "Node.js",
+        "jQuery"
+      ],
+      "triggers": [
+        "应用使用 JavaScript/Node.js，并针对用户输入执行对象 merge、clone 或 extend 操作。",
+        "jQuery $.extend(true, ...) 或 $.fn.merge() 对不可信数据执行深拷贝。",
+        "Lodash _.merge()、_.defaultsDeep()、_.set() 接收请求体/查询参数。",
+        "模板引擎（EJS、Pug、Handlebars）与用户控制的对象处于同一运行时。",
+        "服务端 Node.js 的 child_process.exec/spawn 可通过被污染的选项访问。"
+      ]
+    },
+    {
+      "name": "hunt-race-condition",
+      "path": "redteam/hunt-race-condition/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "race-condition",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "狩猎竞态条件、TOCTOU 缺陷、通过时序绕过 MFA。"
+      ]
+    },
+    {
+      "name": "hunt-rce",
+      "path": "redteam/hunt-rce/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "rce",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when the target has any endpoint that processes user-controlled input through an execution layer — template engines, shell commands, YAML/XML parsers, fi...",
+        "RCE is the highest-payout vulnerability class because it grants direct execution control over target infrastructure.",
+        "Every admin/management console, template/preview endpoint, upload processor, deserialization sink, and dependency resolver is a candidate.",
+        "Highest-value targets: enterprise server products (GHES, self-hosted GitLab), supply chain/package registries, cloud-native infrastructure, and admin/managem..."
+      ]
+    },
+    {
+      "name": "hunt-saml",
+      "path": "redteam/hunt-saml/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "saml",
+        "hunt",
+        "redteam",
+        "sso"
+      ],
+      "triggers": [
+        "Hunting SSO flows, when SAML AssertionConsumerService is reachable, when chaining IdP-trust to SP-impersonation."
+      ]
+    },
+    {
+      "name": "hunt-schema-enumeration",
+      "path": "redteam/hunt-schema-enumeration/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "schema",
+        "enumeration",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "目标 API 返回结构化错误消息（JSON），其中暗示了有效的表名、字段名或端点路径。",
+        "对于 REST/GraphQL API 而言，这是单次收益最高的黑盒侦察技术——一个模糊测试请求即可揭示整个数据库 schema。",
+        "最常见于：PostgREST（Supabase）、FastAPI（Python）、Zod（Next.",
+        "js/Node）、tRPC、GraphQL，以及任何在生产环境中启用了校验错误详情的框架。"
+      ]
+    },
+    {
+      "name": "hunt-session",
+      "path": "redteam/hunt-session/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "session",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "You hold two approved sessions and need to test fixation, invalidation, entropy, refresh rotation, or cookie attributes.",
+        "A session or token survives logout, password change, or email change, or appears predictable."
+      ]
+    },
+    {
+      "name": "hunt-sharepoint",
+      "path": "redteam/hunt-sharepoint/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "sharepoint",
+        "hunt",
+        "redteam",
+        "microsoft"
+      ],
+      "triggers": [
+        "Target has SharePoint headers (SPRequestGuid, X-MS-InvokeApp, X-SharePointHealthScore, MicrosoftSharePointTeamServices) or paths (/_layouts/15/, /_vti_bin/,..."
+      ]
+    },
+    {
+      "name": "hunt-source-leak",
+      "path": "redteam/hunt-source-leak/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "source",
+        "leak",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Recon surfaces .js.map, Swagger/OpenAPI, .env, .git, webpack chunks, or build manifests.",
+        "You need to reconstruct source or extract secrets from build artifacts before hunting."
+      ]
+    },
+    {
+      "name": "hunt-springboot",
+      "path": "redteam/hunt-springboot/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "springboot",
+        "hunt",
+        "redteam",
+        "java"
+      ],
+      "triggers": [
+        "Target runs Spring Boot — detected via X-Application-Context header, /actuator, Whitelabel Error Page.",
+        "Java stack traces."
+      ]
+    },
+    {
+      "name": "hunt-sqli",
+      "path": "redteam/hunt-sqli/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "sql",
+        "injection",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when the target has any endpoint that interacts with a database — search, filter, sort, login, ID-based lookups, API parameters, or any user input that c...",
+        "SQL injection (including NoSQL injection) remains one of the highest-paying vulnerability classes because it directly threatens data confidentiality, integri...",
+        "Every parameter in GET/POST/JSON/headers/cookies that reaches a backend database is a candidate.",
+        "Highest-value targets: multi-tenant SaaS platforms, e-commerce/payment systems, search endpoints, analytics subdomains, and third-party plugins."
+      ]
+    },
+    {
+      "name": "hunt-ssrf",
+      "path": "redteam/hunt-ssrf/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "ssrf",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when the target has any feature that fetches a URL, imports data from a remote source, generates previews/screenshots, processes webhooks, or renders doc...",
+        "SSRF allows an attacker to make the server itself perform network requests — reaching internal services, cloud metadata endpoints, and otherwise inaccessible...",
+        "Every link-preview, file-import, image-proxy, webhook-registration, PDF-generation, and redirect-following endpoint is a candidate.",
+        "Highest-value targets: cloud-hosted SaaS, Kubernetes/orchestration platforms, CI/CD systems, and URL-fetching features."
+      ]
+    },
+    {
+      "name": "hunt-ssti",
+      "path": "redteam/hunt-ssti/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "ssti",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when the target has any endpoint that renders user-controlled input through a server-side template engine.",
+        "SSTI is one of the fastest paths to RCE — detection is a single {{7*7}} and escalation typically requires one more payload.",
+        "SSTI detection is reliable because template expressions evaluate BEFORE HTML encoding, so the result 49 appears in the rendered output even if the surroundin...",
+        "Triggering contexts: email templates (order confirmations, password resets, welcome emails), PDF/report generators, CMS preview features (page builder previe..."
+      ]
+    },
+    {
+      "name": "hunt-subdomain",
+      "path": "redteam/hunt-subdomain/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "subdomain",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting subdomain takeover — emphasis on ATO-chain primitives (OAuth redirect_uri, cookie-domain, email DNS)."
+      ]
+    },
+    {
+      "name": "hunt-supabase",
+      "path": "redteam/hunt-supabase/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "supabase",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "A JS bundle, .env.",
+        "APK reveals a Supabase URL (project.supabase.co) and anon key (eyJ...)."
+      ]
+    },
+    {
+      "name": "hunt-tls-network",
+      "path": "redteam/hunt-tls-network/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "tls",
+        "network",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Recon to find infrastructure weaknesses.",
+        "To TRIAGE them honestly before reporting."
+      ]
+    },
+    {
+      "name": "hunt-websocket",
+      "path": "redteam/hunt-websocket/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "websocket",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Target has WebSocket endpoints (ws:// or wss://), socket.io / SignalR / Phoenix Channels, real-time features, chat, live dashboards, notifications.",
+        "Trading platforms."
+      ]
+    },
+    {
+      "name": "hunt-wordpress",
+      "path": "redteam/hunt-wordpress/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "redteam",
+        "wordpress",
+        "web",
+        "api",
+        "plugins"
+      ],
+      "triggers": [
+        "HTML、响应头、静态资源、cookie 或路由表明存在 WordPress。",
+        "/wp-json/、/wp-login.php、/xmlrpc.php 或 /wp-content/ 可达。",
+        "JavaScript 或源代码引用了 WordPress 后端。",
+        "staging 或子目录安装可能与主站不同。"
+      ]
+    },
+    {
+      "name": "hunt-write-gap",
+      "path": "redteam/hunt-write-gap/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "write-gap",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "你已获得对目标的认证访问，能够读取（READ）自己的数据（个人资料、设置、记录），但需要测试是否能够修改（MODIFY）超出自身授权级别的数据。",
+        "这是 Supabase 驱动的 SaaS 中最常见的模式，并且在 Firebase、自定义 REST API 和 GraphQL 后端中越来越普遍。",
+        "该模式：GET /resource 只返回你的数据（RLS/鉴权正常工作）。",
+        "PATCH /resource 却允许你修改任何内容，包括套餐等级、角色、余额和订阅状态。"
+      ]
+    },
+    {
+      "name": "hunt-xss",
+      "path": "redteam/hunt-xss/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "xss",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use when the target has any endpoint where user input is reflected in HTML output, processed by a JavaScript framework, or stored for later display.",
+        "XSS is the foundational client-side vulnerability class — it enables session hijacking, data theft, phishing, and account takeover.",
+        "Every form, search field, URL parameter, file upload, and user-controlled field is a candidate.",
+        "Highest-value targets: admin panels, OAuth sign-in pages, markdown/wiki renderers, email templates, file upload endpoints (SVG/HTML), and help/documentation...",
+        "**Reflection of HTML tags does NOT mean XSS is exploitable.",
+        "** Modern frameworks escape text by default."
+      ]
+    },
+    {
+      "name": "hunt-xxe",
+      "path": "redteam/hunt-xxe/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "xxe",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Hunting XXE on any target — emphasis on OOB-Or-It-Didn't-Happen Gate for blind cases."
+      ]
+    },
+    {
+      "name": "llm-prompt-injection",
+      "path": "redteam/llm-prompt-injection/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "redteam",
+        "llm",
+        "ai",
+        "prompt-injection",
+        "jailbreak",
+        "gpt-4o",
+        "openai",
+        "rag",
+        "agentic-ai",
+        "indirect-injection"
+      ],
+      "triggers": [
+        "Target exposes a chatbot, copilot, or AI-backed endpoint (serverless function wrapping an LLM API).",
+        "Response includes metadata like context_length, response_length, or token counts — passive measurement vector.",
+        "Standard jailbreak prompts (\"ignore previous instructions\") are blocked — model has explicit refusal training.",
+        "Target uses RAG (retrieval-augmented generation), agentic tools, or multi-modal inputs — wider injection surface.",
+        "You need to map system prompt contents without backend source access."
+      ]
+    },
+    {
+      "name": "m365-entra-attack",
+      "path": "redteam/m365-entra-attack/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "m365",
+        "entra",
+        "azure",
+        "attack",
+        "redteam"
+      ],
+      "triggers": [
+        "Any M365/Entra credential attack, password spray, user enumeration, or CA-bypass exploration.",
+        "The target uses M365/Entra (autodiscover records, login.microsoftonline.com redirects, \"Microsoft Office 365\" in tech-stack notes, *.onmicrosoft.com, *-my.sh...",
+        "You have corporate emails or stealer-leaked credentials, or the engagement mentions \"Conditional Access\", \"MFA bypass\", or \"compliant device\".",
+        "Active-attacker-detection scenario via Smart Lockout differential.",
+        "Do not use for on-prem-only Active Directory, service-to-service token attacks, or phishing-required chains (though you can prepare the credential-validation..."
+      ]
+    },
+    {
+      "name": "meme-coin-audit",
+      "path": "redteam/meme-coin-audit/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "meme-coin",
+        "audit",
+        "web3",
+        "redteam"
+      ],
+      "triggers": [
+        "Any token audit, rug pull assessment, meme coin security review.",
+        "Pre-investment due diligence."
+      ]
+    },
+    {
+      "name": "mid-engagement-ir-detection",
+      "path": "redteam/mid-engagement-ir-detection/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "ir",
+        "detection",
+        "mid-engagement",
+        "redteam"
+      ],
+      "triggers": [
+        "Running any active test against a target with active SOC monitoring, including assume-breach or white-box engagements.",
+        "A previously-confirmed finding stops reproducing, or baseline timing shifts unexpectedly.",
+        "Response sizes change between test windows, or new WAF cookies/headers appear that were not there at session start.",
+        "Lockout or error rates change between test windows, especially LOCKED counts for credential attacks.",
+        "Do not use for bug bounty (the client does not know you are there), pure recon with no state change, or one-off vulnerability scanning with no temporal dimen..."
+      ]
+    },
+    {
+      "name": "offensive-osint",
+      "path": "redteam/offensive-osint/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "osint",
+        "offensive",
+        "recon",
+        "redteam"
+      ],
+      "triggers": [
+        "Any authorized recon: scoping, asset discovery, attack-path mapping, secret triage, severity scoring."
+      ]
+    },
+    {
+      "name": "okta-attack",
+      "path": "redteam/okta-attack/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "okta",
+        "sso",
+        "attack",
+        "redteam"
+      ],
+      "triggers": [
+        "Recon shows .okta.com, .okta-emea.com, or .oktapreview.com.",
+        "Login flow redirects to /login or /app//sso/saml, pages reference /signin/customize or auth-js-sdk, DNS has an okta.com SAN in the TLS certificate, or identi...",
+        "Autodiscover-style records point at an Okta IdP, or recon notes \"uses Okta for SSO\".",
+        "Do not use for Entra ID (m365-entra-attack), Google Workspace, or ADFS (different protocol, on-prem)."
+      ]
+    },
+    {
+      "name": "ops-proxyns",
+      "path": "redteam/ops-proxyns/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "ops",
+        "proxyns",
+        "redteam",
+        "infrastructure"
+      ],
+      "triggers": [
+        "Probes must egress through Tor and the toolchain includes Go/Rust/static binaries that ignore LD_PRELOAD.",
+        "You need DNS-leak-free, kernel-level routing before an engagement or mass scan."
+      ]
+    },
+    {
+      "name": "osint-methodology",
+      "path": "redteam/osint-methodology/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "osint",
+        "methodology",
+        "recon",
+        "redteam"
+      ],
+      "triggers": [
+        "规划或执行针对授权目标的侦察，测绘组织的外部攻击面，调查个人/实体，追踪加密货币流向，定位媒体地理信息。"
+      ]
+    },
+    {
+      "name": "password-spray-methodology",
+      "path": "redteam/password-spray-methodology/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "password",
+        "spray",
+        "methodology",
+        "redteam"
+      ],
+      "triggers": [
+        "Starting ANY engagement with a user list but no credentials",
+        "Finding internet-facing login portals (OWA, Okta, ADFS, VPN, SSO, OIDC)",
+        "After hunt-ntlm-info reveals AD domain/UPN format — feed into spray",
+        "After hunt-ldap enumerates sAMAccountNames — feed into spray",
+        "After js-secrets-extraction finds email patterns — feed into spray",
+        "OneDrive 302/404 enum (from m365-entra-attack) confirms licensed users — spray them"
+      ]
+    },
+    {
+      "name": "recon-sector",
+      "path": "redteam/recon-sector/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "recon",
+        "sector",
+        "wordpress",
+        "cors",
+        "xmlrpc",
+        "mass-recon"
+      ],
+      "triggers": [
+        "Starting recon on a target in a known SMB sector.",
+        "After sector-recon-methodology produces a target list and you need to probe.",
+        "When you want sector-aware path lists (financing pages, booking portals, etc.) tailored to the target's industry."
+      ]
+    },
+    {
+      "name": "recon-sector-expansion",
+      "path": "redteam/recon-sector-expansion/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "recon",
+        "sector",
+        "expansion",
+        "redteam"
+      ],
+      "triggers": [
+        "Use within authorized engagements to expand coverage into fresh sectors — not dig deeper into a single known target, but find and test 20+ new company domain...",
+        "Target list must be from authorized scope.",
+        "Batch expansion is for scoped programs, not indiscriminate scraping.",
+        "\"Discover 20 more domains in non-regulated sectors\"",
+        "\"We need to expand coverage; what haven't we tested?\"",
+        "\"Find fresh targets outside the usual sectors\""
+      ]
+    },
+    {
+      "name": "redteam-mindset",
+      "path": "redteam/redteam-mindset/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "mindset",
+        "methodology",
+        "redteam"
+      ],
+      "triggers": [
+        "Engagement scope says \"red team\", \"adversary emulation\", \"assume breach\", or \"TIBER-style\".",
+        "An engagement stalls, a WAF/CAPTCHA blocks you, or a reproduction fails once and you are tempted to retract.",
+        "You need the operator decision trees for blockers, cadence, and coverage before continuing.",
+        "You are about to spend time on IDOR/CSRF/XSS instead of access-yielding bugs.",
+        "You found a vulnerability on app A and there are sister apps B, C, D you have not touched.",
+        "Do not use for bug bounty (use bug-bounty — different scope rules), WAPT/PCI-style assessments (use OWASP-aligned skills), or pure compliance audits."
+      ]
+    },
+    {
+      "name": "redteam-report-template",
+      "path": "redteam/redteam-report-template/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "report",
+        "template",
+        "redteam"
+      ],
+      "triggers": [
+        "The engagement is \"external red team for an enterprise client\" (not H1/Bugcrowd/Intigriti), when generating the final report, when the client has specified a...",
+        "When packaging findings into DOCX/PDF."
+      ]
+    },
+    {
+      "name": "report-writing",
+      "path": "redteam/report-writing/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "report",
+        "writing",
+        "redteam"
+      ],
+      "triggers": [
+        "Validating a finding and before submitting."
+      ]
+    },
+    {
+      "name": "security-arsenal",
+      "path": "redteam/security-arsenal/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "arsenal",
+        "tools",
+        "security",
+        "redteam"
+      ],
+      "triggers": [
+        "当你需要 XSS/SSRF/SQLi/XXE/NoSQLi/命令注入/SSTI/IDOR/路径遍历/HTTP 请求走私/WebSocket/MFA 绕过的具体 payload 与绕过技术。",
+        "用于判断某个发现是否可提交。"
+      ]
+    },
+    {
+      "name": "supply-chain-attack-recon",
+      "path": "redteam/supply-chain-attack-recon/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "supply-chain",
+        "attack",
+        "recon",
+        "redteam"
+      ],
+      "triggers": [
+        "The target has a public GitHub org, when their build artifacts/SBOMs are reachable, when their docker images are on Docker Hub/GHCR.",
+        "When you find internal package names in their JS bundles."
+      ]
+    },
+    {
+      "name": "triage-validation",
+      "path": "redteam/triage-validation/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "triage",
+        "validation",
+        "redteam"
+      ],
+      "triggers": [
+        "A candidate finding exists and must be proven or killed before writing the report.",
+        "You need the 7-question gate, pre-severity gate, always-rejected list, or a retraction template."
+      ]
+    },
+    {
+      "name": "vmware-vcenter-attack",
+      "path": "redteam/vmware-vcenter-attack/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "vmware",
+        "vcenter",
+        "attack",
+        "redteam"
+      ],
+      "triggers": [
+        "Recon shows port 443 with vCenter banner, /ui redirect, /websso/SAML2/Metadata.",
+        "VMware product fingerprints."
+      ]
+    },
+    {
+      "name": "web2-recon",
+      "path": "redteam/web2-recon/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "web2",
+        "recon",
+        "redteam"
+      ],
+      "triggers": [
+        "开始对任何 web2 目标做侦察，或被问及资产发现、子域名枚举时。"
+      ]
+    },
+    {
+      "name": "web3-audit",
+      "path": "redteam/web3-audit/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "web3",
+        "audit",
+        "redteam",
+        "blockchain"
+      ],
+      "triggers": [
+        "Any Solidity/Rust contract audit or when deciding whether a DeFi target is worth hunting."
+      ]
+    },
+    {
+      "name": "wordpress-cors-xmlrpc-rce-chain",
+      "path": "redteam/wordpress-cors-xmlrpc-rce-chain/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "wordpress",
+        "cors",
+        "xmlrpc",
+        "chain",
+        "validation"
+      ],
+      "triggers": [
+        "Credentialed CORS exposes non-public WordPress data.",
+        "XML-RPC returns a protocol-valid method list.",
+        "An approved test identity has an upload-capable role.",
+        "A plugin or core upload operation may accept an executable file.",
+        "The assessment explicitly permits state-changing upload and execution tests."
+      ]
+    },
+    {
+      "name": "wp-plugin-cve-hunt",
+      "path": "redteam/wp-plugin-cve-hunt/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "wordpress",
+        "plugin",
+        "cve",
+        "hunt",
+        "redteam"
+      ],
+      "triggers": [
+        "Use after WordPress detection recon has identified a list of WP targets with known plugins.",
+        "This skill goes beyond simple readme.",
+        "txt version checking — it performs multi-source version extraction, CVE database cross-referencing, version comparison, vulnerability assessment, and PoC gen...",
+        "Ideal when you have a list of 10+ WP domains and need to systematically find which specific plugin CVEs are exploitable.",
+        "This skill covers both the human-guided CVE research process (WPScan API, Patchstack, NVD cross-referencing, manual PoC validation) and the batch scanning pi...",
+        "It absorbs the former wp-plugin-automation skill."
+      ]
+    },
+    {
+      "name": "wstg-web-pentest",
+      "path": "redteam/wstg-web-pentest/SKILL.md",
+      "category": "redteam",
+      "tags": [
+        "wstg",
+        "web",
+        "pentest",
+        "owasp",
+        "methodology"
+      ],
+      "triggers": [
+        "在已定义范围内启动 Web 应用渗透测试",
+        "依据 OWASP 测试标准审计 Web 应用",
+        "基于观察到的技术与行为构建测试计划",
+        "当项目需要方法论文档时",
+        "将自动化扫描器输出转换为经过验证的发现"
+      ]
+    }
+  ]
+}

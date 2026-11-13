@@ -1,0 +1,1998 @@
+{
+  "schema_version": 1,
+  "entry_points": [
+    {
+      "name": "attack-patterns-reference",
+      "path": "meta/attack-patterns-reference/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "cross-wave-delta-analysis",
+      "path": "meta/cross-wave-delta-analysis/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "evasion-stack-guide",
+      "path": "meta/evasion-stack-guide/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "google-dorks-catalog",
+      "path": "meta/google-dorks-catalog/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "pentest-playbook",
+      "path": "meta/pentest-playbook/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "recon-playbook",
+      "path": "meta/recon-playbook/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "sector-recon-methodology",
+      "path": "meta/sector-recon-methodology/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "bb-methodology",
+      "path": "redteam/bb-methodology/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "osint-methodology",
+      "path": "redteam/osint-methodology/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "password-spray-methodology",
+      "path": "redteam/password-spray-methodology/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "redteam-mindset",
+      "path": "redteam/redteam-mindset/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "wstg-web-pentest",
+      "path": "redteam/wstg-web-pentest/SKILL.md",
+      "category": "redteam"
+    }
+  ],
+  "phases": [
+    {
+      "key": "phase-0-planning",
+      "title": "阶段 0 — 规划与方法论",
+      "skills": [
+        "attack-patterns-reference",
+        "cross-wave-delta-analysis",
+        "evasion-stack-guide",
+        "google-dorks-catalog",
+        "pentest-playbook",
+        "recon-playbook",
+        "sector-recon-methodology"
+      ]
+    },
+    {
+      "key": "phase-1-discovery",
+      "title": "阶段 1 — 资产发现与枚举",
+      "skills": [
+        "401-403-bypass-techniques",
+        "api-noauth-hunt",
+        "asn-infrastructure-mapping",
+        "cms-detection",
+        "cors-credential-wordpress",
+        "deep-invade",
+        "email-security",
+        "error-log-mining",
+        "exchange-owa-attack",
+        "flask-werkzeug-attack",
+        "github-secret-hunting",
+        "gitlab-public-recon",
+        "hardcoded-credential-hunt",
+        "http2-header-impersonation",
+        "humanize-automation",
+        "iot-camera-recon",
+        "js-secrets-extraction",
+        "jwt-attack",
+        "origin-ip-discovery",
+        "phpinfo-to-rce",
+        "port-mass-scan",
+        "port-service-discovery",
+        "s3-minio-content-type-xss",
+        "scada-hikvision-isapi",
+        "source-leak-hunt",
+        "staging-subdomain-hunt",
+        "stealth-browser-launch",
+        "subdomain-enumeration",
+        "subdomain-takeover-hunt",
+        "tls-fingerprint-impersonation",
+        "unauth-api-flow-hijack",
+        "vhost-enumeration",
+        "visual-recon",
+        "wordpress-plugin-hunt",
+        "wp-mass-recon",
+        "wp-plugin-rest-auth-bypass",
+        "zimbra-attack"
+      ]
+    },
+    {
+      "key": "phase-2-validation",
+      "title": "阶段 2 — 漏洞验证与利用",
+      "skills": [
+        "apk-redteam-pipeline",
+        "bb-methodology",
+        "bug-bounty",
+        "cloud-iam-deep",
+        "cors-chain-automation",
+        "enterprise-vpn-attack",
+        "hunt-api-misconfig",
+        "hunt-aspnet",
+        "hunt-ato",
+        "hunt-auth-bypass",
+        "hunt-brute-force",
+        "hunt-business-logic",
+        "hunt-cache-poison",
+        "hunt-cicd",
+        "hunt-cloud-misconfig",
+        "hunt-cors",
+        "hunt-csrf",
+        "hunt-deserialization",
+        "hunt-dispatch",
+        "hunt-dom",
+        "hunt-file-upload",
+        "hunt-firebase",
+        "hunt-frameworks",
+        "hunt-graphql",
+        "hunt-grpc",
+        "hunt-host-header",
+        "hunt-http-smuggling",
+        "hunt-idor",
+        "hunt-information-disclosure",
+        "hunt-k8s",
+        "hunt-ldap",
+        "hunt-lfi",
+        "hunt-llm-ai",
+        "hunt-mass-assignment",
+        "hunt-mcp-security",
+        "hunt-metrics-exposure",
+        "hunt-mfa-bypass",
+        "hunt-misc",
+        "hunt-nestjs",
+        "hunt-nextjs",
+        "hunt-nosqli",
+        "hunt-ntlm-info",
+        "hunt-oauth",
+        "hunt-open-redirect",
+        "hunt-prototype-pollution",
+        "hunt-race-condition",
+        "hunt-rce",
+        "hunt-saml",
+        "hunt-schema-enumeration",
+        "hunt-session",
+        "hunt-sharepoint",
+        "hunt-source-leak",
+        "hunt-springboot",
+        "hunt-sqli",
+        "hunt-ssrf",
+        "hunt-ssti",
+        "hunt-subdomain",
+        "hunt-supabase",
+        "hunt-tls-network",
+        "hunt-websocket",
+        "hunt-wordpress",
+        "hunt-write-gap",
+        "hunt-xss",
+        "hunt-xxe",
+        "llm-prompt-injection",
+        "m365-entra-attack",
+        "meme-coin-audit",
+        "mid-engagement-ir-detection",
+        "offensive-osint",
+        "okta-attack",
+        "ops-proxyns",
+        "osint-methodology",
+        "password-spray-methodology",
+        "recon-sector",
+        "recon-sector-expansion",
+        "redteam-mindset",
+        "security-arsenal",
+        "supply-chain-attack-recon",
+        "triage-validation",
+        "vmware-vcenter-attack",
+        "web2-recon",
+        "web3-audit",
+        "wordpress-cors-xmlrpc-rce-chain",
+        "wp-plugin-cve-hunt",
+        "wstg-web-pentest"
+      ]
+    },
+    {
+      "key": "phase-3-chaining",
+      "title": "阶段 3 — 攻击链与基础设施利用",
+      "skills": [
+        "cross-attack-chains",
+        "docker-privesc",
+        "wordpress-full-compromise"
+      ]
+    },
+    {
+      "key": "phase-4-reporting",
+      "title": "阶段 4 — 证据与报告",
+      "skills": [
+        "bugcrowd-reporting",
+        "evidence-hygiene",
+        "redteam-report-template",
+        "report-writing"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "cross-attack-chains",
+      "to": "attack-patterns-reference"
+    },
+    {
+      "from": "cross-attack-chains",
+      "to": "evidence-hygiene"
+    },
+    {
+      "from": "cross-attack-chains",
+      "to": "report-writing"
+    },
+    {
+      "from": "cross-attack-chains",
+      "to": "triage-validation"
+    },
+    {
+      "from": "cross-attack-chains",
+      "to": "wordpress-full-compromise"
+    },
+    {
+      "from": "wordpress-full-compromise",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "wordpress-full-compromise",
+      "to": "hunt-wordpress"
+    },
+    {
+      "from": "wordpress-full-compromise",
+      "to": "triage-validation"
+    },
+    {
+      "from": "wordpress-full-compromise",
+      "to": "wordpress-cors-xmlrpc-rce-chain"
+    },
+    {
+      "from": "wordpress-full-compromise",
+      "to": "wordpress-plugin-hunt"
+    },
+    {
+      "from": "docker-privesc",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "docker-privesc",
+      "to": "api-noauth-hunt"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "cors-credential-wordpress"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "error-log-mining"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "phpinfo-to-rce"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "staging-subdomain-hunt"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "wordpress-plugin-hunt"
+    },
+    {
+      "from": "attack-patterns-reference",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "cross-wave-delta-analysis",
+      "to": "recon-playbook"
+    },
+    {
+      "from": "cross-wave-delta-analysis",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "cross-wave-delta-analysis",
+      "to": "cors-credential-wordpress"
+    },
+    {
+      "from": "cross-wave-delta-analysis",
+      "to": "attack-patterns-reference"
+    },
+    {
+      "from": "evasion-stack-guide",
+      "to": "tls-fingerprint-impersonation"
+    },
+    {
+      "from": "evasion-stack-guide",
+      "to": "http2-header-impersonation"
+    },
+    {
+      "from": "evasion-stack-guide",
+      "to": "stealth-browser-launch"
+    },
+    {
+      "from": "evasion-stack-guide",
+      "to": "humanize-automation"
+    },
+    {
+      "from": "evasion-stack-guide",
+      "to": "ops-proxyns"
+    },
+    {
+      "from": "pentest-playbook",
+      "to": "recon-playbook"
+    },
+    {
+      "from": "pentest-playbook",
+      "to": "port-mass-scan"
+    },
+    {
+      "from": "pentest-playbook",
+      "to": "hunt-cache-poison"
+    },
+    {
+      "from": "pentest-playbook",
+      "to": "hunt-firebase"
+    },
+    {
+      "from": "pentest-playbook",
+      "to": "hunt-supabase"
+    },
+    {
+      "from": "pentest-playbook",
+      "to": "api-noauth-hunt"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "attack-patterns-reference"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "evidence-hygiene"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "offensive-osint"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "report-writing"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "triage-validation"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "recon-playbook",
+      "to": "web2-recon"
+    },
+    {
+      "from": "sector-recon-methodology",
+      "to": "recon-playbook"
+    },
+    {
+      "from": "sector-recon-methodology",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "sector-recon-methodology",
+      "to": "attack-patterns-reference"
+    },
+    {
+      "from": "sector-recon-methodology",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "sector-recon-methodology",
+      "to": "cross-wave-delta-analysis"
+    },
+    {
+      "from": "sector-recon-methodology",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "401-403-bypass-techniques",
+      "to": "hunt-auth-bypass"
+    },
+    {
+      "from": "401-403-bypass-techniques",
+      "to": "hunt-http-smuggling"
+    },
+    {
+      "from": "401-403-bypass-techniques",
+      "to": "hunt-ssrf"
+    },
+    {
+      "from": "401-403-bypass-techniques",
+      "to": "hunt-idor"
+    },
+    {
+      "from": "api-noauth-hunt",
+      "to": "hunt-firebase"
+    },
+    {
+      "from": "api-noauth-hunt",
+      "to": "hunt-supabase"
+    },
+    {
+      "from": "api-noauth-hunt",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "api-noauth-hunt",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "api-noauth-hunt",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "asn-infrastructure-mapping",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "asn-infrastructure-mapping",
+      "to": "origin-ip-discovery"
+    },
+    {
+      "from": "asn-infrastructure-mapping",
+      "to": "vhost-enumeration"
+    },
+    {
+      "from": "asn-infrastructure-mapping",
+      "to": "port-mass-scan"
+    },
+    {
+      "from": "cms-detection",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "cms-detection",
+      "to": "wordpress-plugin-hunt"
+    },
+    {
+      "from": "cms-detection",
+      "to": "visual-recon"
+    },
+    {
+      "from": "cms-detection",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "cors-credential-wordpress",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "cors-credential-wordpress",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "cors-credential-wordpress",
+      "to": "wordpress-full-compromise"
+    },
+    {
+      "from": "deep-invade",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "deep-invade",
+      "to": "error-log-mining"
+    },
+    {
+      "from": "deep-invade",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "deep-invade",
+      "to": "staging-subdomain-hunt"
+    },
+    {
+      "from": "deep-invade",
+      "to": "wordpress-plugin-hunt"
+    },
+    {
+      "from": "deep-invade",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "deep-invade",
+      "to": "cors-credential-wordpress"
+    },
+    {
+      "from": "deep-invade",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "deep-invade",
+      "to": "phpinfo-to-rce"
+    },
+    {
+      "from": "error-log-mining",
+      "to": "deep-invade"
+    },
+    {
+      "from": "error-log-mining",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "error-log-mining",
+      "to": "phpinfo-to-rce"
+    },
+    {
+      "from": "error-log-mining",
+      "to": "wordpress-full-compromise"
+    },
+    {
+      "from": "exchange-owa-attack",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "exchange-owa-attack",
+      "to": "zimbra-attack"
+    },
+    {
+      "from": "exchange-owa-attack",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "github-secret-hunting",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "github-secret-hunting",
+      "to": "hardcoded-credential-hunt"
+    },
+    {
+      "from": "github-secret-hunting",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "gitlab-public-recon",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "gitlab-public-recon",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "gitlab-public-recon",
+      "to": "api-noauth-hunt"
+    },
+    {
+      "from": "hardcoded-credential-hunt",
+      "to": "api-noauth-hunt"
+    },
+    {
+      "from": "hardcoded-credential-hunt",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "hardcoded-credential-hunt",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "http2-header-impersonation",
+      "to": "tls-fingerprint-impersonation"
+    },
+    {
+      "from": "http2-header-impersonation",
+      "to": "stealth-browser-launch"
+    },
+    {
+      "from": "http2-header-impersonation",
+      "to": "evasion-stack-guide"
+    },
+    {
+      "from": "humanize-automation",
+      "to": "stealth-browser-launch"
+    },
+    {
+      "from": "humanize-automation",
+      "to": "tls-fingerprint-impersonation"
+    },
+    {
+      "from": "humanize-automation",
+      "to": "evasion-stack-guide"
+    },
+    {
+      "from": "iot-camera-recon",
+      "to": "port-mass-scan"
+    },
+    {
+      "from": "iot-camera-recon",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "jwt-attack",
+      "to": "api-noauth-hunt"
+    },
+    {
+      "from": "jwt-attack",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "jwt-attack",
+      "to": "hunt-firebase"
+    },
+    {
+      "from": "jwt-attack",
+      "to": "hunt-supabase"
+    },
+    {
+      "from": "origin-ip-discovery",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "origin-ip-discovery",
+      "to": "vhost-enumeration"
+    },
+    {
+      "from": "origin-ip-discovery",
+      "to": "port-mass-scan"
+    },
+    {
+      "from": "phpinfo-to-rce",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "phpinfo-to-rce",
+      "to": "wordpress-full-compromise"
+    },
+    {
+      "from": "phpinfo-to-rce",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "phpinfo-to-rce",
+      "to": "error-log-mining"
+    },
+    {
+      "from": "port-mass-scan",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "port-mass-scan",
+      "to": "iot-camera-recon"
+    },
+    {
+      "from": "port-mass-scan",
+      "to": "exchange-owa-attack"
+    },
+    {
+      "from": "port-service-discovery",
+      "to": "deep-invade"
+    },
+    {
+      "from": "port-service-discovery",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "port-service-discovery",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "port-service-discovery",
+      "to": "staging-subdomain-hunt"
+    },
+    {
+      "from": "s3-minio-content-type-xss",
+      "to": "hunt-xss"
+    },
+    {
+      "from": "s3-minio-content-type-xss",
+      "to": "hunt-cloud-misconfig"
+    },
+    {
+      "from": "s3-minio-content-type-xss",
+      "to": "hunt-firebase"
+    },
+    {
+      "from": "s3-minio-content-type-xss",
+      "to": "hunt-supabase"
+    },
+    {
+      "from": "s3-minio-content-type-xss",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "scada-hikvision-isapi",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "scada-hikvision-isapi",
+      "to": "hunt-ssrf"
+    },
+    {
+      "from": "scada-hikvision-isapi",
+      "to": "iot-camera-recon"
+    },
+    {
+      "from": "scada-hikvision-isapi",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "source-leak-hunt",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "source-leak-hunt",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "source-leak-hunt",
+      "to": "error-log-mining"
+    },
+    {
+      "from": "source-leak-hunt",
+      "to": "phpinfo-to-rce"
+    },
+    {
+      "from": "source-leak-hunt",
+      "to": "deep-invade"
+    },
+    {
+      "from": "staging-subdomain-hunt",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "staging-subdomain-hunt",
+      "to": "deep-invade"
+    },
+    {
+      "from": "staging-subdomain-hunt",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "staging-subdomain-hunt",
+      "to": "wordpress-plugin-hunt"
+    },
+    {
+      "from": "staging-subdomain-hunt",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "staging-subdomain-hunt",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "staging-subdomain-hunt",
+      "to": "phpinfo-to-rce"
+    },
+    {
+      "from": "stealth-browser-launch",
+      "to": "humanize-automation"
+    },
+    {
+      "from": "stealth-browser-launch",
+      "to": "tls-fingerprint-impersonation"
+    },
+    {
+      "from": "stealth-browser-launch",
+      "to": "http2-header-impersonation"
+    },
+    {
+      "from": "stealth-browser-launch",
+      "to": "ops-proxyns"
+    },
+    {
+      "from": "stealth-browser-launch",
+      "to": "evasion-stack-guide"
+    },
+    {
+      "from": "subdomain-enumeration",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "subdomain-enumeration",
+      "to": "staging-subdomain-hunt"
+    },
+    {
+      "from": "subdomain-enumeration",
+      "to": "deep-invade"
+    },
+    {
+      "from": "subdomain-enumeration",
+      "to": "recon-playbook"
+    },
+    {
+      "from": "subdomain-takeover-hunt",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "subdomain-takeover-hunt",
+      "to": "origin-ip-discovery"
+    },
+    {
+      "from": "subdomain-takeover-hunt",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "tls-fingerprint-impersonation",
+      "to": "http2-header-impersonation"
+    },
+    {
+      "from": "tls-fingerprint-impersonation",
+      "to": "stealth-browser-launch"
+    },
+    {
+      "from": "tls-fingerprint-impersonation",
+      "to": "humanize-automation"
+    },
+    {
+      "from": "tls-fingerprint-impersonation",
+      "to": "evasion-stack-guide"
+    },
+    {
+      "from": "unauth-api-flow-hijack",
+      "to": "api-noauth-hunt"
+    },
+    {
+      "from": "unauth-api-flow-hijack",
+      "to": "hardcoded-credential-hunt"
+    },
+    {
+      "from": "unauth-api-flow-hijack",
+      "to": "hunt-write-gap"
+    },
+    {
+      "from": "unauth-api-flow-hijack",
+      "to": "hunt-idor"
+    },
+    {
+      "from": "vhost-enumeration",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "vhost-enumeration",
+      "to": "origin-ip-discovery"
+    },
+    {
+      "from": "vhost-enumeration",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "visual-recon",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "visual-recon",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "visual-recon",
+      "to": "cms-detection"
+    },
+    {
+      "from": "visual-recon",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "wordpress-plugin-hunt",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "wordpress-plugin-hunt",
+      "to": "deep-invade"
+    },
+    {
+      "from": "wordpress-plugin-hunt",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "wordpress-plugin-hunt",
+      "to": "wordpress-full-compromise"
+    },
+    {
+      "from": "wordpress-plugin-hunt",
+      "to": "staging-subdomain-hunt"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "cors-credential-wordpress"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "wordpress-plugin-hunt"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "staging-subdomain-hunt"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "wordpress-full-compromise"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "deep-invade"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "recon-playbook"
+    },
+    {
+      "from": "wp-mass-recon",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "wp-plugin-rest-auth-bypass",
+      "to": "hunt-firebase"
+    },
+    {
+      "from": "wp-plugin-rest-auth-bypass",
+      "to": "hunt-supabase"
+    },
+    {
+      "from": "wp-plugin-rest-auth-bypass",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "wp-plugin-rest-auth-bypass",
+      "to": "hunt-api-misconfig"
+    },
+    {
+      "from": "wp-plugin-rest-auth-bypass",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "zimbra-attack",
+      "to": "exchange-owa-attack"
+    },
+    {
+      "from": "zimbra-attack",
+      "to": "port-service-discovery"
+    },
+    {
+      "from": "zimbra-attack",
+      "to": "subdomain-enumeration"
+    },
+    {
+      "from": "hunt-frameworks",
+      "to": "hunt-prototype-pollution"
+    },
+    {
+      "from": "hunt-frameworks",
+      "to": "hunt-mass-assignment"
+    },
+    {
+      "from": "hunt-frameworks",
+      "to": "hunt-api-misconfig"
+    },
+    {
+      "from": "hunt-frameworks",
+      "to": "hunt-idor"
+    },
+    {
+      "from": "hunt-frameworks",
+      "to": "hunt-rce"
+    },
+    {
+      "from": "hunt-frameworks",
+      "to": "hunt-ssti"
+    },
+    {
+      "from": "hunt-frameworks",
+      "to": "hunt-source-leak"
+    },
+    {
+      "from": "hunt-information-disclosure",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "hunt-information-disclosure",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "hunt-information-disclosure",
+      "to": "error-log-mining"
+    },
+    {
+      "from": "hunt-information-disclosure",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "hunt-mass-assignment",
+      "to": "hunt-api-misconfig"
+    },
+    {
+      "from": "hunt-mass-assignment",
+      "to": "hunt-idor"
+    },
+    {
+      "from": "hunt-mass-assignment",
+      "to": "hunt-write-gap"
+    },
+    {
+      "from": "hunt-mcp-security",
+      "to": "hunt-llm-ai"
+    },
+    {
+      "from": "hunt-mcp-security",
+      "to": "hunt-api-misconfig"
+    },
+    {
+      "from": "hunt-mcp-security",
+      "to": "hunt-auth-bypass"
+    },
+    {
+      "from": "hunt-nestjs",
+      "to": "hunt-graphql"
+    },
+    {
+      "from": "hunt-nestjs",
+      "to": "hunt-api-misconfig"
+    },
+    {
+      "from": "hunt-nestjs",
+      "to": "hunt-idor"
+    },
+    {
+      "from": "hunt-nestjs",
+      "to": "hunt-write-gap"
+    },
+    {
+      "from": "hunt-prototype-pollution",
+      "to": "hunt-frameworks"
+    },
+    {
+      "from": "hunt-prototype-pollution",
+      "to": "hunt-xss"
+    },
+    {
+      "from": "hunt-prototype-pollution",
+      "to": "hunt-api-misconfig"
+    },
+    {
+      "from": "hunt-wordpress",
+      "to": "cors-credential-wordpress"
+    },
+    {
+      "from": "hunt-wordpress",
+      "to": "error-log-mining"
+    },
+    {
+      "from": "hunt-wordpress",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "hunt-wordpress",
+      "to": "staging-subdomain-hunt"
+    },
+    {
+      "from": "hunt-wordpress",
+      "to": "wordpress-plugin-hunt"
+    },
+    {
+      "from": "hunt-wordpress",
+      "to": "wp-plugin-rest-auth-bypass"
+    },
+    {
+      "from": "llm-prompt-injection",
+      "to": "js-secrets-extraction"
+    },
+    {
+      "from": "llm-prompt-injection",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "llm-prompt-injection",
+      "to": "hunt-llm-ai"
+    },
+    {
+      "from": "llm-prompt-injection",
+      "to": "hunt-api-misconfig"
+    },
+    {
+      "from": "llm-prompt-injection",
+      "to": "hunt-ssrf"
+    },
+    {
+      "from": "recon-sector",
+      "to": "wp-mass-recon"
+    },
+    {
+      "from": "recon-sector",
+      "to": "cors-credential-wordpress"
+    },
+    {
+      "from": "recon-sector",
+      "to": "source-leak-hunt"
+    },
+    {
+      "from": "recon-sector",
+      "to": "error-log-mining"
+    },
+    {
+      "from": "recon-sector",
+      "to": "deep-invade"
+    },
+    {
+      "from": "recon-sector",
+      "to": "recon-playbook"
+    },
+    {
+      "from": "wordpress-cors-xmlrpc-rce-chain",
+      "to": "cross-attack-chains"
+    },
+    {
+      "from": "wordpress-cors-xmlrpc-rce-chain",
+      "to": "hunt-cors"
+    },
+    {
+      "from": "wordpress-cors-xmlrpc-rce-chain",
+      "to": "hunt-wordpress"
+    },
+    {
+      "from": "wordpress-cors-xmlrpc-rce-chain",
+      "to": "triage-validation"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "web2-recon"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-idor"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-xss"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-sqli"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-ssrf"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-cors"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-session"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-mfa-bypass"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-oauth"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-saml"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-graphql"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-file-upload"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-business-logic"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-websocket"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-source-leak"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-tls-network"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-subdomain"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "hunt-brute-force"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "triage-validation"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "report-writing"
+    },
+    {
+      "from": "wstg-web-pentest",
+      "to": "evidence-hygiene"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "cross-attack-chains",
+      "path": "chains/cross-attack-chains/SKILL.md",
+      "category": "chains"
+    },
+    {
+      "name": "wordpress-full-compromise",
+      "path": "chains/wordpress-full-compromise/SKILL.md",
+      "category": "chains"
+    },
+    {
+      "name": "docker-privesc",
+      "path": "infra/docker-privesc/SKILL.md",
+      "category": "infra"
+    },
+    {
+      "name": "attack-patterns-reference",
+      "path": "meta/attack-patterns-reference/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "cross-wave-delta-analysis",
+      "path": "meta/cross-wave-delta-analysis/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "evasion-stack-guide",
+      "path": "meta/evasion-stack-guide/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "google-dorks-catalog",
+      "path": "meta/google-dorks-catalog/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "pentest-playbook",
+      "path": "meta/pentest-playbook/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "recon-playbook",
+      "path": "meta/recon-playbook/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "sector-recon-methodology",
+      "path": "meta/sector-recon-methodology/SKILL.md",
+      "category": "meta"
+    },
+    {
+      "name": "401-403-bypass-techniques",
+      "path": "recon/401-403-bypass/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "api-noauth-hunt",
+      "path": "recon/api-noauth-hunt/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "asn-infrastructure-mapping",
+      "path": "recon/asn-infrastructure-mapping/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "cms-detection",
+      "path": "recon/cms-detection/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "cors-credential-wordpress",
+      "path": "recon/cors-credential-wordpress/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "deep-invade",
+      "path": "recon/deep-invade/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "email-security",
+      "path": "recon/email-security/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "error-log-mining",
+      "path": "recon/error-log-mining/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "exchange-owa-attack",
+      "path": "recon/exchange-owa-attack/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "flask-werkzeug-attack",
+      "path": "recon/flask-werkzeug-attack/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "github-secret-hunting",
+      "path": "recon/github-secret-hunting/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "gitlab-public-recon",
+      "path": "recon/gitlab-public-recon/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "hardcoded-credential-hunt",
+      "path": "recon/hardcoded-credential-hunt/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "http2-header-impersonation",
+      "path": "recon/http2-header-impersonation/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "humanize-automation",
+      "path": "recon/humanize-automation/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "iot-camera-recon",
+      "path": "recon/iot-camera-recon/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "js-secrets-extraction",
+      "path": "recon/js-secrets-extraction/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "jwt-attack",
+      "path": "recon/jwt-attack/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "origin-ip-discovery",
+      "path": "recon/origin-ip-discovery/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "phpinfo-to-rce",
+      "path": "recon/phpinfo-to-rce/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "port-mass-scan",
+      "path": "recon/port-mass-scan/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "port-service-discovery",
+      "path": "recon/port-service-discovery/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "s3-minio-content-type-xss",
+      "path": "recon/s3-minio-content-type-xss/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "scada-hikvision-isapi",
+      "path": "recon/scada-hikvision-isapi/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "source-leak-hunt",
+      "path": "recon/source-leak-hunt/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "staging-subdomain-hunt",
+      "path": "recon/staging-subdomain-hunt/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "stealth-browser-launch",
+      "path": "recon/stealth-browser-launch/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "subdomain-enumeration",
+      "path": "recon/subdomain-enumeration/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "subdomain-takeover-hunt",
+      "path": "recon/subdomain-takeover-hunt/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "tls-fingerprint-impersonation",
+      "path": "recon/tls-fingerprint-impersonation/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "unauth-api-flow-hijack",
+      "path": "recon/unauth-api-flow-hijack/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "vhost-enumeration",
+      "path": "recon/vhost-enumeration/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "visual-recon",
+      "path": "recon/visual-recon/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "wordpress-plugin-hunt",
+      "path": "recon/wordpress-plugin-hunt/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "wp-mass-recon",
+      "path": "recon/wp-mass-recon/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "wp-plugin-rest-auth-bypass",
+      "path": "recon/wp-plugin-rest-auth-bypass/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "zimbra-attack",
+      "path": "recon/zimbra-attack/SKILL.md",
+      "category": "recon"
+    },
+    {
+      "name": "apk-redteam-pipeline",
+      "path": "redteam/apk-redteam-pipeline/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "bb-methodology",
+      "path": "redteam/bb-methodology/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "bug-bounty",
+      "path": "redteam/bug-bounty/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "bugcrowd-reporting",
+      "path": "redteam/bugcrowd-reporting/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "cloud-iam-deep",
+      "path": "redteam/cloud-iam-deep/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "cors-chain-automation",
+      "path": "redteam/cors-chain-automation/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "enterprise-vpn-attack",
+      "path": "redteam/enterprise-vpn-attack/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "evidence-hygiene",
+      "path": "redteam/evidence-hygiene/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-api-misconfig",
+      "path": "redteam/hunt-api-misconfig/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-aspnet",
+      "path": "redteam/hunt-aspnet/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-ato",
+      "path": "redteam/hunt-ato/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-auth-bypass",
+      "path": "redteam/hunt-auth-bypass/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-brute-force",
+      "path": "redteam/hunt-brute-force/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-business-logic",
+      "path": "redteam/hunt-business-logic/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-cache-poison",
+      "path": "redteam/hunt-cache-poison/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-cicd",
+      "path": "redteam/hunt-cicd/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-cloud-misconfig",
+      "path": "redteam/hunt-cloud-misconfig/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-cors",
+      "path": "redteam/hunt-cors/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-csrf",
+      "path": "redteam/hunt-csrf/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-deserialization",
+      "path": "redteam/hunt-deserialization/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-dispatch",
+      "path": "redteam/hunt-dispatch/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-dom",
+      "path": "redteam/hunt-dom/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-file-upload",
+      "path": "redteam/hunt-file-upload/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-firebase",
+      "path": "redteam/hunt-firebase/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-frameworks",
+      "path": "redteam/hunt-frameworks/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-graphql",
+      "path": "redteam/hunt-graphql/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-grpc",
+      "path": "redteam/hunt-grpc/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-host-header",
+      "path": "redteam/hunt-host-header/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-http-smuggling",
+      "path": "redteam/hunt-http-smuggling/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-idor",
+      "path": "redteam/hunt-idor/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-information-disclosure",
+      "path": "redteam/hunt-information-disclosure/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-k8s",
+      "path": "redteam/hunt-k8s/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-ldap",
+      "path": "redteam/hunt-ldap/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-lfi",
+      "path": "redteam/hunt-lfi/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-llm-ai",
+      "path": "redteam/hunt-llm-ai/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-mass-assignment",
+      "path": "redteam/hunt-mass-assignment/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-mcp-security",
+      "path": "redteam/hunt-mcp-security/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-metrics-exposure",
+      "path": "redteam/hunt-metrics-exposure/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-mfa-bypass",
+      "path": "redteam/hunt-mfa-bypass/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-misc",
+      "path": "redteam/hunt-misc/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-nestjs",
+      "path": "redteam/hunt-nestjs/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-nextjs",
+      "path": "redteam/hunt-nextjs/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-nosqli",
+      "path": "redteam/hunt-nosqli/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-ntlm-info",
+      "path": "redteam/hunt-ntlm-info/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-oauth",
+      "path": "redteam/hunt-oauth/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-open-redirect",
+      "path": "redteam/hunt-open-redirect/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-prototype-pollution",
+      "path": "redteam/hunt-prototype-pollution/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-race-condition",
+      "path": "redteam/hunt-race-condition/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-rce",
+      "path": "redteam/hunt-rce/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-saml",
+      "path": "redteam/hunt-saml/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-schema-enumeration",
+      "path": "redteam/hunt-schema-enumeration/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-session",
+      "path": "redteam/hunt-session/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-sharepoint",
+      "path": "redteam/hunt-sharepoint/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-source-leak",
+      "path": "redteam/hunt-source-leak/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-springboot",
+      "path": "redteam/hunt-springboot/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-sqli",
+      "path": "redteam/hunt-sqli/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-ssrf",
+      "path": "redteam/hunt-ssrf/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-ssti",
+      "path": "redteam/hunt-ssti/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-subdomain",
+      "path": "redteam/hunt-subdomain/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-supabase",
+      "path": "redteam/hunt-supabase/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-tls-network",
+      "path": "redteam/hunt-tls-network/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-websocket",
+      "path": "redteam/hunt-websocket/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-wordpress",
+      "path": "redteam/hunt-wordpress/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-write-gap",
+      "path": "redteam/hunt-write-gap/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-xss",
+      "path": "redteam/hunt-xss/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "hunt-xxe",
+      "path": "redteam/hunt-xxe/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "llm-prompt-injection",
+      "path": "redteam/llm-prompt-injection/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "m365-entra-attack",
+      "path": "redteam/m365-entra-attack/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "meme-coin-audit",
+      "path": "redteam/meme-coin-audit/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "mid-engagement-ir-detection",
+      "path": "redteam/mid-engagement-ir-detection/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "offensive-osint",
+      "path": "redteam/offensive-osint/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "okta-attack",
+      "path": "redteam/okta-attack/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "ops-proxyns",
+      "path": "redteam/ops-proxyns/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "osint-methodology",
+      "path": "redteam/osint-methodology/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "password-spray-methodology",
+      "path": "redteam/password-spray-methodology/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "recon-sector",
+      "path": "redteam/recon-sector/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "recon-sector-expansion",
+      "path": "redteam/recon-sector-expansion/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "redteam-mindset",
+      "path": "redteam/redteam-mindset/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "redteam-report-template",
+      "path": "redteam/redteam-report-template/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "report-writing",
+      "path": "redteam/report-writing/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "security-arsenal",
+      "path": "redteam/security-arsenal/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "supply-chain-attack-recon",
+      "path": "redteam/supply-chain-attack-recon/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "triage-validation",
+      "path": "redteam/triage-validation/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "vmware-vcenter-attack",
+      "path": "redteam/vmware-vcenter-attack/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "web2-recon",
+      "path": "redteam/web2-recon/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "web3-audit",
+      "path": "redteam/web3-audit/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "wordpress-cors-xmlrpc-rce-chain",
+      "path": "redteam/wordpress-cors-xmlrpc-rce-chain/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "wp-plugin-cve-hunt",
+      "path": "redteam/wp-plugin-cve-hunt/SKILL.md",
+      "category": "redteam"
+    },
+    {
+      "name": "wstg-web-pentest",
+      "path": "redteam/wstg-web-pentest/SKILL.md",
+      "category": "redteam"
+    }
+  ],
+  "unlinked": [
+    "apk-redteam-pipeline",
+    "bb-methodology",
+    "bug-bounty",
+    "bugcrowd-reporting",
+    "cloud-iam-deep",
+    "cors-chain-automation",
+    "email-security",
+    "enterprise-vpn-attack",
+    "flask-werkzeug-attack",
+    "google-dorks-catalog",
+    "hunt-aspnet",
+    "hunt-ato",
+    "hunt-cicd",
+    "hunt-csrf",
+    "hunt-deserialization",
+    "hunt-dispatch",
+    "hunt-dom",
+    "hunt-grpc",
+    "hunt-host-header",
+    "hunt-k8s",
+    "hunt-ldap",
+    "hunt-lfi",
+    "hunt-metrics-exposure",
+    "hunt-misc",
+    "hunt-nextjs",
+    "hunt-nosqli",
+    "hunt-ntlm-info",
+    "hunt-open-redirect",
+    "hunt-race-condition",
+    "hunt-schema-enumeration",
+    "hunt-sharepoint",
+    "hunt-springboot",
+    "hunt-xxe",
+    "m365-entra-attack",
+    "meme-coin-audit",
+    "mid-engagement-ir-detection",
+    "okta-attack",
+    "osint-methodology",
+    "password-spray-methodology",
+    "recon-sector-expansion",
+    "redteam-mindset",
+    "redteam-report-template",
+    "security-arsenal",
+    "supply-chain-attack-recon",
+    "vmware-vcenter-attack",
+    "web3-audit",
+    "wp-plugin-cve-hunt"
+  ]
+}
