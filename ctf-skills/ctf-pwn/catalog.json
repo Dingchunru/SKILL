@@ -1,0 +1,1521 @@
+{
+  "skill": "ctf-pwn",
+  "generated_by": "scripts/build_skill_catalog.py",
+  "docs": [
+    {
+      "path": "advanced-exploits-2.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 进阶利用技术（第 2 部分）",
+      "summary": "进阶利用技术（第 2 部分）：自修改绕过字节码校验器、io_uring UAF 注入 SQE、int32→int16 整数截断、GC 空引用级联破坏、多次 fgets 覆盖 stdout FILE 实现无泄露 libc、有符号/无符号 char 下溢堆溢出、XOR 密钥流爆破写原语、tcache 指针解密堆泄露、伪造 chunk size 提升 unsorted bin、FSOP stdout TLS 泄露、通过 __call_tls_dtors 劫持 TLS…",
+      "sections": [
+        "通过自修改绕过字节码校验器（srdnlenCTF 2026）",
+        "io_uring UAF 与 SQE 注入（ApoorvCTF 2026）",
+        "整数截断绕过 int32 到 int16（ApoorvCTF 2026）",
+        "GC 空引用级联破坏（DiceCTF 2026）",
+        "多次 fgets 覆写 stdout FILE 实现无泄漏 libc（Midnightflag 2026）",
+        "有符号/无符号 char 下溢到堆溢出 + TLS 析构函数劫持（Midnightflag 2026）",
+        "通过指针溢出自定义影子栈绕过（Midnight 2026）",
+        "有符号 int 溢出导致负向越界堆写 + XSS 到二进制 pwn 的桥接（Midnight 2026）"
+      ],
+      "bytes": 31528
+    },
+    {
+      "path": "advanced-exploits-3.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 进阶利用技术（第 3 部分）",
+      "summary": "进阶利用技术（第 3 部分）：栈变量重叠/进位破坏越界、8 位循环计数器造成 1 字节溢出、游戏 AI 算术平均越界读、任意读写 GOT 覆盖 getshell、__environ + memcpy 溢出泄露栈、uint16 跳转截断造成 JIT 沙箱逃逸、DNS 压缩指针多问题栈溢出 + ROP、篡改程序头绕过 ELF 代码签名、游戏关卡格式有符号/无符号坐标不一致、缺失 O_CLOEXEC 导致文件描述符继承、元数据解析中的符号扩展整数下溢、只读原语构造 ROP…",
+      "sections": [
+        "栈变量重叠 / 进位破坏造成越界（srdnlenCTF 2026）",
+        "8 位循环计数器造成 1 字节溢出（srdnlenCTF 2026）",
+        "游戏 AI 算术平均造成越界读（BSidesSF 2024）",
+        "通过 GOT 覆盖实现任意读/写到 shell（BSidesSF 2026）",
+        "通过 __environ 与 memcpy 溢出泄漏栈（BSidesSF 2026）",
+        "条件跳转 uint16 截断导致 JIT 沙箱逃逸（BSidesSF 2026）",
+        "DNS 压缩指针栈溢出与多问题 ROP（BSidesSF 2026）",
+        "通过程序头篡改绕过 ELF 代码签名（BSidesSF 2026）"
+      ],
+      "bytes": 32608
+    },
+    {
+      "path": "advanced-exploits-4.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 进阶利用技术（第 4 部分）",
+      "summary": "进阶利用技术（第 4 部分）：Windows SEH 覆盖 + pushad VirtualAlloc ROP、IAT 相对解析、分离进程的 shell 稳定性、SeDebugPrivilege 提权到 SYSTEM、ARM 缓冲区溢出配 Thumb shellcode、Forth 解释器 system 字利用、GF(2) 高斯消元做多轮 tcache 投毒、单比特翻转利用原语（mprotect + 迭代改代码）、用静物演化生成 Game of Life…",
+      "sections": [
+        "Windows SEH 覆盖 + pushad VirtualAlloc ROP（RainbowTwo HTB）",
+        "SeDebugPrivilege 提权到 SYSTEM（RainbowTwo HTB）",
+        "ARM 缓冲区溢出与 Thumb shellcode（HackIM 2016）",
+        "Forth 解释器命令执行（32C3 2015）",
+        "GF(2) 高斯消元实现多轮 tcache 投毒（Midnight Flag 2026）",
+        "单比特翻转利用原语（PlaidCTF 2016）",
+        "用静物模式让生命游戏中的 shellcode 存活（DEF CON Quals 2016）",
+        "菜单驱动的 strdup/free 顺序造成 UAF（PlaidCTF 2016）"
+      ],
+      "bytes": 31386
+    },
+    {
+      "path": "advanced-exploits-5.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 进阶利用技术（第 5 部分）",
+      "summary": "进阶利用技术（第 5 部分）：数据解释类利用——Chip-8 模拟器越界内存打 ret2libc、双精度浮点快排重排 canary、布隆过滤器 abs(INT_MIN) 负索引越界写",
+      "sections": [
+        "Chip-8 模拟器越界内存实现 ret2libc（IceCTF 2018）",
+        "双精度浮点快速排序重排 Canary（CSAW 2018）",
+        "布隆过滤器 abs(INT_MIN) 负下标越界写（DragonCTF Teaser 2018）"
+      ],
+      "bytes": 6365
+    },
+    {
+      "path": "advanced-exploits.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 进阶漏洞利用技术",
+      "summary": "进阶利用技术（第 1 部分）：VM 有符号比较、BF JIT shellcode、类型混淆、off-by-one 索引破坏、DNS 溢出、ASAN shadow memory、带编码约束的格式化字符串、自定义 canary 保留、有符号整数绕过、感知 canary 的部分溢出、CSV 注入、MD5 原像 gadget、VM GC UAF slab 复用、路径穿越清洗绕过、FSOP + 通过 openat/mmap/write 绕过 seccomp",
+      "sections": [
+        "VM 有符号比较 Bug（0xFun 2026）",
+        "BF JIT 括号不配对导致 RWX Shellcode（VuwCTF 2025）",
+        "解释器中的类型混淆（VuwCTF 2025）",
+        "Off-by-One 索引破坏 size 字段（VuwCTF 2025）",
+        "双次调用 win() 模式（VuwCTF 2025）",
+        "DNS 记录缓冲区溢出",
+        "ASAN 影子内存利用",
+        "带编码约束的格式化字符串 + RWX .fini_array 劫持"
+      ],
+      "bytes": 37258
+    },
+    {
+      "path": "advanced.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 进阶技术",
+      "summary": "seccomp 进阶技术、UAF、JIT、冷门 GOT、进制转换造成堆重叠、树结构栈分配不足、ret2dlresolve、内核利用（基础）",
+      "sections": [
+        "Seccomp 进阶技巧",
+        "ROP 链中的 rdx 控制",
+        "释放后使用（UAF）利用",
+        "JIT 编译利用",
+        "小众语言解释器的 GOT 覆写",
+        "通过进制转换做堆重叠",
+        "树形数据结构栈分配不足",
+        "ret2dlresolve"
+      ],
+      "bytes": 15128
+    },
+    {
+      "path": "attack-playbook.md",
+      "kind": "technique",
+      "title": "Linux 用户态攻击手册",
+      "summary": "Linux 用户态攻击 playbook：输入/权限边界侦察、按缓解措施选择泄露方式、原语排序工作流",
+      "sections": [
+        "侦察",
+        "泄漏选择",
+        "控制流与写目标",
+        "路由到具体技术",
+        "Payload 检查清单"
+      ],
+      "bytes": 5531
+    },
+    {
+      "path": "field-notes.md",
+      "kind": "technique",
+      "title": "Pwn 实战笔记",
+      "summary": "详细 pwn 笔记：堆利用速查、额外利用笔记、常用命令",
+      "sections": [
+        "堆利用",
+        "其他利用笔记",
+        "常用命令"
+      ],
+      "bytes": 28523
+    },
+    {
+      "path": "format-string.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 格式化字符串利用",
+      "summary": "格式化字符串利用（泄露、GOT 覆盖、盲打、过滤绕过、canary 泄露、__free_hook、.rela.plt 修补、覆盖保存的 EBP 做 .bss 迁移、覆盖 argv[0] 泄露栈信息、.fini_array 循环做多阶段利用、连续 %p 绕过 __printf_chk、单次调用泄露 + GOT 覆盖、输入变换后的 ROT13 格式化字符串利用）",
+      "sections": [
+        "格式化字符串基础",
+        "参数重定向（非位置化 %n 技巧）",
+        "盲打 Pwn（未提供二进制）",
+        "带过滤绕过的格式化字符串",
+        "格式化字符串泄漏 canary + PIE",
+        "通过格式化字符串覆写 __free_hook（glibc < 2.34）",
+        ".rela.plt / .dynsym 补丁",
+        "用格式化字符串篡改游戏状态（UTCTF 2026）"
+      ],
+      "bytes": 33565
+    },
+    {
+      "path": "heap-fsop.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 堆 FILE 结构攻击",
+      "summary": "FILE 结构体（_IO_FILE）利用：fastbin stdout vtable 两阶段劫持绕过 PIE + Full RELRO、_IO_buf_base 空字节劫持 stdin、glibc 2.24+ _IO_FILE vtable 校验绕过、对 stdin _IO_buf_end 的 unsorted bin 攻击、通过 mp_ 结构破坏 unsorted bin、realloc(ptr, 0) 当作 free() 的 UAF、单字节引用计数回绕 UAF",
+      "sections": [
+        "Fastbin stdout Vtable 两阶段劫持（PIE + Full RELRO，ASIS CTF 2017）",
+        "_IO_buf_base 空字节覆盖劫持 stdin（Tokyo Westerns 2017）",
+        "glibc 2.24+ _IO_FILE Vtable 校验绕过（HITCON 2017）",
+        "针对 stdin _IO_buf_end 的 Unsorted Bin 攻击（HITCON 2017）",
+        "通过 mp_ 结构破坏 Unsorted Bin（HITCON 2017）",
+        "用 realloc(ptr, 0) 当作 free() 制造 UAF（AceBear 2018）",
+        "单字节引用计数回绕导致 UAF（WhiteHat Grand Prix 2018）"
+      ],
+      "bytes": 15458
+    },
+    {
+      "path": "heap-techniques-2.md",
+      "kind": "technique",
+      "title": "堆利用技术（第 2 部分）",
+      "summary": "CTF writeup 中的堆变体：UAF vtable 指针编码 shell 参数、未初始化 chunk 残留指针泄露、tcache strcpy 空字节溢出 + 向后合并、相邻结构体函数指针溢出实现 libc 泄露 + GOT 覆盖、隐藏菜单 tcache 投毒、tcache double-free + 伪造 _IO_FILE vtable 劫持 stdout、tcache 提升为 fastbin 的跨 bin 攻击、6 位索引越界 + written_bytes…",
+      "sections": [
+        "UAF 中 vtable 指针编码为 shell 参数（BCTF 2017）",
+        "未初始化 chunk 残留指针泄漏（picoCTF 2018）",
+        "tcache strcpy 空字节溢出 + 向后合并（HITCON 2018）",
+        "相邻结构体函数指针溢出实现 libc 泄漏 + GOT 覆盖（RITSEC 2018）",
+        "隐藏菜单项 1337 实现 tcache 投毒（FireShell 2019）",
+        "tcache double-free + 伪造 _IO_FILE vtable 劫持 stdout（BCTF 2018）",
+        "tcache 到 fastbin 的提升型跨 bin 攻击（BCTF 2018）",
+        "6 位下标越界 + written_bytes 累加器递增函数指针（Codegate 2019）"
+      ],
+      "bytes": 20838
+    },
+    {
+      "path": "heap-techniques.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 堆利用技术",
+      "summary": "House of Apple 2（含 setcontext SUID 变体）、House of Einherjar、House of Orange/Spirit/Lore/Force、堆布局 groom、自定义分配器（nginx、talloc）、经典 unlink、musl libc 堆（meta 指针 + atexit 劫持）、tcache stashing unlink 攻击、unsafe unlink + top chunk 合并",
+      "sections": [
+        "House of Apple 2 — 针对 glibc 2.34+ 的 FSOP（0xFun 2026）",
+        "House of Einherjar — Off-by-One 空字节（0xFun 2026）",
+        "堆利用",
+        "自定义分配器利用",
+        "经典堆 Unlink 攻击（Crypto-Cat）",
+        "musl libc 堆利用 — Meta 指针 + atexit（UNbreakable 2026）",
+        "House of Orange",
+        "House of Spirit"
+      ],
+      "bytes": 39077
+    },
+    {
+      "path": "kernel-bypass.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 内核保护绕过",
+      "summary": "内核保护绕过：KASLR/FGKASLR 绕过（__ksymtab）、KPTI 绕过（swapgs trampoline、信号处理器、通过 ROP 改 modprobe_path/core_pattern）、SMEP/SMAP 绕过、GDB 调试内核模块、initramfs/virtio-9p 工作流、利用模板、利用投递",
+      "sections": [
+        "KASLR 与 FGKASLR 绕过",
+        "KPTI 绕过方法",
+        "CET 影子栈（SHSTK）与 IBT —— 信号帧绕过（Wolv / IERAE 2024）",
+        "SMEP / SMAP 绕过",
+        "KPTI / SMEP / SMAP 速查",
+        "GDB 调试内核模块",
+        "initramfs 与 virtio-9p 工作流",
+        "在没有 CONFIG_KALLSYMS_ALL 的情况下找符号偏移"
+      ],
+      "bytes": 20709
+    },
+    {
+      "path": "kernel-techniques.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 内核利用技术",
+      "summary": "内核利用技术：tty_struct kROP（伪造 vtable + 栈迁移）、通过 ioctl 寄存器控制实现任意地址写、userfaultfd 竞态稳定化、SLUB 分配器内部（freelist 加固/混淆）、通过内核 panic 泄露、MADV_DONTNEED 扩大竞态窗口（DiceCTF 2026）、跨 cache CPU 拆分攻击（DiceCTF 2026）、PTE 重叠文件写（DiceCTF 2026）、利用文件打开失败绕过 addr_limit 读写内核内存",
+      "sections": [
+        "tty_struct RIP 劫持与 kROP",
+        "userfaultfd 稳定竞态",
+        "SLUB 分配器内部机制",
+        "通过内核 panic 泄漏",
+        "用 MADV_DONTNEED + mprotect 扩大竞态窗口（DiceCTF 2026）",
+        "CPU 分离策略的跨缓存攻击（DiceCTF 2026）",
+        "PTE 重叠原语实现文件写（DiceCTF 2026）",
+        "通过文件打开失败绕过内核 addr_limit（Midnight Sun CTF 2018）"
+      ],
+      "bytes": 19223
+    },
+    {
+      "path": "kernel.md",
+      "kind": "technique",
+      "title": "CTF Pwn - Linux 内核利用",
+      "summary": "Linux 内核利用基础：环境搭建、QEMU 调试、堆喷结构（tty_struct、poll_list、user_key_payload、seq_operations）、内核栈溢出、canary 泄露、提权（ret2usr、内核 ROP）、覆盖 modprobe_path、覆盖 core_pattern、kmalloc 大小不匹配堆溢出 + struct file f_op 破坏",
+      "sections": [
+        "环境搭建与信息收集",
+        "堆喷常用的内核结构体",
+        "内核栈溢出与 canary 泄漏",
+        "提权原语",
+        "modprobe_path 覆写",
+        "core_pattern 覆写",
+        "kmalloc 尺寸不匹配导致的内核堆溢出（PlaidCTF 2013）",
+        "eBPF 校验器绕过利用（UIUCTF 2021、D^3CTF 2022）"
+      ],
+      "bytes": 33363
+    },
+    {
+      "path": "overflow-basics.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 溢出基础",
+      "summary": "栈/全局缓冲区溢出、ret2win、canary 绕过、fork 服务上的 canary 逐字节爆破、结构体指针覆盖、有符号整数绕过、隐藏 gadget、基于 stride 的越界读泄露、未检查 memcpy 长度导致的解析器栈溢出（含 callee-saved 寄存器恢复）",
+      "sections": [
+        "栈缓冲区溢出",
+        "结构体指针覆写（堆菜单题）",
+        "有符号整数绕过（负数量）",
+        "绕过 canary 的部分溢出",
+        "通过步长/速率泄漏的越界读（DiceCTF 2026）",
+        "fork 型服务器上的栈 canary 逐字节爆破",
+        "全局缓冲区溢出（CSV 注入）",
+        "协议长度字段栈泄漏（EKOPARTY CTF 2016）"
+      ],
+      "bytes": 27286
+    },
+    {
+      "path": "rop-advanced.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 进阶 ROP 技术",
+      "summary": "进阶 ROP 技术：通过 leave;ret 双重栈迁移到 BSS、带 UTF-8 约束的 SROP（Sigreturn-Oriented Programming）、seccomp 绕过、RETF 架构切换（x64→x32）绕过 seccomp、输入反转的 shellcode、.fini_array 劫持、ret2vdso、pwntools 模板、x32 ABI 系统调用别名绕过 seccomp、基于时间的盲 shellcode 外带",
+      "sections": [
+        "通过 leave;ret 双重栈迁移到 BSS（Midnightflag 2026）",
+        "受 UTF-8 载荷约束的 SROP（DiceCTF 2026）",
+        "seccomp 绕过",
+        "用 RETF 切换架构绕过 seccomp（Midnightflag 2026）",
+        "带输入反转的栈上 shellcode",
+        ".fini_array 劫持",
+        "pwntools 模板",
+        "ret2vdso — 使用内核 vDSO gadget（HTB Nowhere to go）"
+      ],
+      "bytes": 33624
+    },
+    {
+      "path": "rop-and-shellcode.md",
+      "kind": "technique",
+      "title": "CTF Pwn - ROP 链与 Shellcode",
+      "summary": "核心 ROP 链（ret2libc、syscall ROP、rdx 控制、shell 交互）、ret2csu、坏字符 XOR 绕过、冷门 x86 gadget（BEXTR/XLAT/STOSB/PEXT）、通过 xchg rax,esp 栈迁移、sprintf() gadget 链绕过坏字符、canary XOR 尾声作为 RDX 清零 gadget、以 stub_execveat 系统调用和 read() 返回值替代 execve",
+      "sections": [
+        "构造 ROP 链",
+        "ret2csu — __libc_csu_init gadget（Crypto-Cat）",
+        "ROP 中用 XOR 编码绕过坏字符（Crypto-Cat）",
+        "冷门 x86 gadget — BEXTR/XLAT/STOSB/PEXT（Crypto-Cat）",
+        "通过 xchg rax,esp 做栈迁移（Crypto-Cat）",
+        "用 sprintf() 串联绕过坏字符（PlaidCTF 2013）",
+        "DynELF 自动探测 libc（RC3 CTF 2016）",
+        "小缓冲区中的受限 shellcode（TUM CTF 2016）"
+      ],
+      "bytes": 29485
+    },
+    {
+      "path": "sandbox-escape.md",
+      "kind": "technique",
+      "title": "CTF Pwn - 沙箱逃逸与受限环境",
+      "summary": "自定义 VM 利用、FUSE/CUSE 设备、busybox/受限 shell、shell 技巧、process_vm_readv 沙箱绕过、命名管道文件大小绕过、CPU 模拟器 print 操作码的 Python eval 注入",
+      "sections": [
+        "Python 沙箱逃逸",
+        "VM 利用（自定义字节码）",
+        "FUSE/CUSE 字符设备利用",
+        "Busybox / 受限 shell 提权",
+        "Shell 技巧",
+        "通过 /proc/self/mem 任意写（BSidesSF 2025）",
+        "自定义 VM swap 指令覆写自身指针（HITCON 2018）"
+      ],
+      "bytes": 15723
+    },
+    {
+      "path": "static-signals.md",
+      "kind": "technique",
+      "title": "与利用相关的静态信号",
+      "summary": "与利用相关的静态信号（libc 版本、seccomp 策略、RELRO/PIE/canary/NX 证据），用于评估可利用性",
+      "sections": [],
+      "bytes": 2084
+    },
+    {
+      "path": "tools-mcp.md",
+      "kind": "technique",
+      "title": "CTF Pwn - MCP 服务器集成",
+      "summary": "pwn 方向的 MCP 服务集成：WinDbg MCP 会话模型（open_cdb_dump/open_cdb_remote/open_kd_session + session_id）、崩溃转储初筛、在转储中扫描 flag{ 内存、实时断点/硬件观察点/内存补丁利用、!dh -f 检查 Windows 缓解措施（相当于 checksec）、用 kd 在内核态窃取 token；IDA/Ghidra MCP 用于漏洞利用开发（先反编译漏洞函数，只在需要精确 gadget…",
+      "sections": [
+        "WinDbg MCP（Windows 崩溃转储、实时与内核调试）",
+        "用 IDA / Ghidra MCP 开发利用"
+      ],
+      "bytes": 12045
+    }
+  ],
+  "tools": [
+    {
+      "path": "scripts/fmtstr_payload_suite.py",
+      "summary": "Format-string payload suite: leak, GOT overwrite, short writes."
+    },
+    {
+      "path": "scripts/ret2libc_two_stage.py",
+      "summary": "Two-stage ret2libc: leak libc via puts, then ret2system /bin/sh."
+    },
+    {
+      "path": "scripts/seccomp_orw_generator.py",
+      "summary": "Seccomp ORW (open/read/write) shellcode generator."
+    },
+    {
+      "path": "scripts/shellcraft_asm.py",
+      "summary": "Shellcraft assembly generation: amd64 linux shellcode via pwntools."
+    },
+    {
+      "path": "scripts/srop_execve.py",
+      "summary": "SROP execve: sigreturn-oriented programming to execve('/bin/sh')."
+    }
+  ],
+  "challenges": {
+    "index": "pwnable-tw/README.md",
+    "count": 43,
+    "items": [
+      {
+        "path": "pwnable-tw/orw.md",
+        "kind": "technique",
+        "title": "orw — pwnable.tw（100 分）",
+        "summary": "在固定地址的 RWX BSS 缓冲区执行用户 shellcode，但 seccomp 过滤器只允许 open、read、write 系统调用，需借此读取 flag 文件。",
+        "sections": [
+          "题目概览",
+          "二进制分析",
+          "漏洞",
+          "利用路径",
+          "关键技术细节",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 12059,
+        "tags": [
+          "shellcode",
+          "seccomp-bypass"
+        ],
+        "platform": "pwnable.tw",
+        "points": "100",
+        "arch": "i386",
+        "libc": "static",
+        "protections": "Partial RELRO / Canary / NX off / No PIE"
+      },
+      {
+        "path": "pwnable-tw/start.md",
+        "kind": "technique",
+        "title": "Start — pwnable.tw（100 分）",
+        "summary": "在一个极简的 32 位汇编二进制中，利用栈缓冲区溢出通过 sys_write 泄漏栈指针，并返回到栈上的用户 shellcode。",
+        "sections": [
+          "题目概况",
+          "反汇编",
+          "漏洞",
+          "利用路径",
+          "利用原语汇总",
+          "关键地址",
+          "解法 writeup",
+          "文件"
+        ],
+        "bytes": 10723,
+        "tags": [
+          "stack-buffer-overflow",
+          "information-leak",
+          "shellcode"
+        ],
+        "platform": "pwnable.tw",
+        "points": "100",
+        "arch": "i386",
+        "libc": "static",
+        "protections": "No RELRO / No Canary / NX off / No PIE"
+      },
+      {
+        "path": "pwnable-tw/3x17.md",
+        "kind": "technique",
+        "title": "3x17 — pwnable.tw (150 分)",
+        "summary": "一次任意 24 字节写入可以覆盖 .fini_array 条目，让 __libc_csu_fini 循环执行，把 RSP 迁移到用户输入处并执行调用 execve 的 ROP 链。",
+        "sections": [
+          "题目概览",
+          "逆向分析",
+          "漏洞",
+          "关键地址",
+          "ROP Gadget（静态链接 —— 数量充足）",
+          "利用路径",
+          "利用流程图",
+          "利用原语总结"
+        ],
+        "bytes": 11299,
+        "tags": [
+          "arbitrary-write",
+          "fini-array-overwrite",
+          "rop",
+          "static-binary"
+        ],
+        "platform": "pwnable.tw",
+        "points": "150",
+        "arch": "x86-64",
+        "libc": "static",
+        "protections": "Partial RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/calc.md",
+        "kind": "technique",
+        "title": "calc — pwnable.tw（150 分）",
+        "summary": "算术表达式 token 索引中的整数下溢可导致任意栈读写，从而能在返回地址处构造 ROP 链。",
+        "sections": [
+          "题目概览",
+          "架构",
+          "漏洞",
+          "利用路径",
+          "写原语细节",
+          "利用原语总结",
+          "关键 gadget（位于静态二进制中）",
+          "题解文章"
+        ],
+        "bytes": 13188,
+        "tags": [
+          "integer-underflow",
+          "stack-buffer-overflow",
+          "rop",
+          "static-binary"
+        ],
+        "platform": "pwnable.tw",
+        "points": "150",
+        "arch": "i386",
+        "libc": "static",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/hacknote.md",
+        "kind": "technique",
+        "title": "hacknote — pwnable.tw（150 分）",
+        "summary": "笔记管理中的 use-after-free 允许把用户数据重新分配到笔记元数据堆块，从而覆盖打印函数指针并调用 system。",
+        "sections": [
+          "题目概览",
+          "程序结构",
+          "漏洞",
+          "关键地址（固定，No PIE）",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_32.so.6，glibc 2.23，32 位）",
+          "题解文章"
+        ],
+        "bytes": 12499,
+        "tags": [
+          "use-after-free",
+          "got-overwrite",
+          "ret2libc"
+        ],
+        "platform": "pwnable.tw",
+        "points": "150",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/bash.md",
+        "kind": "technique",
+        "title": "Bash — pwnable.tw（200 分）",
+        "summary": "受限 bash shell 中创建临时环境文件时的竞态条件，使得攻击者可以执行任意 shell 命令以绕过限制。",
+        "sections": [
+          "题目概览",
+          "漏洞 / 弱点",
+          "利用路径",
+          "利用手法总结",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 10545,
+        "tags": [
+          "logic-flaw",
+          "race-condition",
+          "command-injection"
+        ],
+        "platform": "pwnable.tw",
+        "points": "200",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/criticalheap.md",
+        "kind": "technique",
+        "title": "criticalheap — pwnable.tw（200 分）",
+        "summary": "system 类型与普通堆对象之间的类型混淆可修改结构体指针，从而获得向 RWX 页的任意写入并执行 shellcode。",
+        "sections": [
+          "题目概览",
+          "数据结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "关键偏移",
+          "诱饵陷阱",
+          "题解文章"
+        ],
+        "bytes": 14642,
+        "tags": [
+          "type-confusion",
+          "arbitrary-write",
+          "shellcode"
+        ],
+        "platform": "pwnable.tw",
+        "points": "200",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/re_alloc.md",
+        "kind": "technique",
+        "title": "Re-alloc — pwnable.tw（200 分）",
+        "summary": "向 realloc 传入 0 会释放 chunk 却不清空指针，进而在 glibc 2.29 上做 tcache poisoning，用 system 覆盖 GOT 表项。",
+        "sections": [
+          "题目概况",
+          "程序逻辑（伪代码）",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "关键地址（无 PIE）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 11697,
+        "tags": [
+          "use-after-free",
+          "tcache-poisoning",
+          "got-overwrite"
+        ],
+        "platform": "pwnable.tw",
+        "points": "200",
+        "arch": "x86-64",
+        "libc": "glibc-2.29",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/silver_bullet.md",
+        "kind": "technique",
+        "title": "Silver Bullet — pwnable.tw（200 分）",
+        "summary": "strncat 的 off-by-one 会把子弹威力整数写成 0，于是第二次输入能溢出栈帧，进而做 ret2libc。",
+        "sections": [
+          "题目概况",
+          "程序结构",
+          "漏洞",
+          "关键二进制地址（无 PIE）",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_32.so.6，glibc 2.23）",
+          "题解文章"
+        ],
+        "bytes": 14150,
+        "tags": [
+          "off-by-one",
+          "stack-buffer-overflow",
+          "ret2libc"
+        ],
+        "platform": "pwnable.tw",
+        "points": "200",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/starbound.md",
+        "kind": "technique",
+        "title": "Starbound — pwnable.tw（200 分）",
+        "summary": "菜单跳转表接受负下标，可读到表外，进而把栈迁移到用户输入上执行 ROP 链。",
+        "sections": [
+          "题目概况",
+          "关键内存布局（无 PIE —— 地址固定）",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（远端 libc：Ubuntu GLIBC 2.23-0ubuntu10，i386）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13547,
+        "tags": [
+          "integer-overflow",
+          "stack-pivoting",
+          "rop"
+        ],
+        "platform": "pwnable.tw",
+        "points": "200",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/tcache_tear.md",
+        "kind": "technique",
+        "title": "Tcache Tear — pwnable.tw（200 分）",
+        "summary": "tcache 中的双重释放可把任意内存地址链进 tcache 链表，在 __free_hook 上伪造 chunk 从而执行 system。",
+        "sections": [
+          "题目概况",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（远端 libc，glibc 2.27）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 12515,
+        "tags": [
+          "double-free",
+          "tcache-poisoning",
+          "arbitrary-write"
+        ],
+        "platform": "pwnable.tw",
+        "points": "200",
+        "arch": "x86-64",
+        "libc": "glibc-2.27",
+        "protections": "Full RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/babystack.md",
+        "kind": "technique",
+        "title": "BabyStack — pwnable.tw（250 分）",
+        "summary": "利用 strncmp 构成的密码校验预言机，可以逐字节还原栈 canary 和随机密码，进而通过栈溢出构造 ROP 链。",
+        "sections": [
+          "题目概览",
+          "程序逻辑",
+          "漏洞",
+          "利用路径",
+          "关键观察",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章"
+        ],
+        "bytes": 15745,
+        "tags": [
+          "information-leak",
+          "brute-force-oracle",
+          "stack-buffer-overflow",
+          "rop"
+        ],
+        "platform": "pwnable.tw",
+        "points": "250",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/applestore.md",
+        "kind": "technique",
+        "title": "applestore — pwnable.tw (300 分)",
+        "summary": "把栈上分配的商品节点插入堆管理的购物车双向链表后，删除商品时会产生任意写原语，可通过覆盖 GOT 劫持控制流。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_32.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13873,
+        "tags": [
+          "stack-pivoting",
+          "type-confusion",
+          "arbitrary-write",
+          "got-overwrite"
+        ],
+        "platform": "pwnable.tw",
+        "points": "300",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/death_note.md",
+        "kind": "technique",
+        "title": "Death Note — pwnable.tw（300 分）",
+        "summary": "笔记选择处存在负索引，允许把地址写进 GOT 数组，从而将执行流重定向到存放在可执行堆上的可打印字母数字 shellcode。",
+        "sections": [
+          "题目概览",
+          "还原后的二进制逻辑",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "Shellcode 编码技术汇总",
+          "利用原语总结",
+          "偏移"
+        ],
+        "bytes": 13785,
+        "tags": [
+          "out-of-bounds-write",
+          "alpha-shellcode",
+          "got-overwrite"
+        ],
+        "platform": "pwnable.tw",
+        "points": "300",
+        "arch": "i386",
+        "libc": "static",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/dubblesort.md",
+        "kind": "technique",
+        "title": "dubblesort — pwnable.tw（300 分）",
+        "summary": "向 scanf 输入非数字可跳过数组元素的赋值而不写入，从而在排序过程中绕过栈 canary，实现 ret2libc。",
+        "sections": [
+          "题目概览",
+          "程序逻辑（反编译）",
+          "漏洞",
+          "利用路径 — 栈溢出 + 绕过 Canary 的 ret2libc",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_32.so.6，glibc 2.23 i386）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 11676,
+        "tags": [
+          "canary-bypass",
+          "stack-buffer-overflow",
+          "ret2libc"
+        ],
+        "platform": "pwnable.tw",
+        "points": "300",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/kidding.md",
+        "kind": "technique",
+        "title": "Kidding — pwnable.tw（300 分）",
+        "summary": "静态二进制在标准流被关闭的情况下存在栈溢出，需构造 ROP 链建立反向 socket 连接才能取回 flag。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键符号（No PIE，静态链接）",
+          "利用路径",
+          "利用原语总结",
+          "偏移（静态二进制，No PIE）",
+          "获取 flag",
+          "题解文章"
+        ],
+        "bytes": 13513,
+        "tags": [
+          "stack-buffer-overflow",
+          "rop",
+          "seccomp-bypass",
+          "reverse-shell"
+        ],
+        "platform": "pwnable.tw",
+        "points": "300",
+        "arch": "i386",
+        "libc": "static",
+        "protections": "Partial RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/mno2.md",
+        "kind": "technique",
+        "title": "MnO2 — pwnable.tw（300 分）",
+        "summary": "在固定的 RWX 内存区执行字母数字 shellcode，并在 seccomp 限制下用自修改代码拼出 syscall 指令。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "可用指令集",
+          "利用路径",
+          "利用原语总结",
+          "关键偏移",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 12532,
+        "tags": [
+          "alpha-shellcode",
+          "seccomp-bypass"
+        ],
+        "platform": "pwnable.tw",
+        "points": "300",
+        "arch": "i386",
+        "libc": "static",
+        "protections": "Partial RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/spirited_away.md",
+        "kind": "technique",
+        "title": "Spirited Away — pwnable.tw（300 分）",
+        "summary": "长度字段的 off-by-one 可在栈上伪造 chunk 头，经 free() 触发 House of Spirit，从而覆盖返回地址。",
+        "sections": [
+          "题目概况",
+          "程序逻辑（伪代码）",
+          "漏洞",
+          "利用流程（所有解法通用）",
+          "利用原语总结",
+          "关键栈布局",
+          "偏移（pwnable.tw libc_32.so.6，glibc 2.23）",
+          "题解文章"
+        ],
+        "bytes": 11904,
+        "tags": [
+          "house-of-spirit",
+          "stack-buffer-overflow",
+          "ret2libc"
+        ],
+        "platform": "pwnable.tw",
+        "points": "300",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/alive_note.md",
+        "kind": "technique",
+        "title": "Alive Note — pwnable.tw (350 分)",
+        "summary": "越界索引写入可以覆盖 free 的 GOT 表项，跳转到散布在堆 note 块中的 3 字节字母数字 shellcode 片段链。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "字母数字指令参考",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13703,
+        "tags": [
+          "heap-buffer-overflow",
+          "alpha-shellcode",
+          "got-overwrite"
+        ],
+        "platform": "pwnable.tw",
+        "points": "350",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / Canary / NX off / No PIE"
+      },
+      {
+        "path": "pwnable-tw/break_out.md",
+        "kind": "technique",
+        "title": "Break Out — pwnable.tw（350 分）",
+        "summary": "牢房笔记管理中的 use-after-free 可泄露堆与 libc 指针，随后通过 fastbin 重复分配覆盖 __malloc_hook。",
+        "sections": [
+          "题目概览",
+          "关键数据结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 14471,
+        "tags": [
+          "use-after-free",
+          "information-leak",
+          "fastbin-dup"
+        ],
+        "platform": "pwnable.tw",
+        "points": "350",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/caov.md",
+        "kind": "technique",
+        "title": "CAOV — pwnable.tw（350 分）",
+        "summary": "在 C++ 键值对的编辑流程中复用悬垂的对象指针会引发堆上类型混淆，从而破坏 fastbin 并覆盖伪造的 vtable。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13779,
+        "tags": [
+          "use-after-free",
+          "type-confusion",
+          "fastbin-dup"
+        ],
+        "platform": "pwnable.tw",
+        "points": "350",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/heap_paradise.md",
+        "kind": "technique",
+        "title": "Heap Paradise — pwnable.tw（350 分）",
+        "summary": "单字节 off-by-null 溢出配合 fastbin 合并与重复分配，在没有 show 功能的情况下通过 _IO_2_1_stdout_ 泄漏 libc。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键约束",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 12432,
+        "tags": [
+          "off-by-null",
+          "fastbin-dup",
+          "io-file-exploit"
+        ],
+        "platform": "pwnable.tw",
+        "points": "350",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/re_alloc_revenge.md",
+        "kind": "technique",
+        "title": "Re-alloc Revenge — pwnable.tw（350 分）",
+        "summary": "只有两个分配槽时，利用 realloc(ptr, 0) 双重释放做 tcache poisoning，污染 _IO_2_1_stdout_ 并劫持 __free_hook。",
+        "sections": [
+          "题目概况",
+          "程序逻辑",
+          "漏洞",
+          "关键限制",
+          "关键技术：两个槽下的 Tcache Poisoning",
+          "利用路径",
+          "利用原语总结",
+          "偏移（glibc 2.29，Ubuntu 2.29-0ubuntu2）"
+        ],
+        "bytes": 11733,
+        "tags": [
+          "use-after-free",
+          "double-free",
+          "tcache-poisoning",
+          "io-file-exploit"
+        ],
+        "platform": "pwnable.tw",
+        "points": "350",
+        "arch": "x86-64",
+        "libc": "glibc-2.29",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/secret_garden.md",
+        "kind": "technique",
+        "title": "Secret Garden — pwnable.tw（350 分）",
+        "summary": "花朵节点上的双重释放漏洞可做 fastbin 伪造，在 __malloc_hook 上分配出 chunk 并执行 one_gadget。",
+        "sections": [
+          "题目概况",
+          "程序结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "关键偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 14324,
+        "tags": [
+          "double-free",
+          "fastbin-dup",
+          "one-gadget"
+        ],
+        "platform": "pwnable.tw",
+        "points": "350",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/ghost_party.md",
+        "kind": "technique",
+        "title": "Ghost Party — pwnable.tw（400 分）",
+        "summary": "把不匹配的 C++ 派生类对象重新分配到已释放的槽位，会造成类型混淆，从而可将虚表重定向到 system。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13485,
+        "tags": [
+          "type-confusion",
+          "use-after-free",
+          "vtable-hijack"
+        ],
+        "platform": "pwnable.tw",
+        "points": "400",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/printable.md",
+        "kind": "technique",
+        "title": "Printable — pwnable.tw（400 分）",
+        "summary": "stdout 被关闭后仅有的一次 printf 调用，可通过在 stderr 上做 1 字节格式串改写，并借栈迁移把执行流循环起来。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "利用路径",
+          "关键地址（No-PIE 二进制）",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "利用原语总结",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13708,
+        "tags": [
+          "format-string",
+          "fini-array-overwrite",
+          "stack-pivoting"
+        ],
+        "platform": "pwnable.tw",
+        "points": "400",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/secret_of_my_heart.md",
+        "kind": "technique",
+        "title": "Secret Of My Heart — pwnable.tw（400 分）",
+        "summary": "创建 secret 时的一字节 off-by-null 可清掉 prev_inuse 位，触发向低地址合并进仍在使用的 chunk，进而覆盖 __malloc_hook。",
+        "sections": [
+          "题目概况",
+          "关键数据结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 12727,
+        "tags": [
+          "off-by-null",
+          "heap-consolidation",
+          "fastbin-dup"
+        ],
+        "platform": "pwnable.tw",
+        "points": "400",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/seethefile.md",
+        "kind": "technique",
+        "title": "seethefile — pwnable.tw（400 分）",
+        "summary": "在 BSS 段伪造 _IO_FILE 结构，fclose 时劫持文件 vtable 指针，把执行流重定向到 system。",
+        "sections": [
+          "题目概况",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_32.so.6，glibc 2.23）",
+          "BSS 地址（无 PIE）",
+          "题解文章"
+        ],
+        "bytes": 12554,
+        "tags": [
+          "io-file-exploit",
+          "vtable-hijack",
+          "arbitrary-write"
+        ],
+        "platform": "pwnable.tw",
+        "points": "400",
+        "arch": "i386",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/wannaheap.md",
+        "kind": "technique",
+        "title": "WannaHeap — pwnable.tw（400 分）",
+        "summary": "在 treap 键插入中出现一个 off-by-null 字节，可跨活跃树节点触发向低地址的堆合并，在 glibc 2.24 上实现任意写。",
+        "sections": [
+          "题目概况",
+          "关键数据结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（libc 2.24-9ubuntu2.2，sha1 4e5dfd83...）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13240,
+        "tags": [
+          "off-by-null",
+          "heap-consolidation",
+          "arbitrary-write"
+        ],
+        "platform": "pwnable.tw",
+        "points": "400",
+        "arch": "x86-64",
+        "libc": "glibc-2.24",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/babyallocator.md",
+        "kind": "technique",
+        "title": "BabyAllocator — pwnable.tw (500 分)",
+        "summary": "耗尽 mmap 分配的 split-stack 段会让 libgcc morestack 把动态栈分配与堆缓冲区重叠，从而可以覆盖返回地址。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 14065,
+        "tags": [
+          "stack-exhaustion",
+          "heap-overlap",
+          "arbitrary-write"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/bash_revenge.md",
+        "kind": "technique",
+        "title": "Bash Revenge — pwnable.tw（500 分）",
+        "summary": "利用泄露的文件描述符和 bash 内部内置命令，可以逃出受限执行模式并执行特权二进制。",
+        "sections": [
+          "题目概览",
+          "关键数据结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（libc 2.23-0ubuntu10，amd64）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 15046,
+        "tags": [
+          "logic-flaw",
+          "file-descriptor-leak",
+          "command-injection"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/bookwriter.md",
+        "kind": "technique",
+        "title": "BookWriter — pwnable.tw（500 分）",
+        "summary": "在填写书籍作者时的 off-by-null 写入可泄露堆地址，而覆盖 top chunk 大小可触发 House of Orange，通过 _IO_flush_all_lockp 实现 _IO_FILE vtable 利用。",
+        "sections": [
+          "题目概览",
+          "全局数据布局（BSS）",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "top chunk 大小的关键约束",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章"
+        ],
+        "bytes": 13181,
+        "tags": [
+          "out-of-bounds-write",
+          "information-leak",
+          "house-of-orange",
+          "io-file-exploit"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/bounty_program_a.md",
+        "kind": "technique",
+        "title": "Bounty Program α — pwnable.tw（500 分）",
+        "summary": "报告评论解析中的堆缓冲区溢出，可破坏 tcache 的 next 指针，实现任意内存写入并覆盖 __free_hook。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc-2.27.so）",
+          "题解文章",
+          "说明"
+        ],
+        "bytes": 14176,
+        "tags": [
+          "heap-buffer-overflow",
+          "tcache-poisoning",
+          "arbitrary-write"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.27",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/bounty_program_b.md",
+        "kind": "technique",
+        "title": "Bounty Program β — pwnable.tw（500 分）",
+        "summary": "一字节堆溢出可让重叠的堆 chunk 在 FORTIFY_SOURCE 约束下伪造 tcache 条目，并劫持 __free_hook。",
+        "sections": [
+          "题目概览",
+          "关键数据结构",
+          "漏洞",
+          "利用路径",
+          "与 Bounty Program α 的差异",
+          "利用原语总结",
+          "偏移（pwnable.tw libc-2.27.so）",
+          "题解文章"
+        ],
+        "bytes": 13846,
+        "tags": [
+          "heap-buffer-overflow",
+          "unsorted-bin-attack",
+          "tcache-poisoning"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.27",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/de_aslr.md",
+        "kind": "technique",
+        "title": "De-ASLR — pwnable.tw（500 分）",
+        "summary": "在没有任何输出函数的二进制中，利用 gets() 的栈缓冲区溢出，通过 ret2dlresolve 解析 system() 并执行 shell。",
+        "sections": [
+          "题目概览",
+          "二进制分析",
+          "漏洞",
+          "可用 gadget",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "二进制 gadget（固定，无 PIE）"
+        ],
+        "bytes": 15186,
+        "tags": [
+          "ret2dlresolve",
+          "rop",
+          "information-leak"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/food_store.md",
+        "kind": "technique",
+        "title": "Food Store — pwnable.tw（500 分）",
+        "summary": "食谱解析中的堆溢出破坏了堆元数据，进而触发 House of Orange 并改写 glibc 2.24 中的 _IO_FILE 跳转表。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（Ubuntu 17.04 libc 2.24-9ubuntu2.2）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 12853,
+        "tags": [
+          "heap-buffer-overflow",
+          "unsorted-bin-attack",
+          "house-of-orange"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.24",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/hitcon_ftp.md",
+        "kind": "technique",
+        "title": "HITCON FTP — pwnable.tw（500 分）",
+        "summary": "msgpack 数据包反序列化过程中的堆破坏可在 seccomp 之下劫持执行流，并构造 open-read-write 的 ROP 链。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "利用路径",
+          "泄漏原语总结",
+          "执行触发",
+          "关键偏移（远端 libc，glibc 2.27）",
+          "seccomp 策略",
+          "题解文章"
+        ],
+        "bytes": 13795,
+        "tags": [
+          "heap-buffer-overflow",
+          "seccomp-bypass",
+          "rop"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.27",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/seccomptools.md",
+        "kind": "technique",
+        "title": "SeccompTools — pwnable.tw（500 分）",
+        "summary": "规则管理中存在堆写原语，可覆盖 __free_hook，从而触发 BPF 过滤器预言机逐位泄漏内存内容。",
+        "sections": [
+          "题目概况",
+          "漏洞",
+          "利用流程（所有解法通用）",
+          "利用路径变体（阶段三的收尾）",
+          "预言机技巧变体",
+          "关键偏移（pwnable.tw 远端，glibc 2.23）",
+          "seccomp_data 布局（供 BPF 预言机使用）",
+          "题解文章"
+        ],
+        "bytes": 12421,
+        "tags": [
+          "arbitrary-write",
+          "seccomp-bypass",
+          "timing-side-channel"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/stupid_boss.md",
+        "kind": "technique",
+        "title": "Stupid Boss — pwnable.tw（500 分）",
+        "summary": "员工类结构中的 use-after-free 漏洞可篡改函数指针，把执行流劫持到 system。",
+        "sections": [
+          "题目概况",
+          "关键数据结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13355,
+        "tags": [
+          "use-after-free",
+          "type-confusion",
+          "got-overwrite"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/unexploitable.md",
+        "kind": "technique",
+        "title": "unexploitable — pwnable.tw（500 分）",
+        "summary": "一个没有任何输出函数的栈溢出，可用 Sigreturn-Oriented Programming（SROP）布置寄存器状态并调用 execve。",
+        "sections": [
+          "题目概况",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 14649,
+        "tags": [
+          "stack-buffer-overflow",
+          "srop",
+          "stack-pivoting"
+        ],
+        "platform": "pwnable.tw",
+        "points": "500",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / No Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/criticalheap_pp.md",
+        "kind": "technique",
+        "title": "Critical Heap++ — pwnable.tw（600 分）",
+        "summary": "多态 C++ 对象在没有虚析构函数的情况下被销毁，导致悬垂指针复用与类型混淆，从而实现任意内存写入。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "拿到 shell 之后：取真实 flag",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 13722,
+        "tags": [
+          "type-confusion",
+          "use-after-free",
+          "arbitrary-write"
+        ],
+        "platform": "pwnable.tw",
+        "points": "600",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Full RELRO / Canary / NX / No PIE"
+      },
+      {
+        "path": "pwnable-tw/digimon.md",
+        "kind": "technique",
+        "title": "Digimon — pwnable.tw（600 分）",
+        "summary": "并发战斗线程之间的竞态在 Digimon 对象上造成 use-after-free，从而可以覆盖虚函数表指针。",
+        "sections": [
+          "题目概览",
+          "漏洞",
+          "关键数据结构",
+          "利用路径",
+          "利用原语总结",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章",
+          "文件"
+        ],
+        "bytes": 14632,
+        "tags": [
+          "use-after-free",
+          "race-condition",
+          "vtable-hijack"
+        ],
+        "platform": "pwnable.tw",
+        "points": "600",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / Canary / NX / PIE"
+      },
+      {
+        "path": "pwnable-tw/omegago.md",
+        "kind": "technique",
+        "title": "OmegaGo — pwnable.tw（600 分）",
+        "summary": "围棋棋盘上的坐标编码混淆导致数组越界索引，从而实现任意 GOT 覆盖并劫持程序执行流。",
+        "sections": [
+          "题目概览",
+          "关键数据结构",
+          "漏洞",
+          "利用路径",
+          "利用原语总结",
+          "编码约束",
+          "偏移（pwnable.tw libc_64.so.6，glibc 2.23）",
+          "题解文章"
+        ],
+        "bytes": 12923,
+        "tags": [
+          "type-confusion",
+          "out-of-bounds-write",
+          "got-overwrite"
+        ],
+        "platform": "pwnable.tw",
+        "points": "600",
+        "arch": "x86-64",
+        "libc": "glibc-2.23",
+        "protections": "Partial RELRO / No Canary / NX / No PIE"
+      }
+    ]
+  }
+}

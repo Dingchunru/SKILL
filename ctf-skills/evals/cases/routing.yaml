@@ -1,0 +1,88 @@
+# Routing cases for promptfooconfig.routing.yaml.
+#
+# vars:
+#   task       the user message sent to the agent
+#   expected   skill that must be loaded (checked by `skill-used`)
+#   forbidden  skills that must NOT be loaded (checked by noForbiddenSkills)
+# metadata.tier: smoke = cheap subset for quick checks (--filter-metadata tier=smoke)
+#
+# tests/test_eval_coverage.py requires every skill directory to appear as
+# `expected` at least once, so add a case here when you add a skill.
+
+# --- web -------------------------------------------------------------------
+- description: 'web: flask app with jwt, upload, admin bot'
+  metadata: { category: web, tier: smoke }
+  vars:
+    task: >-
+      The target is a Flask website with JWT cookies, a file upload form, and
+      an admin bot that visits reported URLs. We already see template
+      injection in the profile page and a possible stored XSS. How should we
+      approach this?
+    expected: ctf-web
+    forbidden: [ctf-pwn, ctf-reverse]
+
+- description: 'web: misc is fallback, not default (unusual but still web)'
+  metadata: { category: web }
+  vars:
+    task: >-
+      The website exposes OAuth redirects, JWT sessions, and a browser admin
+      panel. It feels unusual, but the core bug family is still web. Where do
+      we start?
+    expected: ctf-web
+    forbidden: [ctf-pwn]
+
+# --- pwn -------------------------------------------------------------------
+- description: 'pwn: heap uaf with libc leak'
+  metadata: { category: pwn, tier: smoke }
+  vars:
+    task: >-
+      We already confirmed a heap use-after-free in an ELF service, have a
+      libc leak, and need tcache poisoning plus a ROP chain to get a shell.
+      What is the plan?
+    expected: ctf-pwn
+    forbidden: [ctf-web]
+
+- description: 'pwn vs reverse boundary: known format string bug'
+  metadata: { category: pwn }
+  vars:
+    task: >-
+      We already know the bug is a format string in a native service. The
+      remaining task is stack control, a libc leak, and ret2libc
+      exploitation.
+    expected: ctf-pwn
+    forbidden: [ctf-reverse, ctf-web]
+
+# --- reverse ---------------------------------------------------------------
+- description: 'reverse: stripped binary with custom vm'
+  metadata: { category: reverse, tier: smoke }
+  vars:
+    task: >-
+      The challenge gives a stripped binary with a custom VM and obfuscated
+      bytecode. The blocker is understanding what the executable does before
+      we can get the flag.
+    expected: ctf-reverse
+    forbidden: [ctf-pwn, ctf-web]
+
+- description: 'reverse vs pwn boundary: packed elf with anti-debug'
+  metadata: { category: reverse }
+  vars:
+    task: >-
+      We have a packed ELF with anti-debug tricks and no known vulnerability.
+      First we need to unpack it and recover the protocol it speaks.
+    expected: ctf-reverse
+    forbidden: [ctf-pwn]
+
+# --- negative control ------------------------------------------------------
+- description: 'negative: ordinary coding question loads no ctf skill'
+  metadata: { category: negative, tier: smoke }
+  options:
+    disableDefaultAsserts: true
+  vars:
+    task: Write a Python function that reverses a singly linked list in place.
+  assert:
+    - type: not-skill-used
+      value: { pattern: 'ctf-*' }
+      metric: no-wrong-skill
+    - type: not-skill-used
+      value: ctf-web
+      metric: no-wrong-skill

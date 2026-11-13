@@ -1,0 +1,391 @@
+{
+  "skill": "ctf-web",
+  "generated_by": "scripts/build_skill_catalog.py",
+  "docs": [
+    {
+      "path": "auth-and-access-2.md",
+      "kind": "technique",
+      "title": "CTF Web - 认证与访问控制攻击（第二部分）",
+      "summary": "第 2 部分（2018 年代）：std::unordered_set 桶碰撞鉴权绕过、nodeprep.prepare Unicode 同形字符用户名碰撞、SRP A=0/A=N 鉴权绕过、ArangoDB AQL MERGE 提权",
+      "sections": [
+        "std::unordered_set 哈希桶碰撞认证绕过（Hackover 2018）",
+        "nodeprep.prepare 同形用户名碰撞（HCTF 2018）",
+        "SRP A=0、A=N 认证绕过（OTW Advent 2018）",
+        "ArangoDB AQL MERGE 注入提权（P.W.N. CTF 2018）"
+      ],
+      "bytes": 5033
+    },
+    {
+      "path": "auth-and-access.md",
+      "kind": "technique",
+      "title": "CTF Web - 认证与访问控制攻击",
+      "summary": "认证/授权绕过、隐藏端点、IDOR、重定向链、子域接管、AI 聊天机器人越狱",
+      "sections": [
+        "现代认证与访问控制模式（2025/2026）",
+        "从公开数据推断密码/密钥",
+        "登录表单爆破",
+        "弱签名/弱哈希校验绕过",
+        "客户端访问门禁绕过",
+        "NoSQL 注入（MongoDB）",
+        "Cookie 操纵",
+        "公开管理登录路由的 Cookie 播种（EHAX 2026）"
+      ],
+      "bytes": 59833
+    },
+    {
+      "path": "auth-infra.md",
+      "kind": "technique",
+      "title": "CTF Web - OAuth、SAML 与基础设施认证攻击",
+      "summary": "OAuth/OIDC、SAML、CORS、CI/CD 密钥、IdP 滥用、登录投毒",
+      "sections": [
+        "现代 OAuth/OIDC 与基础设施补充（2025/2026）",
+        "OAuth/OIDC 利用",
+        "CORS 配置错误",
+        "Git 历史凭据泄露（Barrier HTB）",
+        "CI/CD 变量凭据窃取（Barrier HTB）",
+        "身份提供方 API 接管（Barrier HTB）",
+        "SAML SSO 流程自动化（Barrier HTB）",
+        "Apache Guacamole 连接参数提取（Barrier HTB）"
+      ],
+      "bytes": 16462
+    },
+    {
+      "path": "auth-jwt.md",
+      "kind": "technique",
+      "title": "CTF Web - JWT 与 JWE Token 攻击",
+      "summary": "JWT/JWE 篡改、弱密钥、头注入、密钥混淆、重放",
+      "sections": [
+        "现代 JWT/JWE 补充（2025/2026）",
+        "算法 None",
+        "算法混淆（RS256 转 HS256）",
+        "弱密钥爆破",
+        "不校验签名（Crypto-Cat）",
+        "JWK 头注入（Crypto-Cat）",
+        "JKU 头注入（Crypto-Cat）",
+        "KID 路径穿越（Crypto-Cat）"
+      ],
+      "bytes": 11100
+    },
+    {
+      "path": "client-side-advanced.md",
+      "kind": "technique",
+      "title": "CTF Web - 进阶客户端攻击",
+      "summary": "CSP 绕过、Unicode 技巧、XSSI、CSS 窃取、浏览器规范化怪癖、postMessage null origin 绕过",
+      "sections": [
+        "现代浏览器信任边界补充（2025/2026）",
+        "Unicode 大小写折叠 XSS 绕过（UNbreakable 2026）",
+        "CSS 字体字形宽度 + 容器查询外带（UNbreakable 2026）",
+        "Hyperscript CDN CSP 绕过（UNbreakable 2026）",
+        "通过 postMessage 的 PBKDF2 前缀时序 oracle（UNbreakable 2026）",
+        "借泄露的 JS 密钥绕过客户端 HMAC（Codegate 2013）",
+        "终端控制字符混淆（SECCON 2015）",
+        "通过云函数白名单域名绕过 CSP（BSidesSF 2025）"
+      ],
+      "bytes": 39997
+    },
+    {
+      "path": "client-side.md",
+      "kind": "technique",
+      "title": "CTF Web - 客户端攻击",
+      "summary": "XSS、CSRF、缓存投毒、DOM 技巧、admin bot 滥用、请求走私、付费墙绕过",
+      "sections": [
+        "现代浏览器与客户端补充（2025/2026）",
+        "XSS Payload",
+        "借助可信后端路由绕过 DOMPurify",
+        "JavaScript String Replace 利用",
+        "客户端路径穿越（CSPT）",
+        "缓存投毒",
+        "隐藏的 DOM 元素",
+        "React 受控输入的程序化填充"
+      ],
+      "bytes": 25564
+    },
+    {
+      "path": "cves.md",
+      "kind": "technique",
+      "title": "CTF Web - CVE 与浏览器漏洞",
+      "summary": "可通过 banner、响应头、依赖泄露或版本文本匹配的 CVE 技术",
+      "sections": [
+        "CVE-2025-29927：Next.js 中间件绕过",
+        "CVE-2025-0167：Curl .netrc 凭据泄露",
+        "Uvicorn CRLF 注入（未修复的 N-Day）",
+        "Python urllib 协议校验绕过（0-Day）",
+        "Chrome 通过 Link 头的 Referrer 泄露（2025）",
+        "TCP 分包（防火墙绕过）",
+        "Puppeteer/Chrome 的 JavaScript 绕过",
+        "Python python-dotenv 注入"
+      ],
+      "bytes": 17320
+    },
+    {
+      "path": "field-notes.md",
+      "kind": "technique",
+      "title": "CTF Web 实战笔记",
+      "summary": "长篇利用笔记：SQLi、XSS、LFI、JWT、SSTI、SSRF、命令注入、XXE、反序列化、竞态、鉴权绕过的速查与多阶段链",
+      "sections": [
+        "侦察",
+        "SQL 注入速查",
+        "XSS 速查",
+        "借 JSONP 回调的 XSSI 外带",
+        "路径穿越 / LFI 速查",
+        "JWT 速查",
+        "SSTI 速查",
+        "Python str.format() 属性遍历（PlaidCTF 2017）"
+      ],
+      "bytes": 46535
+    },
+    {
+      "path": "node-and-prototype.md",
+      "kind": "technique",
+      "title": "CTF Web - Node.js 原型污染与 VM 逃逸",
+      "summary": "原型链污染、JS 沙箱逃逸、Node.js 攻击链",
+      "sections": [
+        "原型污染基础",
+        "flatnest 循环引用绕过（CVE-2023-26135）",
+        "Gadget：经原型链读取库配置",
+        "Node.js VM 沙箱逃逸",
+        "完整链条：原型污染到 VM 逃逸 RCE（4llD4y）",
+        "Lodash 原型污染到 Pug AST 注入（VuwCTF 2025）",
+        "受影响的库",
+        "检测"
+      ],
+      "bytes": 7330
+    },
+    {
+      "path": "pat-reference.md",
+      "kind": "technique",
+      "title": "PayloadsAllTheThings 参考索引",
+      "summary": "PayloadsAllTheThings 索引：XSS/SQLi/SSRF/SSTI/LFI/命令注入/上传的批量 payload（需要 PAT clone，见前置条件）",
+      "sections": [
+        "如何使用本索引",
+        "分类映射——本地技巧 → PAT 路径",
+        "示例 payload（离线可用，带署名）",
+        "搜索配方（批量 PAT）",
+        "与本地技巧文件的关系",
+        "注意事项",
+        "安装",
+        "在 agent 中使用（按需懒加载 clone）"
+      ],
+      "bytes": 12967
+    },
+    {
+      "path": "python-requests.md",
+      "kind": "technique",
+      "title": "Python Requests 工具箱 — Python 版 Burp Intruder",
+      "summary": "Python requests 工具箱：session 脚手架、类 Burp Intruder 的 fuzzer（同步 + ThreadPoolExecutor + httpx 异步）、从 pat-reference.md 字典投放 payload、头/参数喷洒、cookie/JWT、代理",
+      "sections": [
+        "1. 何时使用 — Intruder 与 Repeater 的分工",
+        "2. 初始化 — Session 骨架、代理、校验",
+        "3. Intruder — 同步基线（先正确，再快速）",
+        "4. Intruder — ThreadPoolExecutor（30 worker，每线程独立 Session）",
+        "5. Intruder — httpx 异步（100 并发、Limits、Semaphore）",
+        "6. Payload 装配 — PAT 加载器（load_pat，上限 200）",
+        "7. Generator/Yield 数据源 — wordlist_stream、pat_stream、blind_sqli、discovery、调度器",
+        "8. 处理链 — 14 条规则 + 最终 URL 编码"
+      ],
+      "bytes": 22165
+    },
+    {
+      "path": "server-side-2.md",
+      "kind": "technique",
+      "title": "CTF Web - XXE、XML 注入、命令注入、GraphQL",
+      "summary": "XXE（基础、OOB、DOCX 上传）、通过 X-Forwarded-For 的 XML 注入、PHP 可变变量、PHP uniqid 可预测文件名、连续正则替换绕过、命令注入（换行、黑名单、sendmail CGI、多条形码、git CLI）、GraphQL 注入（introspection、批处理、插值）",
+      "sections": [
+        "XXE（XML 外部实体）",
+        "经 X-Forwarded-For 头的 XML 注入（Pwn2Win 2016）",
+        "PHP 可变变量（$$var）滥用（bugs_bunny 2017）",
+        "PHP uniqid() 可预测文件名（EKOPARTY 2017）",
+        "顺序正则替换绕过（Tokyo Westerns 2017）",
+        "命令注入",
+        "GraphQL 注入与利用（Hack.lu CTF 2020、HeroCTF v5）"
+      ],
+      "bytes": 16078
+    },
+    {
+      "path": "server-side-advanced-2.md",
+      "kind": "technique",
+      "title": "CTF Web - 进阶服务端技巧（第 2 部分）",
+      "summary": "Docker API SSRF、Castor/XML、Apache expression 读取、解析器差异、Windows 路径技巧、恶意 MySQL 服务器读文件",
+      "sections": [
+        "SSRF 打 Docker API 的 RCE 链（H7CTF 2025）",
+        "Castor XML 的 xsi:type 多态反序列化（Atlas HTB）",
+        "Apache ErrorDocument 表达式读文件（Zero HTB）",
+        "SQLite 文件路径穿越绕过字符串相等判断（Codegate 2013）",
+        "利用不间断空格做 HQL 注入（HackIM 2016）",
+        "Base64 编码的路径穿越（Sharif CTF 2016）",
+        "Windows 8.3 短文件名绕过路径穿越（Tokyo Westerns 2016）",
+        "URL parse_url() 的 @ 符号绕过（EKOPARTY CTF 2016）"
+      ],
+      "bytes": 26544
+    },
+    {
+      "path": "server-side-advanced-3.md",
+      "kind": "technique",
+      "title": "CTF Web - 进阶服务端技巧（第三部分）",
+      "summary": "第 3 部分（CSAW/35C3/ASIS/PlaidCTF 2018）：WAV polyglot 上传、多斜杠 URL 绕过 path.startswith、Xalan XSLT math:random() 种子猜测、SoapClient _user_agent CRLF 方法走私、gopher:/// 无 host URL scheme 绕过、攻击者指定出站 URL 导致 SSRF 凭据泄露",
+      "sections": [
+        "经 .wave 扩展名的 WAV 多语言上传绕过（PlaidCTF 2018）",
+        "多斜杠 URL 解析器 path.startswith 绕过（CSAW 2018 Finals）",
+        "Xalan XSLT math:random() 种子猜测（35C3 2018）",
+        "SoapClient _user_agent CRLF 方法走私（35C3 2018）",
+        "gopher:// 无主机 URL scheme 绕过（35C3 2018）",
+        "经攻击者指定外连 URL 的 SSRF 凭据泄露（ASIS Finals 2018）"
+      ],
+      "bytes": 7336
+    },
+    {
+      "path": "server-side-advanced-4.md",
+      "kind": "technique",
+      "title": "服务端进阶技巧（第 4 部分）",
+      "summary": "第 4 部分：WeasyPrint SSRF/文件读取（CVE-2024-28184）、MongoDB 正则/$where 盲注布尔预言、Pongo2 Go 模板注入、ZIP PHP webshell、basename() 绕过、wget CRLF SSRF→SMTP、Gopher SSRF 打 MySQL 盲注、React Server Components Flight RCE（CVE-2025-55182）、sslsplit+arpspoof 拦截…",
+      "sections": [
+        "WeasyPrint SSRF 与文件读取（CVE-2024-28184，Nullcon 2026）",
+        "MongoDB 正则注入 / $where 盲注 oracle（Nullcon 2026）",
+        "Pongo2 / Go 模板注入经路径穿越（Nullcon 2026）",
+        "上传 ZIP 携带 PHP Webshell（Nullcon 2026）",
+        "basename() 绕过读取隐藏文件（Nullcon 2026）",
+        "wget CRLF 注入实现 SSRF 打 SMTP（SECCON 2017）",
+        "Gopher SSRF 打 MySQL 时间盲注（34C3 CTF 2017、AceBear 2018）",
+        "React Server Components Flight 协议 RCE（Ehax 2026）"
+      ],
+      "bytes": 22948
+    },
+    {
+      "path": "server-side-advanced.md",
+      "kind": "technique",
+      "title": "CTF Web - 进阶服务端技巧",
+      "summary": "进阶 SSRF、路径穿越、压缩包、解析器、框架与现代应用服务器问题、Nginx alias 穿越",
+      "sections": [
+        "ExifTool CVE-2021-22204 —— DjVu Perl 注入（0xFun 2026）",
+        "Go rune/字节长度不匹配 + 命令注入（VuwCTF 2025）",
+        "Zip 符号链接路径穿越（UTCTF 2024）",
+        "路径穿越绕过技巧",
+        "Unicode 同形点路径穿越 U+2E2E（CSAW 2017）",
+        "Ruby Regexp.escape 多字节字符绕过（Square CTF 2017）",
+        "/dev/fd 符号链接绕过 /proc 过滤（Google CTF 2017）",
+        "Flask/Werkzeug 调试模式利用"
+      ],
+      "bytes": 16701
+    },
+    {
+      "path": "server-side-deser.md",
+      "kind": "technique",
+      "title": "CTF Web - 反序列化与执行类攻击",
+      "summary": "Java/Python/PHP 反序列化与竞态条件 playbook、反序列化配合 PHP SoapClient CRLF SSRF",
+      "sections": [
+        "Java 反序列化（ysoserial）",
+        "Python Pickle 反序列化",
+        "条件竞争（Time-of-Check to Time-of-Use）",
+        "通过剥离 STOP 操作码实现 Pickle 链式执行（VolgaCTF 2013）",
+        "Java XMLDecoder 反序列化 RCE（HackIM 2016）",
+        ".NET JSON TypeNameHandling 反序列化（DefCamp 2017）",
+        "通过过滤词扩展操纵 PHP 序列化长度（0CTF 2016）",
+        "Java TiedMapEntry + LazyMap + 反射修补 HashMap（Trend Micro 2018）"
+      ],
+      "bytes": 22580
+    },
+    {
+      "path": "server-side-exec-2.md",
+      "kind": "technique",
+      "title": "CTF Web - 服务端代码执行与访问类攻击（第二部分）",
+      "summary": "更多执行链：SQLi 分片、路径解析器技巧、多语言 polyglot 上传、wrapper 滥用、文件名注入、文件名截断配合 BMP 像素 webshell",
+      "sections": [
+        "SQLi 关键字碎片化绕过（SecuInside 2013）",
+        "经 ORDER BY CASE 绕过 SQL WHERE（Sharif CTF 2016）",
+        "经 DNS 记录注入 SQL（PlaidCTF 2014）",
+        "Bash 花括号展开实现无空格命令注入（Insomnihack 2016）",
+        "Common Lisp 经 reader macro 注入（Insomnihack 2016）",
+        "通过剥离 STOP 操作码实现 Pickle 链式执行（VolgaCTF 2013）",
+        "Java 反序列化（ysoserial）",
+        "Python Pickle 反序列化"
+      ],
+      "bytes": 40629
+    },
+    {
+      "path": "server-side-exec.md",
+      "kind": "technique",
+      "title": "CTF Web - 服务端代码执行与访问类攻击",
+      "summary": "直接代码执行路径、上传转 RCE、反序列化相邻执行、LaTeX 注入、请求头与 API 滥用",
+      "sections": [
+        "Ruby 代码注入",
+        "Ruby ObjectSpace 内存扫描提取 flag（Tokyo Westerns 2016）",
+        "Perl open() RCE",
+        "LaTeX 注入 RCE（Hack.lu CTF 2012）",
+        "服务端 JS eval 黑名单绕过",
+        "PHP preg_replace /e 修饰符 RCE（PlaidCTF 2014）",
+        "字符长度限制下的 PHP 反引号执行（EasyCTF 2017）",
+        "PHP assert() 字符串求值注入（CSAW CTF 2016）"
+      ],
+      "bytes": 22468
+    },
+    {
+      "path": "server-side.md",
+      "kind": "technique",
+      "title": "CTF Web - 服务端注入攻击",
+      "summary": "PHP 类型混淆、php://filter LFI、Python str.format 路径穿越、SSTI（Jinja2、Twig、ERB、Mako、EJS、Vue.js、Smarty）、SSRF（Host 头、DNS rebinding、curl 重定向、未转义点号正则、SNI FTP 走私、mod_vhost_alias）、PHP hash_hmac NULL",
+      "sections": [
+        "PHP 类型混淆",
+        "PHP 文件包含 / php://filter",
+        "SQL 注入",
+        "Python str.format() 属性遍历（PlaidCTF 2017）",
+        "SSTI（服务端模板注入）",
+        "PHP hash_hmac 对数组输入返回 NULL（AceBear 2018）",
+        "SSRF",
+        "递归替换路径穿越 ....//（35C3 2018）"
+      ],
+      "bytes": 30293
+    },
+    {
+      "path": "sql-injection.md",
+      "kind": "technique",
+      "title": "CTF Web - SQL 注入技术",
+      "summary": "SQL 注入技术：鉴权绕过、UNION 提取、过滤绕过、二次注入、截断、竞态辅助泄露、INSERT ON DUPLICATE KEY UPDATE 覆盖密码、innodb_table_stats WAF 绕过",
+      "sections": [
+        "反斜杠转义引号绕过",
+        "十六进制编码绕过引号",
+        "二次注入",
+        "SQLi LIKE 逐字符爆破",
+        "MySQL 列截断（VolgaCTF 2014）",
+        "SQLi 转 SSTI 链",
+        "MySQL information_schema.processList 技巧",
+        "通过 XML 实体编码绕过 WAF（Crypto-Cat）"
+      ],
+      "bytes": 38620
+    },
+    {
+      "path": "tools-mcp.md",
+      "kind": "technique",
+      "title": "CTF Web - MCP 服务器集成",
+      "summary": "Web 方向的 MCP 服务集成：Playwright MCP（admin-bot DOM XSS 复现、实时 DOM/console/network 检查，browser_network_requests 只列端点，只有 browser_network_request part=\"response-body\" 返回响应体）与 Burp Suite 官方 MCP（27 个工具、审批闸门会阻塞 agent、目标三元组把 socket 与 Host:…",
+      "sections": [
+        "Playwright MCP（浏览器自动化）",
+        "Burp Suite MCP（线路层利用）",
+        "何时用 Burp MCP、curl 还是 Playwright MCP"
+      ],
+      "bytes": 36243
+    },
+    {
+      "path": "web3.md",
+      "kind": "technique",
+      "title": "CTF Web - Web3 / 区块链挑战",
+      "summary": "Solidity 与 Web3 挑战笔记",
+      "sections": [
+        "挑战基础设施模式",
+        "EIP-1967 代理模式利用",
+        "ABI Coder v1 与 v2 —— 脏地址绕过",
+        "剥离 Solidity CBOR 元数据以绕过 codehash 校验",
+        "非标准 ABI calldata 编码",
+        "Solidity bytes32 字符串编码",
+        "完整利用流程（House of Illusions）",
+        "Delegatecall 存储上下文滥用（EHAX 2026）"
+      ],
+      "bytes": 17916
+    }
+  ],
+  "tools": [
+    {
+      "path": "scripts/async_fuzz.py",
+      "summary": ""
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "ctf-leader",
+  "skills": [".."],
+  "references": {
+    "ctf-web": {
+      "path": "../ctf-web",
+      "description": "Web exploitation techniques: SQLi, XSS, SSTI, SSRF, JWT, auth bypass, file upload, prototype pollution"
+    },
+    "ctf-pwn": {
+      "path": "../ctf-pwn",
+      "description": "Binary exploitation: buffer overflow, ROP, heap, format string, seccomp, kernel"
+    },
+    "ctf-reverse": {
+      "path": "../ctf-reverse",
+      "description": "Reverse engineering: binary analysis, VMs, anti-debug, deobfuscation, dynamic analysis"
+    }
+  }
+}
